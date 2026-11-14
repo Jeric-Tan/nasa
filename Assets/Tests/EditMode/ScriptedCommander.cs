@@ -9,7 +9,10 @@ namespace OutpostGale.Tests
         readonly Mission m;
         static readonly string[] Goals = { "oxygen", "wall@hab", "greenhouse", "wall@shelter", "pad", "recycler", "gym", "panel" };
 
-        public ScriptedCommander(Mission mission) { m = mission; }
+        readonly bool careful;
+
+        // careful = false: never uses the Radio or the Storm Shelter (a player who ignores space weather).
+        public ScriptedCommander(Mission mission, bool careful = true) { m = mission; this.careful = careful; }
 
         PlacedModule First(string id) => m.S.modules.Find(x => x.id == id);
 
@@ -27,7 +30,7 @@ namespace OutpostGale.Tests
         public void PlaySol()
         {
             var hab = First("hab");
-            Do("radio", hab);
+            if (careful) Do("radio", hab);
 
             foreach (var e in new List<ActiveEvent>(m.S.events))
             {
@@ -38,7 +41,7 @@ namespace OutpostGale.Tests
                 Do("fix:" + e.id, at);
             }
 
-            if (m.S.forecastTonight == 2 || (m.S.forecastTonight == 3 && m.S.power >= 60)) Do("seal", First("shelter"));
+            if (careful && m.S.forecastTonight == 2 || careful && (m.S.forecastTonight == 3 && m.S.power >= 60)) Do("seal", First("shelter"));
 
             WorkSites();
             TryPlace();

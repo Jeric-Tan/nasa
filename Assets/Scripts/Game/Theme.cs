@@ -190,7 +190,8 @@ namespace OutpostGale
         {
             string key = "art_" + name;
             if (cache.TryGetValue(key, out var s)) return s;
-            s = Resources.Load<Sprite>("Art/" + name);
+            var loaded = Resources.Load<Sprite>("Art/" + name);
+            s = loaded ? loaded : null; // real null, so callers can use ??
             cache[key] = s;
             return s;
         }

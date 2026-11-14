@@ -202,6 +202,7 @@ namespace OutpostGale
                 fill.color = v < 25 ? Theme.Warn : Theme.MeterColor(m);
                 // Colour is never the only signal: words or numbers too, and a "!" when low.
                 hud.values[m].text = commander ? v + (v < 25 ? " !" : "") : MeterWord(v) + " " + v;
+                if (m == "health" && s.healthCap < 100) hud.values[m].text += " <size=12>(max " + s.healthCap + ")</size>";
             }
             hud.sol.text = "Sol " + Mathf.Min(s.sol, s.lastSol) + " <size=16>/ " + s.lastSol + "</size>";
             hud.act.text = "Act " + Mission.Act + ": " + ActName(Mission.Act) + (Mission.InDustSeason(s.sol) ? " · dust season" : "");

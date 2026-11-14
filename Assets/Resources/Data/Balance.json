@@ -8,7 +8,7 @@
   "life": { "crewUse": 12, "systemsDownDrain": 8, "greenhouseDelaySols": 2, "adjacencyBonus": 2 },
   "health": {
     "baseline": 2, "baselineShielded": 1, "stormUnsealed": 22, "stormSealed": 6, "shelterNeighbourMax": 3,
-    "lowLifeThreshold": 25, "lowLifeDrain": 5, "rest": 6, "gym": 4, "fatigueDrain": 3, "dustCleanDose": 2, "fatigueHours": 7
+    "lowLifeThreshold": 25, "lowLifeDrain": 5, "rest": 6, "gym": 4, "fatigueDrain": 3, "dustCleanDose": 2, "fatigueHours": 7, "doseScar": 1.0
   },
   "events": { "firstSol": 2, "chance": 0.45, "dustSeasonChance": 0.7, "dustSeasonDustWeight": 3, "farPanelDustWeight": 0.5 },
   "eventDefs": [

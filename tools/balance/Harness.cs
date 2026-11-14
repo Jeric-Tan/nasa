@@ -23,15 +23,17 @@ static class Harness
             story = Load<StoryScript>("Assets/Resources/Data/Story.json"),
         };
         data.staticFacts.AddRange(Load<StaticFactList>("Assets/Resources/Data/Facts.json").facts);
-        foreach (var mode in new[] { "cadet", "commander" })
+        foreach (var run in new[] { "cadet", "commander", "cadet-careless", "commander-careless" })
         {
+            string mode = run.Split('-')[0];
+            bool careful = !run.EndsWith("careless");
             var endings = new Dictionary<string, int>();
             var minHealth = new List<int>(); var finalP = new List<int>(); var finalL = new List<int>(); var finalH = new List<int>();
             var padSol = new List<int>(); var ups = new List<int>(); var downs = 0; var storms = new List<int>();
             for (int seed = 1; seed <= seeds; seed++)
             {
                 var m = Mission.Start(b, data, new Profile(), new MissionSetup { mode = mode }, seed * 7919);
-                var bot = new ScriptedCommander(m);
+                var bot = new ScriptedCommander(m, careful);
                 int lo = 100;
                 while (!m.S.over)
                 {
@@ -45,7 +47,7 @@ static class Harness
                 var pad = m.S.modules.Find(x => x.id == "pad" && x.built); if (pad != null) padSol.Add(pad.builtSol);
                 ups.Add(m.UpgradesBuilt(false)); storms.Add(m.S.stormsHit);
             }
-            Console.WriteLine($"{mode}: " + string.Join(", ", endings.OrderBy(k => k.Key).Select(k => $"{k.Key} {100.0 * k.Value / seeds:0}%")));
+            Console.WriteLine($"{run}: " + string.Join(", ", endings.OrderBy(k => k.Key).Select(k => $"{k.Key} {100.0 * k.Value / seeds:0}%")));
             Console.WriteLine($"   final P/L/H avg {finalP.Average():0}/{finalL.Average():0}/{finalH.Average():0}  min health avg {minHealth.Average():0}  upgrades {ups.Average():0.0}  pad built {padSol.Count}/{seeds} (avg sol {(padSol.Count > 0 ? padSol.Average() : 0):0})  storms {storms.Average():0.0}  power-outs {downs}");
         }
     }

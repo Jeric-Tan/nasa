@@ -226,6 +226,7 @@ namespace OutpostGale.Tests
             TestData.AddBuilt(m, "pad", 12, 4);
             TestData.AddBuilt(m, "oxygen", 3, 6);
             TestData.AddBuilt(m, "greenhouse", 6, 5, builtSol: -5);
+            TestData.AddBuilt(m, "recycler", 3, 3);
             m.Sleep();
             Assert.AreEqual("thriving", m.S.ending);
         }
@@ -650,6 +651,34 @@ namespace OutpostGale.Tests
                 m.Do("radio", m.S.modules.Find(x => x.id == "hab").uid);
                 Assert.AreNotEqual(3, m.S.forecastTonight);
             }
+        }
+    }
+}
+
+namespace OutpostGale.Tests
+{
+    public class DoseTests
+    {
+        [Test]
+        public void StormDoseLowersMaxHealthAndRestCantUndoIt()
+        {
+            var m = TestData.Quiet();
+            m.S.storms.Add(new PlannedStorm { sol = 1 });
+            m.Sleep();
+            Assert.AreEqual(100 - 22, m.S.healthCap);
+            m.S.health = m.S.healthCap - 1;
+            m.Do("rest", m.S.modules.Find(x => x.id == "hab").uid);
+            Assert.AreEqual(m.S.healthCap, m.S.health, "rest stops at the cap");
+        }
+
+        [Test]
+        public void SealedShelterKeepsMaxHealthHigh()
+        {
+            var m = TestData.Quiet();
+            m.S.storms.Add(new PlannedStorm { sol = 1 });
+            m.Do("seal", m.S.modules.Find(x => x.id == "shelter").uid);
+            m.Sleep();
+            Assert.AreEqual(95, m.S.healthCap);
         }
     }
 }

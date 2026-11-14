@@ -121,6 +121,7 @@ namespace OutpostGale.Sim
         public int gym = 4;
         public int fatigueDrain = 3;
         public int dustCleanDose = 2;
+        public float doseScar = 0.5f;     // share of storm damage that rest can't heal (lowers max health)
         public float fatigueHours = 7;
     }
 

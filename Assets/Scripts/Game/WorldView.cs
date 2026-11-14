@@ -64,6 +64,7 @@ namespace OutpostGale
             public Vector3 target;
             public float wait;
             public SpriteRenderer face;
+            public Color baseColor;
         }
 
         public static Vector3 TileCentre(int x, int y, int w, int h) => new Vector3(x + 0.5f - w / 2f, y + 0.5f - h / 2f, 0);
@@ -148,7 +149,7 @@ namespace OutpostGale
             for (int i = 0; i < 2; i++)
             {
                 var go = MakePerson(names[i], colors[i], 0.5f, out var body);
-                var c = new Crew { t = go.transform, face = body };
+                var c = new Crew { t = go.transform, face = body, baseColor = colors[i] };
                 c.t.localPosition = hab != null ? Rect(hab) + new Vector3(i == 0 ? -0.8f : 0.8f, -0.2f, 0) : Vector3.zero;
                 c.target = c.t.localPosition;
                 crew.Add(c);
@@ -543,7 +544,7 @@ namespace OutpostGale
                 c.t.localPosition = Vector3.MoveTowards(c.t.localPosition, c.target, Time.deltaTime * 0.8f);
                 // Faces: tired, hungry or happy, shown by suit tint.
                 float mood = Mathf.Min(M.S.health, M.S.life) / 100f;
-                c.face.color = Color.Lerp(Color.Lerp(c.face.color, Theme.Muted, 0.0f), c.face.color, 1f);
+                c.face.color = Color.Lerp(Theme.Muted, c.baseColor, Mathf.Clamp01(mood * 2f)); // greyer when tired or hungry
                 SetOrder(c.t, Order(hab.y) + 15);
                 c.t.localScale = Vector3.one * (0.95f + 0.05f * Mathf.Sin(Time.time * (mood > 0.4f ? 4 : 1.5f)));
             }

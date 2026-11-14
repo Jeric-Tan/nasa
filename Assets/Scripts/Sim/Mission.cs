@@ -162,6 +162,7 @@ namespace OutpostGale.Sim
             S.decisions.Add(new Decision { sol = S.sol, weight = weight, kind = kind, text = text });
 
         static int Clamp(int v) => Math.Max(0, Math.Min(100, v));
+        int ClampHealth(int v) => Math.Max(0, Math.Min(S.healthCap, v));
 
         public bool Spend(int quarters, bool work = true)
         {
@@ -283,7 +284,7 @@ namespace OutpostGale.Sim
                 case "rest":
                 {
                     Spend(opt.quarters, work: false);
-                    S.health = Clamp(S.health + RestAmount());
+                    S.health = ClampHealth(S.health + RestAmount());
                     var f = EventActive("fatigue");
                     if (f != null) { S.events.Remove(f); Log("The crew got some rest. Fatigue is gone."); }
                     Log("The crew rests: +" + RestAmount() + " health.");
@@ -330,7 +331,7 @@ namespace OutpostGale.Sim
                 var def = B.Event(id);
                 if (id == "dust")
                 {
-                    S.health = Clamp(S.health - B.health.dustCleanDose);
+                    S.health = ClampHealth(S.health - B.health.dustCleanDose);
                     S.totalDose += B.health.dustCleanDose;
                     S.solsInsideStreak = -1; // went outside today
                     Log("Panels cleaned (outside, -" + B.health.dustCleanDose + " health). Full solar power again.");
@@ -347,7 +348,7 @@ namespace OutpostGale.Sim
             var storm = StormOn(S.sol);
             string text;
             if (S.forecastTonight == 3)
-                text = "Earth's message is late and crackly: \"…Sun is very busy… can't tell yet if…\" You'll have to decide without Earth.";
+                text = "Earth's message is late and crackly: \"â€¦Sun is very busyâ€¦ can't tell yet ifâ€¦\" You'll have to decide without Earth.";
             else if (storm != null)
             {
                 string flare = storm.record != null && !string.IsNullOrEmpty(storm.record.flareClass)
@@ -517,7 +518,7 @@ namespace OutpostGale.Sim
             int amount = spot.amount + (spot.material == "ice" ? B.Site(S.site).iceBonus : 0);
             if (spot.material == "samples" && HasTrait("rock_hound") && S.rng.Chance(0.5)) amount++;
             Give(spot.material, amount);
-            S.health = Clamp(S.health - dose);
+            S.health = ClampHealth(S.health - dose);
             S.totalDose += dose;
             S.tripsOutside++;
             S.solsInsideStreak = -1;
@@ -552,7 +553,7 @@ namespace OutpostGale.Sim
             if (!CanPush) return ActionResult.Fail("Time to head home");
             Spend(PushQuarters);
             int dose = PushDose;
-            S.health = Clamp(S.health - dose);
+            S.health = ClampHealth(S.health - dose);
             S.totalDose += dose;
             Give(S.trip.material, 1);
             S.trip.pushed = true;

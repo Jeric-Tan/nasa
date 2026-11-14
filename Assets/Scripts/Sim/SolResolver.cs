@@ -122,6 +122,12 @@ namespace OutpostGale.Sim
                 }
                 h -= stormDmg;
                 S.totalDose += stormDmg;
+                int scar = (int)Math.Round(stormDmg * B.health.doseScar, MidpointRounding.AwayFromZero);
+                if (scar > 0)
+                {
+                    S.healthCap = Math.Max(20, S.healthCap - scar);
+                    hWhy.Add("max health now " + S.healthCap + " (radiation dose adds up)");
+                }
                 hWhy.Add("particle storm -" + stormDmg + (S.sealedTonight ? " (shelter sealed)" : " (no shelter!)"));
                 TriggerFirst("storm");
                 Trigger("storm");
@@ -134,8 +140,8 @@ namespace OutpostGale.Sim
             if (S.life < B.health.lowLifeThreshold) { h -= B.health.lowLifeDrain; hWhy.Add("low air and food -" + B.health.lowLifeDrain); }
             if (S.exercisedToday && HasActive("gym")) { h += B.health.gym; hWhy.Add("gym +" + B.health.gym); }
             if (EventActive("fatigue") != null) { h -= B.health.fatigueDrain; hWhy.Add("tired crew -" + B.health.fatigueDrain); }
-            r.lines.Add(new ReportLine { meter = "health", delta = Clamp(S.health + h) - S.health, reason = string.Join(", ", hWhy) });
-            S.health = Clamp(S.health + h);
+            r.lines.Add(new ReportLine { meter = "health", delta = ClampHealth(S.health + h) - S.health, reason = string.Join(", ", hWhy) });
+            S.health = ClampHealth(S.health + h);
             S.totalDose += habShielded ? B.health.baselineShielded : B.health.baseline;
 
             r.storm = storm != null;

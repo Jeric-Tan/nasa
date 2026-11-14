@@ -22,6 +22,7 @@ namespace OutpostGale.Sim
         public int busyDaysInRow;
 
         public int power, life, health;
+        public int healthCap = 100;    // radiation dose adds up: rest can't heal above this
         public int regolith, ice, parts, samples;
 
         public bool radioUsed;

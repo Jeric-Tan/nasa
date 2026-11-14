@@ -34,6 +34,9 @@
       { "speaker": "earth", "text": "Outpost Gale, that was a solar particle event, an [[sep|SEP]]. They often come after a big flare or a [[cme|CME]]." },
       { "speaker": "bolt", "text": "Every storm in this game really happened. Check the storm card to see the date." },
       { "speaker": "bolt", "text": "Tip: use the Radio, then decide about sealing the Storm Shelter." } ] },
+    { "id": "dose_adds_up", "trigger": "first:storm", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Radiation [[dose]] adds up. Rest can't undo it, so the crew's max health just went down for the rest of the mission." },
+      { "speaker": "bolt", "text": "A sealed Storm Shelter keeps the dose small. That's the trade: some power tonight for health that lasts." } ] },
     { "id": "act2", "trigger": "act:2", "mode": "", "lines": [
       { "speaker": "bolt", "text": "Act 2: Dust Season. Dust storms will cut solar power for days at a time." },
       { "speaker": "tomas", "text": "Big battery or more panels? Mission Control just sent a battery blueprint." },
@@ -81,7 +84,7 @@
   ],
   "endings": [
     { "id": "thriving", "title": "Thriving Outpost", "message": "The next crew walks into a real home.", "tip": "Try Commander mode, or a stormier season.", "parallel": "NASA plans missions so each one prepares the way for the next, just like you did." },
-    { "id": "ready", "title": "Ready, Just Barely", "message": "It was close, but you made it.", "tip": "Keep every meter above 40 and build at least 2 upgrades besides the pad.", "parallel": "The International Space Station was built up one mission at a time, starting in 1998." },
+    { "id": "ready", "title": "Ready, Just Barely", "message": "It was close, but you made it.", "tip": "Keep every meter at 50 or more and build at least 3 upgrades besides the pad.", "parallel": "The International Space Station was built up one mission at a time, starting in 1998." },
     { "id": "holding", "title": "Holding On", "message": "Everyone's safe. The next crew has work to do.", "tip": "The landing pad blueprint arrives in Act 3. Save 8 regolith for it.", "parallel": "Curiosity has explored Gale crater since 2012, one careful sol at a time." },
     { "id": "early", "title": "Early Ride Home", "message": "The crew is evacuated. Here's what happened, and what to try next time.", "tip": "Build something that refills your weakest meter early, and use the Radio before deciding about the shelter.", "parallel": "In 2018 a planet-wide dust storm covered the Opportunity rover's solar panels. Its mission ended after almost 15 years." }
   ]
