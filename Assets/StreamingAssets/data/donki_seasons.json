@@ -1,0 +1,5169 @@
+{
+ "seasons": [
+  {
+   "year": 2012,
+   "stormCount": 41,
+   "strongestFlare": "X5.4",
+   "storms": [
+    {
+     "id": "2012-01-23T04:49:00-SEP-001",
+     "date": "2012-01-23",
+     "flareClass": "M8.7",
+     "flareId": "2012-01-23T03:38:00-FLR-001",
+     "cmeId": "2012-01-23T04:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/98/-1"
+    },
+    {
+     "id": "2012-01-23T05:00:00-SEP-001",
+     "date": "2012-01-23",
+     "flareClass": "M8.7",
+     "flareId": "2012-01-23T03:38:00-FLR-001",
+     "cmeId": "2012-01-23T04:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/127/-1"
+    },
+    {
+     "id": "2012-01-23T05:30:00-SEP-001",
+     "date": "2012-01-23",
+     "flareClass": "M8.7",
+     "flareId": "2012-01-23T03:38:00-FLR-001",
+     "cmeId": "2012-01-23T04:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6233/-1"
+    },
+    {
+     "id": "2012-01-23T08:15:00-SEP-001",
+     "date": "2012-01-23",
+     "flareClass": "M8.7",
+     "flareId": "2012-01-23T03:38:00-FLR-001",
+     "cmeId": "2012-01-23T04:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/124/-1"
+    },
+    {
+     "id": "2012-01-24T06:30:00-SEP-001",
+     "date": "2012-01-24",
+     "flareClass": "M8.7",
+     "flareId": "2012-01-23T03:38:00-FLR-001",
+     "cmeId": "2012-01-23T04:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/132/-1"
+    },
+    {
+     "id": "2012-01-27T19:00:00-SEP-001",
+     "date": "2012-01-27",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-01-27T16:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1117/-1"
+    },
+    {
+     "id": "2012-01-27T23:35:00-SEP-001",
+     "date": "2012-01-27",
+     "flareClass": "X1.8",
+     "flareId": "2012-01-27T17:37:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/141/-1"
+    },
+    {
+     "id": "2012-03-04T19:32:00-SEP-001",
+     "date": "2012-03-04",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-04T11:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/167/-1"
+    },
+    {
+     "id": "2012-03-07T01:44:00-SEP-001",
+     "date": "2012-03-07",
+     "flareClass": "X5.4",
+     "flareId": "2012-03-07T00:00:00-FLR-001",
+     "cmeId": "2012-03-07T00:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/205/-1"
+    },
+    {
+     "id": "2012-03-07T04:05:00-SEP-001",
+     "date": "2012-03-07",
+     "flareClass": "X5.4",
+     "flareId": "2012-03-07T00:00:00-FLR-001",
+     "cmeId": "2012-03-07T00:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/235/-1"
+    },
+    {
+     "id": "2012-03-07T05:00:00-SEP-001",
+     "date": "2012-03-07",
+     "flareClass": "X5.4",
+     "flareId": "2012-03-07T00:00:00-FLR-001",
+     "cmeId": "2012-03-07T00:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3298/-1"
+    },
+    {
+     "id": "2012-03-09T14:42:00-SEP-001",
+     "date": "2012-03-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-09T04:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/364/-1"
+    },
+    {
+     "id": "2012-03-13T18:10:00-SEP-001",
+     "date": "2012-03-13",
+     "flareClass": "M7.9",
+     "flareId": "2012-03-13T16:21:00-FLR-001",
+     "cmeId": "2012-03-13T17:52:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/418/-1"
+    },
+    {
+     "id": "2012-03-19T18:53:00-SEP-001",
+     "date": "2012-03-19",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-18T00:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/461/-1"
+    },
+    {
+     "id": "2012-03-21T08:20:00-SEP-001",
+     "date": "2012-03-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-21T07:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/513/-1"
+    },
+    {
+     "id": "2012-03-24T01:17:00-SEP-001",
+     "date": "2012-03-24",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-24T00:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/523/-1"
+    },
+    {
+     "id": "2012-03-27T01:05:00-SEP-001",
+     "date": "2012-03-27",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-03-26T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/529/-1"
+    },
+    {
+     "id": "2012-05-17T02:10:00-SEP-001",
+     "date": "2012-05-17",
+     "flareClass": "M5.1",
+     "flareId": "2012-05-17T00:30:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/670/-1"
+    },
+    {
+     "id": "2012-05-26T22:50:00-SEP-001",
+     "date": "2012-05-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-05-26T22:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/677/-1"
+    },
+    {
+     "id": "2012-05-27T05:05:00-SEP-001",
+     "date": "2012-05-27",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-05-26T22:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/679/-1"
+    },
+    {
+     "id": "2012-06-16T18:45:00-SEP-001",
+     "date": "2012-06-16",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-06-14T14:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/718/-1"
+    },
+    {
+     "id": "2012-07-07T04:00:00-SEP-001",
+     "date": "2012-07-07",
+     "flareClass": "X1.1",
+     "flareId": "2012-07-06T23:01:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/827/-1"
+    },
+    {
+     "id": "2012-07-09T01:20:00-SEP-001",
+     "date": "2012-07-09",
+     "flareClass": "M6.9",
+     "flareId": "2012-07-08T16:23:00-FLR-001",
+     "cmeId": "2012-07-08T16:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/845/-1"
+    },
+    {
+     "id": "2012-07-12T17:50:00-SEP-001",
+     "date": "2012-07-12",
+     "flareClass": "X1.4",
+     "flareId": "2012-07-12T15:37:00-FLR-001",
+     "cmeId": "2012-07-12T16:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8/-1"
+    },
+    {
+     "id": "2012-07-12T18:18:00-SEP-001",
+     "date": "2012-07-12",
+     "flareClass": "X1.4",
+     "flareId": "2012-07-12T15:37:00-FLR-001",
+     "cmeId": "2012-07-12T16:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/10/-1"
+    },
+    {
+     "id": "2012-07-12T18:35:00-SEP-001",
+     "date": "2012-07-12",
+     "flareClass": "X1.4",
+     "flareId": "2012-07-12T15:37:00-FLR-001",
+     "cmeId": "2012-07-12T16:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9/-1"
+    },
+    {
+     "id": "2012-07-17T16:30:00-SEP-001",
+     "date": "2012-07-17",
+     "flareClass": "M1.8",
+     "flareId": "2012-07-17T12:03:00-FLR-001",
+     "cmeId": "2012-07-17T14:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/868/-1"
+    },
+    {
+     "id": "2012-07-23T03:59:00-SEP-001",
+     "date": "2012-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-07-23T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/929/-1"
+    },
+    {
+     "id": "2012-07-23T14:00:00-SEP-001",
+     "date": "2012-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-07-23T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/932/-1"
+    },
+    {
+     "id": "2012-07-24T18:27:00-SEP-001",
+     "date": "2012-07-24",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-07-23T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/949/-1"
+    },
+    {
+     "id": "2012-08-19T20:21:00-SEP-001",
+     "date": "2012-08-19",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/966/-1"
+    },
+    {
+     "id": "2012-08-31T22:31:00-SEP-001",
+     "date": "2012-08-31",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-08-31T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1001/-1"
+    },
+    {
+     "id": "2012-09-01T13:35:00-SEP-001",
+     "date": "2012-09-01",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-08-31T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/5680/-1"
+    },
+    {
+     "id": "2012-09-21T02:37:00-SEP-001",
+     "date": "2012-09-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-09-20T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1069/-1"
+    },
+    {
+     "id": "2012-09-21T10:00:00-SEP-001",
+     "date": "2012-09-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-09-20T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1071/-1"
+    },
+    {
+     "id": "2012-09-23T00:54:00-SEP-001",
+     "date": "2012-09-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1080/-1"
+    },
+    {
+     "id": "2012-09-27T13:23:00-SEP-001",
+     "date": "2012-09-27",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-09-27T10:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1056/-1"
+    },
+    {
+     "id": "2012-09-28T02:47:00-SEP-001",
+     "date": "2012-09-28",
+     "flareClass": "C3.7",
+     "flareId": "2012-09-27T23:36:00-FLR-001",
+     "cmeId": "2012-09-28T02:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1046/-1"
+    },
+    {
+     "id": "2012-09-28T03:00:00-SEP-001",
+     "date": "2012-09-28",
+     "flareClass": "C3.7",
+     "flareId": "2012-09-27T23:36:00-FLR-001",
+     "cmeId": "2012-09-28T02:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1051/-1"
+    },
+    {
+     "id": "2012-09-28T05:21:00-SEP-001",
+     "date": "2012-09-28",
+     "flareClass": "C3.7",
+     "flareId": "2012-09-27T23:36:00-FLR-001",
+     "cmeId": "2012-09-28T02:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1043/-1"
+    },
+    {
+     "id": "2012-11-08T11:55:00-SEP-001",
+     "date": "2012-11-08",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2012-11-08T11:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/953/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2012-01-23T03:38:00-FLR-001",
+     "date": "2012-01-23",
+     "flareClass": "M8.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/95/-1"
+    },
+    {
+     "id": "2012-01-27T17:37:00-FLR-001",
+     "date": "2012-01-27",
+     "flareClass": "X1.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/137/-1"
+    },
+    {
+     "id": "2012-03-05T03:30:00-FLR-001",
+     "date": "2012-03-05",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/172/-1"
+    },
+    {
+     "id": "2012-03-07T00:00:00-FLR-001",
+     "date": "2012-03-07",
+     "flareClass": "X5.4",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/197/-1"
+    },
+    {
+     "id": "2012-03-07T01:05:00-FLR-001",
+     "date": "2012-03-07",
+     "flareClass": "X1.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/211/-1"
+    },
+    {
+     "id": "2012-03-10T17:32:00-FLR-001",
+     "date": "2012-03-10",
+     "flareClass": "M8.4",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/1130/-1"
+    },
+    {
+     "id": "2012-03-13T16:21:00-FLR-001",
+     "date": "2012-03-13",
+     "flareClass": "M7.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/416/-1"
+    },
+    {
+     "id": "2012-07-06T23:01:00-FLR-001",
+     "date": "2012-07-06",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/795/-1"
+    },
+    {
+     "id": "2012-07-12T15:37:00-FLR-001",
+     "date": "2012-07-12",
+     "flareClass": "X1.4",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/6/-1"
+    },
+    {
+     "id": "2012-07-19T04:17:00-FLR-001",
+     "date": "2012-07-19",
+     "flareClass": "M7.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/907/-1"
+    },
+    {
+     "id": "2012-10-20T18:05:00-FLR-001",
+     "date": "2012-10-20",
+     "flareClass": "M9.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/964/-1"
+    },
+    {
+     "id": "2012-10-23T03:13:00-FLR-001",
+     "date": "2012-10-23",
+     "flareClass": "X1.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/958/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "stormy"
+  },
+  {
+   "year": 2013,
+   "stormCount": 31,
+   "strongestFlare": "X3.3",
+   "storms": [
+    {
+     "id": "2013-03-05T05:24:00-SEP-001",
+     "date": "2013-03-05",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-03-05T04:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/100/-1"
+    },
+    {
+     "id": "2013-03-05T22:57:00-SEP-001",
+     "date": "2013-03-05",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-03-05T04:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/108/-1"
+    },
+    {
+     "id": "2013-03-16T10:00:00-SEP-001",
+     "date": "2013-03-16",
+     "flareClass": "M1.2",
+     "flareId": "2013-03-15T05:51:00-FLR-001",
+     "cmeId": "2013-03-15T06:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/12683/-1"
+    },
+    {
+     "id": "2013-03-16T19:05:00-SEP-001",
+     "date": "2013-03-16",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-03-15T06:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/129/-1"
+    },
+    {
+     "id": "2013-04-11T08:12:00-SEP-001",
+     "date": "2013-04-11",
+     "flareClass": "M6.5",
+     "flareId": "2013-04-11T06:55:00-FLR-001",
+     "cmeId": "2013-04-11T07:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/148/-1"
+    },
+    {
+     "id": "2013-04-11T09:30:00-SEP-001",
+     "date": "2013-04-11",
+     "flareClass": "M6.5",
+     "flareId": "2013-04-11T06:55:00-FLR-001",
+     "cmeId": "2013-04-11T07:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/376/-1"
+    },
+    {
+     "id": "2013-04-11T10:10:00-SEP-001",
+     "date": "2013-04-11",
+     "flareClass": "M6.5",
+     "flareId": "2013-04-11T06:55:00-FLR-001",
+     "cmeId": "2013-04-11T07:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/378/-1"
+    },
+    {
+     "id": "2013-05-13T04:12:00-SEP-001",
+     "date": "2013-05-13",
+     "flareClass": "X1.6",
+     "flareId": "2013-05-13T01:53:00-FLR-001",
+     "cmeId": "2013-05-13T02:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/219/-1"
+    },
+    {
+     "id": "2013-05-13T18:02:00-SEP-001",
+     "date": "2013-05-13",
+     "flareClass": "X2.8",
+     "flareId": "2013-05-13T15:40:00-FLR-001",
+     "cmeId": "2013-05-13T16:18:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/231/-1"
+    },
+    {
+     "id": "2013-05-15T13:25:00-SEP-001",
+     "date": "2013-05-15",
+     "flareClass": "X1.2",
+     "flareId": "2013-05-15T01:25:00-FLR-001",
+     "cmeId": "2013-05-15T02:18:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/262/-1"
+    },
+    {
+     "id": "2013-05-22T15:05:00-SEP-001",
+     "date": "2013-05-22",
+     "flareClass": "M5.0",
+     "flareId": "2013-05-22T12:30:00-FLR-001",
+     "cmeId": "2013-05-22T13:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/295/-1"
+    },
+    {
+     "id": "2013-05-22T15:05:00-SEP-002",
+     "date": "2013-05-22",
+     "flareClass": "M5.0",
+     "flareId": "2013-05-22T12:30:00-FLR-001",
+     "cmeId": "2013-05-22T13:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/297/-1"
+    },
+    {
+     "id": "2013-05-22T15:30:00-SEP-001",
+     "date": "2013-05-22",
+     "flareClass": "M5.0",
+     "flareId": "2013-05-22T12:30:00-FLR-001",
+     "cmeId": "2013-05-22T13:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/302/-1"
+    },
+    {
+     "id": "2013-06-21T06:09:00-SEP-001",
+     "date": "2013-06-21",
+     "flareClass": "M2.9",
+     "flareId": "2013-06-21T02:30:00-FLR-001",
+     "cmeId": "2013-06-21T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/337/-1"
+    },
+    {
+     "id": "2013-06-23T20:10:00-SEP-001",
+     "date": "2013-06-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-06-21T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/342/-1"
+    },
+    {
+     "id": "2013-08-20T05:54:00-SEP-001",
+     "date": "2013-08-20",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-08-19T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3201/-1"
+    },
+    {
+     "id": "2013-08-21T06:57:00-SEP-001",
+     "date": "2013-08-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3203/-1"
+    },
+    {
+     "id": "2013-09-30T05:05:00-SEP-001",
+     "date": "2013-09-30",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-09-29T22:40:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3305/-1"
+    },
+    {
+     "id": "2013-10-05T12:55:00-SEP-001",
+     "date": "2013-10-05",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-10-05T07:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3330/-1"
+    },
+    {
+     "id": "2013-10-11T08:17:00-SEP-001",
+     "date": "2013-10-11",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-10-11T07:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3375/-1"
+    },
+    {
+     "id": "2013-10-11T11:46:00-SEP-001",
+     "date": "2013-10-11",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-10-11T07:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3376/-1"
+    },
+    {
+     "id": "2013-10-25T13:36:00-SEP-001",
+     "date": "2013-10-25",
+     "flareClass": "X1.7",
+     "flareId": "2013-10-25T07:53:00-FLR-001",
+     "cmeId": "2013-10-25T08:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3455/-1"
+    },
+    {
+     "id": "2013-11-02T05:08:00-SEP-001",
+     "date": "2013-11-02",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-11-02T04:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3547/-1"
+    },
+    {
+     "id": "2013-11-04T10:43:00-SEP-001",
+     "date": "2013-11-04",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-11-02T04:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3562/-1"
+    },
+    {
+     "id": "2013-11-07T11:16:00-SEP-001",
+     "date": "2013-11-07",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-11-07T10:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3577/-1"
+    },
+    {
+     "id": "2013-11-07T14:26:00-SEP-001",
+     "date": "2013-11-07",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-11-07T10:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3587/-1"
+    },
+    {
+     "id": "2013-12-01T21:48:00-SEP-001",
+     "date": "2013-12-01",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-11-29T19:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/3672/-1"
+    },
+    {
+     "id": "2013-12-26T08:44:00-SEP-001",
+     "date": "2013-12-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-12-26T03:40:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4070/-1"
+    },
+    {
+     "id": "2013-12-26T08:53:00-SEP-001",
+     "date": "2013-12-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-12-26T03:40:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4071/-1"
+    },
+    {
+     "id": "2013-12-28T21:50:00-SEP-001",
+     "date": "2013-12-28",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-12-28T18:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4088/-1"
+    },
+    {
+     "id": "2013-12-28T21:50:00-SEP-002",
+     "date": "2013-12-28",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2013-12-28T18:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4094/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2013-05-13T15:40:00-FLR-001",
+     "date": "2013-05-13",
+     "flareClass": "X2.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/225/-1"
+    },
+    {
+     "id": "2013-05-13T01:53:00-FLR-001",
+     "date": "2013-05-13",
+     "flareClass": "X1.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/215/-1"
+    },
+    {
+     "id": "2013-05-14T01:00:00-FLR-001",
+     "date": "2013-05-14",
+     "flareClass": "X3.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/234/-1"
+    },
+    {
+     "id": "2013-05-15T01:25:00-FLR-001",
+     "date": "2013-05-15",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/250/-1"
+    },
+    {
+     "id": "2013-10-25T14:52:00-FLR-001",
+     "date": "2013-10-25",
+     "flareClass": "X2.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3451/-1"
+    },
+    {
+     "id": "2013-10-25T07:53:00-FLR-001",
+     "date": "2013-10-25",
+     "flareClass": "X1.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3452/-1"
+    },
+    {
+     "id": "2013-10-28T01:41:00-FLR-001",
+     "date": "2013-10-28",
+     "flareClass": "X1.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3491/-1"
+    },
+    {
+     "id": "2013-10-29T21:48:00-FLR-001",
+     "date": "2013-10-29",
+     "flareClass": "X2.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3526/-1"
+    },
+    {
+     "id": "2013-11-05T22:08:00-FLR-001",
+     "date": "2013-11-05",
+     "flareClass": "X3.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3573/-1"
+    },
+    {
+     "id": "2013-11-08T04:20:00-FLR-001",
+     "date": "2013-11-08",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3596/-1"
+    },
+    {
+     "id": "2013-11-10T05:08:00-FLR-001",
+     "date": "2013-11-10",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3615/-1"
+    },
+    {
+     "id": "2013-11-19T10:14:00-FLR-001",
+     "date": "2013-11-19",
+     "flareClass": "X1.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/3637/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "moderate"
+  },
+  {
+   "year": 2014,
+   "stormCount": 27,
+   "strongestFlare": "X4.9",
+   "storms": [
+    {
+     "id": "2014-01-06T08:30:00-SEP-001",
+     "date": "2014-01-06",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-01-06T08:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4332/-1"
+    },
+    {
+     "id": "2014-01-06T09:15:00-SEP-001",
+     "date": "2014-01-06",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-01-06T08:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4333/-1"
+    },
+    {
+     "id": "2014-01-06T10:00:00-SEP-001",
+     "date": "2014-01-06",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-01-06T08:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4334/-1"
+    },
+    {
+     "id": "2014-01-07T19:45:00-SEP-001",
+     "date": "2014-01-07",
+     "flareClass": "X1.2",
+     "flareId": "2014-01-07T18:02:00-FLR-001",
+     "cmeId": "2014-01-07T18:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4362/-1"
+    },
+    {
+     "id": "2014-01-07T20:30:00-SEP-001",
+     "date": "2014-01-07",
+     "flareClass": "X1.2",
+     "flareId": "2014-01-07T18:02:00-FLR-001",
+     "cmeId": "2014-01-07T18:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4356/-1"
+    },
+    {
+     "id": "2014-01-07T20:30:00-SEP-002",
+     "date": "2014-01-07",
+     "flareClass": "X1.2",
+     "flareId": "2014-01-07T18:02:00-FLR-001",
+     "cmeId": "2014-01-07T18:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4361/-1"
+    },
+    {
+     "id": "2014-01-08T21:31:00-SEP-001",
+     "date": "2014-01-08",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-01-06T08:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4381/-1"
+    },
+    {
+     "id": "2014-02-20T08:55:00-SEP-001",
+     "date": "2014-02-20",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-02-20T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4634/-1"
+    },
+    {
+     "id": "2014-02-25T06:05:00-SEP-001",
+     "date": "2014-02-25",
+     "flareClass": "X4.9",
+     "flareId": "2014-02-25T00:41:00-FLR-001",
+     "cmeId": "2014-02-25T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4637/-1"
+    },
+    {
+     "id": "2014-02-25T13:55:00-SEP-001",
+     "date": "2014-02-25",
+     "flareClass": "X4.9",
+     "flareId": "2014-02-25T00:41:00-FLR-001",
+     "cmeId": "2014-02-25T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4638/-1"
+    },
+    {
+     "id": "2014-03-05T21:05:00-SEP-001",
+     "date": "2014-03-05",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-03-04T18:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4641/-1"
+    },
+    {
+     "id": "2014-03-12T20:47:00-SEP-001",
+     "date": "2014-03-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-03-12T14:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4642/-1"
+    },
+    {
+     "id": "2014-04-02T15:55:00-SEP-001",
+     "date": "2014-04-02",
+     "flareClass": "M6.5",
+     "flareId": "2014-04-02T13:18:00-FLR-001",
+     "cmeId": "2014-04-02T13:55:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/5079/-1"
+    },
+    {
+     "id": "2014-04-18T15:25:00-SEP-001",
+     "date": "2014-04-18",
+     "flareClass": "M7.3",
+     "flareId": "2014-04-18T12:31:00-FLR-001",
+     "cmeId": "2014-04-18T13:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/5251/-1"
+    },
+    {
+     "id": "2014-04-18T21:51:00-SEP-001",
+     "date": "2014-04-18",
+     "flareClass": "M7.3",
+     "flareId": "2014-04-18T12:31:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/5259/-1"
+    },
+    {
+     "id": "2014-08-28T20:58:00-SEP-001",
+     "date": "2014-08-28",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-08-28T17:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6497/-1"
+    },
+    {
+     "id": "2014-09-01T12:14:00-SEP-001",
+     "date": "2014-09-01",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-09-01T11:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6514/-1"
+    },
+    {
+     "id": "2014-09-02T07:05:00-SEP-001",
+     "date": "2014-09-02",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-09-01T11:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6531/-1"
+    },
+    {
+     "id": "2014-09-04T22:45:00-SEP-001",
+     "date": "2014-09-04",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-09-01T11:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6571/-1"
+    },
+    {
+     "id": "2014-09-11T02:40:00-SEP-001",
+     "date": "2014-09-11",
+     "flareClass": "X1.6",
+     "flareId": "2014-09-10T17:21:00-FLR-001",
+     "cmeId": "2014-09-10T18:18:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6620/-1"
+    },
+    {
+     "id": "2014-09-11T04:25:00-SEP-001",
+     "date": "2014-09-11",
+     "flareClass": "X1.6",
+     "flareId": "2014-09-10T17:21:00-FLR-001",
+     "cmeId": "2014-09-10T18:18:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6624/-1"
+    },
+    {
+     "id": "2014-09-25T02:25:00-SEP-001",
+     "date": "2014-09-25",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-09-24T21:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO B: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6780/-1"
+    },
+    {
+     "id": "2014-09-25T19:51:00-SEP-001",
+     "date": "2014-09-25",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-09-24T21:54:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6784/-1"
+    },
+    {
+     "id": "2014-10-15T06:57:00-SEP-001",
+     "date": "2014-10-15",
+     "flareClass": "M2.2",
+     "flareId": "2014-10-14T19:07:00-FLR-001",
+     "cmeId": "2014-10-14T19:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/6934/-1"
+    },
+    {
+     "id": "2014-11-02T21:10:00-SEP-001",
+     "date": "2014-11-02",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-11-02T10:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/7109/-1"
+    },
+    {
+     "id": "2014-12-13T19:16:00-SEP-001",
+     "date": "2014-12-13",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-12-13T14:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/7369/-1"
+    },
+    {
+     "id": "2014-12-23T11:15:00-SEP-001",
+     "date": "2014-12-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2014-12-21T13:30:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/7456/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2014-01-07T18:02:00-FLR-001",
+     "date": "2014-01-07",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/4351/-1"
+    },
+    {
+     "id": "2014-02-25T00:41:00-FLR-001",
+     "date": "2014-02-25",
+     "flareClass": "X4.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/4636/-1"
+    },
+    {
+     "id": "2014-04-25T00:17:00-FLR-001",
+     "date": "2014-04-25",
+     "flareClass": "X1.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/5317/-1"
+    },
+    {
+     "id": "2014-06-10T11:38:00-FLR-001",
+     "date": "2014-06-10",
+     "flareClass": "X2.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/5723/-1"
+    },
+    {
+     "id": "2014-06-10T12:38:00-FLR-001",
+     "date": "2014-06-10",
+     "flareClass": "X1.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/5726/-1"
+    },
+    {
+     "id": "2014-09-10T17:21:00-FLR-001",
+     "date": "2014-09-10",
+     "flareClass": "X1.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/6606/-1"
+    },
+    {
+     "id": "2014-10-22T14:02:00-FLR-001",
+     "date": "2014-10-22",
+     "flareClass": "X1.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/6993/-1"
+    },
+    {
+     "id": "2014-10-24T21:07:00-FLR-001",
+     "date": "2014-10-24",
+     "flareClass": "X3.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7016/-1"
+    },
+    {
+     "id": "2014-10-26T10:04:00-FLR-001",
+     "date": "2014-10-26",
+     "flareClass": "X2.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7024/-1"
+    },
+    {
+     "id": "2014-10-27T14:12:00-FLR-001",
+     "date": "2014-10-27",
+     "flareClass": "X2.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7044/-1"
+    },
+    {
+     "id": "2014-11-07T16:53:00-FLR-001",
+     "date": "2014-11-07",
+     "flareClass": "X1.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7180/-1"
+    },
+    {
+     "id": "2014-12-20T00:11:00-FLR-001",
+     "date": "2014-12-20",
+     "flareClass": "X1.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7424/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "moderate"
+  },
+  {
+   "year": 2015,
+   "stormCount": 10,
+   "strongestFlare": "X2.7",
+   "storms": [
+    {
+     "id": "2015-03-06T19:20:00-SEP-001",
+     "date": "2015-03-06",
+     "flareClass": "M1.2",
+     "flareId": "2015-03-05T17:06:00-FLR-001",
+     "cmeId": "2015-03-05T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/7936/-1"
+    },
+    {
+     "id": "2015-03-16T07:36:00-SEP-001",
+     "date": "2015-03-16",
+     "flareClass": "C9.1",
+     "flareId": "2015-03-15T01:15:00-FLR-001",
+     "cmeId": "2015-03-15T02:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8024/-1"
+    },
+    {
+     "id": "2015-06-18T09:25:00-SEP-001",
+     "date": "2015-06-18",
+     "flareClass": "M1.2",
+     "flareId": "2015-06-18T00:34:00-FLR-001",
+     "cmeId": "2015-06-18T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8698/-1"
+    },
+    {
+     "id": "2015-06-18T15:30:00-SEP-001",
+     "date": "2015-06-18",
+     "flareClass": "M1.2",
+     "flareId": "2015-06-18T00:34:00-FLR-001",
+     "cmeId": "2015-06-18T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8707/-1"
+    },
+    {
+     "id": "2015-06-21T20:35:00-SEP-001",
+     "date": "2015-06-21",
+     "flareClass": "M2.0",
+     "flareId": "2015-06-21T01:02:00-FLR-001",
+     "cmeId": "2015-06-21T02:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8743/-1"
+    },
+    {
+     "id": "2015-06-25T18:00:00-SEP-001",
+     "date": "2015-06-25",
+     "flareClass": "M7.9",
+     "flareId": "2015-06-25T08:02:00-FLR-001",
+     "cmeId": "2015-06-25T08:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8822/-1"
+    },
+    {
+     "id": "2015-06-26T01:20:00-SEP-001",
+     "date": "2015-06-26",
+     "flareClass": "M7.9",
+     "flareId": "2015-06-25T08:02:00-FLR-001",
+     "cmeId": "2015-06-25T08:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8819/-1"
+    },
+    {
+     "id": "2015-10-29T04:00:00-SEP-001",
+     "date": "2015-10-29",
+     "flareClass": "C1.1",
+     "flareId": "2015-10-29T01:03:00-FLR-001",
+     "cmeId": "2015-10-29T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9582/-1"
+    },
+    {
+     "id": "2015-10-29T04:35:00-SEP-001",
+     "date": "2015-10-29",
+     "flareClass": "C1.1",
+     "flareId": "2015-10-29T01:03:00-FLR-001",
+     "cmeId": "2015-10-29T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9575/-1"
+    },
+    {
+     "id": "2015-10-29T05:50:00-SEP-001",
+     "date": "2015-10-29",
+     "flareClass": "C1.1",
+     "flareId": "2015-10-29T01:03:00-FLR-001",
+     "cmeId": "2015-10-29T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9581/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2015-01-13T04:13:00-FLR-001",
+     "date": "2015-01-13",
+     "flareClass": "M5.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7582/-1"
+    },
+    {
+     "id": "2015-03-03T01:25:00-FLR-001",
+     "date": "2015-03-03",
+     "flareClass": "M8.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7898/-1"
+    },
+    {
+     "id": "2015-03-07T21:45:00-FLR-001",
+     "date": "2015-03-07",
+     "flareClass": "M9.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7942/-1"
+    },
+    {
+     "id": "2015-03-09T23:29:00-FLR-001",
+     "date": "2015-03-09",
+     "flareClass": "M5.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7953/-1"
+    },
+    {
+     "id": "2015-03-10T03:19:00-FLR-001",
+     "date": "2015-03-10",
+     "flareClass": "M5.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7957/-1"
+    },
+    {
+     "id": "2015-03-11T16:11:00-FLR-001",
+     "date": "2015-03-11",
+     "flareClass": "X2.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/7971/-1"
+    },
+    {
+     "id": "2015-05-05T22:05:00-FLR-001",
+     "date": "2015-05-05",
+     "flareClass": "X2.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/8434/-1"
+    },
+    {
+     "id": "2015-06-22T17:39:00-FLR-001",
+     "date": "2015-06-22",
+     "flareClass": "M6.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/8756/-1"
+    },
+    {
+     "id": "2015-06-25T08:02:00-FLR-001",
+     "date": "2015-06-25",
+     "flareClass": "M7.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/8800/-1"
+    },
+    {
+     "id": "2015-08-24T07:26:00-FLR-001",
+     "date": "2015-08-24",
+     "flareClass": "M5.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/9176/-1"
+    },
+    {
+     "id": "2015-09-28T14:53:00-FLR-001",
+     "date": "2015-09-28",
+     "flareClass": "M7.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/9403/-1"
+    },
+    {
+     "id": "2015-10-02T00:08:00-FLR-001",
+     "date": "2015-10-02",
+     "flareClass": "M5.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/9445/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "calm"
+  },
+  {
+   "year": 2016,
+   "stormCount": 2,
+   "strongestFlare": "M7.6",
+   "storms": [
+    {
+     "id": "2016-01-02T02:48:00-SEP-001",
+     "date": "2016-01-02",
+     "flareClass": "M2.3",
+     "flareId": "2016-01-01T23:10:00-FLR-001",
+     "cmeId": "2016-01-01T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9966/-1"
+    },
+    {
+     "id": "2016-01-02T04:30:00-SEP-001",
+     "date": "2016-01-02",
+     "flareClass": "M2.3",
+     "flareId": "2016-01-01T23:10:00-FLR-001",
+     "cmeId": "2016-01-01T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/9964/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2016-04-18T00:14:00-FLR-001",
+     "date": "2016-04-18",
+     "flareClass": "M6.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/10506/-1"
+    },
+    {
+     "id": "2016-07-23T05:00:00-FLR-001",
+     "date": "2016-07-23",
+     "flareClass": "M7.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/11052/-1"
+    },
+    {
+     "id": "2016-07-23T05:27:00-FLR-001",
+     "date": "2016-07-23",
+     "flareClass": "M5.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/11054/-1"
+    },
+    {
+     "id": "2016-07-23T01:46:00-FLR-001",
+     "date": "2016-07-23",
+     "flareClass": "M5.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/11050/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "calm"
+  },
+  {
+   "year": 2017,
+   "stormCount": 13,
+   "strongestFlare": "X9.3",
+   "storms": [
+    {
+     "id": "2017-04-18T23:39:00-SEP-001",
+     "date": "2017-04-18",
+     "flareClass": "C5.5",
+     "flareId": "2017-04-18T19:15:00-FLR-001",
+     "cmeId": "2017-04-18T19:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/12463/-1"
+    },
+    {
+     "id": "2017-07-14T09:00:00-SEP-001",
+     "date": "2017-07-14",
+     "flareClass": "M2.4",
+     "flareId": "2017-07-14T01:07:00-FLR-001",
+     "cmeId": "2017-07-14T01:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/12759/-1"
+    },
+    {
+     "id": "2017-07-23T10:19:00-SEP-001",
+     "date": "2017-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2017-07-23T04:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/12816/-1"
+    },
+    {
+     "id": "2017-09-04T22:56:00-SEP-001",
+     "date": "2017-09-04",
+     "flareClass": "M5.5",
+     "flareId": "2017-09-04T20:15:00-FLR-001",
+     "cmeId": "2017-09-04T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13004/-1"
+    },
+    {
+     "id": "2017-09-04T23:52:00-SEP-001",
+     "date": "2017-09-04",
+     "flareClass": "M5.5",
+     "flareId": "2017-09-04T20:15:00-FLR-001",
+     "cmeId": "2017-09-04T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13000/-1"
+    },
+    {
+     "id": "2017-09-05T00:30:00-SEP-001",
+     "date": "2017-09-05",
+     "flareClass": "M5.5",
+     "flareId": "2017-09-04T20:15:00-FLR-001",
+     "cmeId": "2017-09-04T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/12984/-1"
+    },
+    {
+     "id": "2017-09-06T23:30:00-SEP-001",
+     "date": "2017-09-06",
+     "flareClass": "X9.3",
+     "flareId": "2017-09-06T11:53:00-FLR-001",
+     "cmeId": "2017-09-06T12:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13081/-1"
+    },
+    {
+     "id": "2017-09-06T23:45:00-SEP-001",
+     "date": "2017-09-06",
+     "flareClass": "M5.5",
+     "flareId": "2017-09-04T20:15:00-FLR-001",
+     "cmeId": "2017-09-04T19:39:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13036/-1"
+    },
+    {
+     "id": "2017-09-10T16:25:00-SEP-001",
+     "date": "2017-09-10",
+     "flareClass": "X8.2",
+     "flareId": "2017-09-10T15:35:00-FLR-001",
+     "cmeId": "2017-09-10T16:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1"
+    },
+    {
+     "id": "2017-09-10T16:45:00-SEP-001",
+     "date": "2017-09-10",
+     "flareClass": "X8.2",
+     "flareId": "2017-09-10T15:35:00-FLR-001",
+     "cmeId": "2017-09-10T16:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES13: SEM/EPS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13104/-1"
+    },
+    {
+     "id": "2017-09-10T20:00:00-SEP-001",
+     "date": "2017-09-10",
+     "flareClass": "X8.2",
+     "flareId": "2017-09-10T15:35:00-FLR-001",
+     "cmeId": "2017-09-10T16:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13112/-1"
+    },
+    {
+     "id": "2017-09-13T05:33:00-SEP-001",
+     "date": "2017-09-13",
+     "flareClass": "C3.0",
+     "flareId": "2017-09-12T07:23:00-FLR-001",
+     "cmeId": "2017-09-10T16:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13134/-1"
+    },
+    {
+     "id": "2017-09-17T23:40:00-SEP-001",
+     "date": "2017-09-17",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2017-09-17T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13186/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2017-04-02T20:28:00-FLR-001",
+     "date": "2017-04-02",
+     "flareClass": "M5.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/12360/-1"
+    },
+    {
+     "id": "2017-04-02T07:48:00-FLR-001",
+     "date": "2017-04-02",
+     "flareClass": "M5.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/12350/-1"
+    },
+    {
+     "id": "2017-04-03T14:21:00-FLR-001",
+     "date": "2017-04-03",
+     "flareClass": "M5.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/12369/-1"
+    },
+    {
+     "id": "2017-09-04T20:15:00-FLR-001",
+     "date": "2017-09-04",
+     "flareClass": "M5.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/12979/-1"
+    },
+    {
+     "id": "2017-09-06T11:53:00-FLR-001",
+     "date": "2017-09-06",
+     "flareClass": "X9.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13010/-1"
+    },
+    {
+     "id": "2017-09-06T08:57:00-FLR-001",
+     "date": "2017-09-06",
+     "flareClass": "X2.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13007/-1"
+    },
+    {
+     "id": "2017-09-07T14:20:00-FLR-001",
+     "date": "2017-09-07",
+     "flareClass": "X1.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13043/-1"
+    },
+    {
+     "id": "2017-09-07T10:11:00-FLR-001",
+     "date": "2017-09-07",
+     "flareClass": "M7.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13038/-1"
+    },
+    {
+     "id": "2017-09-08T07:40:00-FLR-001",
+     "date": "2017-09-08",
+     "flareClass": "M8.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13061/-1"
+    },
+    {
+     "id": "2017-09-10T15:35:00-FLR-001",
+     "date": "2017-09-10",
+     "flareClass": "X8.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13098/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "moderate"
+  },
+  {
+   "year": 2018,
+   "stormCount": 0,
+   "strongestFlare": "",
+   "storms": [],
+   "flares": [],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "calm"
+  },
+  {
+   "year": 2019,
+   "stormCount": 0,
+   "strongestFlare": "",
+   "storms": [],
+   "flares": [],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "calm"
+  },
+  {
+   "year": 2020,
+   "stormCount": 2,
+   "strongestFlare": "",
+   "storms": [
+    {
+     "id": "2020-11-30T04:26:00-SEP-001",
+     "date": "2020-11-30",
+     "flareClass": "M4.4",
+     "flareId": "2020-11-29T12:34:00-FLR-001",
+     "cmeId": "2020-11-29T13:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/16166/-1"
+    },
+    {
+     "id": "2020-11-30T14:16:00-SEP-001",
+     "date": "2020-11-30",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2020-11-26T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/16169/-1"
+    }
+   ],
+   "flares": [],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "calm"
+  },
+  {
+   "year": 2021,
+   "stormCount": 13,
+   "strongestFlare": "X1.5",
+   "storms": [
+    {
+     "id": "2021-05-29T03:00:00-SEP-001",
+     "date": "2021-05-29",
+     "flareClass": "C9.4",
+     "flareId": "2021-05-28T22:19:00-FLR-001",
+     "cmeId": "2021-05-28T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/17004/-1"
+    },
+    {
+     "id": "2021-07-09T18:05:00-SEP-001",
+     "date": "2021-07-09",
+     "flareClass": "C4.7",
+     "flareId": "2021-07-09T17:15:00-FLR-001",
+     "cmeId": "2021-07-09T17:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/17241/-1"
+    },
+    {
+     "id": "2021-10-09T07:51:00-SEP-001",
+     "date": "2021-10-09",
+     "flareClass": "M1.6",
+     "flareId": "2021-10-09T06:19:00-FLR-001",
+     "cmeId": "2021-10-09T07:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/17919/-1"
+    },
+    {
+     "id": "2021-10-28T16:16:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18099/-1"
+    },
+    {
+     "id": "2021-10-28T16:35:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18101/-1"
+    },
+    {
+     "id": "2021-10-28T17:39:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18124/-1"
+    },
+    {
+     "id": "2021-10-28T17:40:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18108/-1"
+    },
+    {
+     "id": "2021-10-28T18:28:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18111/-1"
+    },
+    {
+     "id": "2021-10-28T20:44:00-SEP-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "flareId": "2021-10-28T15:17:00-FLR-001",
+     "cmeId": "2021-10-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18125/-1"
+    },
+    {
+     "id": "2021-10-29T12:09:00-SEP-001",
+     "date": "2021-10-29",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18121/-1"
+    },
+    {
+     "id": "2021-11-01T03:12:00-SEP-001",
+     "date": "2021-11-01",
+     "flareClass": "M1.5",
+     "flareId": "2021-11-01T00:57:00-FLR-001",
+     "cmeId": "2021-11-01T02:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18143/-1"
+    },
+    {
+     "id": "2021-11-03T20:17:00-SEP-001",
+     "date": "2021-11-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2021-11-01T18:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18210/-1"
+    },
+    {
+     "id": "2021-11-03T20:55:00-SEP-001",
+     "date": "2021-11-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2021-11-01T18:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18191/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2021-07-03T14:18:00-FLR-001",
+     "date": "2021-07-03",
+     "flareClass": "X1.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/17201/-1"
+    },
+    {
+     "id": "2021-10-28T15:17:00-FLR-001",
+     "date": "2021-10-28",
+     "flareClass": "X1.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/18096/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "moderate"
+  },
+  {
+   "year": 2022,
+   "stormCount": 40,
+   "strongestFlare": "X2.2",
+   "storms": [
+    {
+     "id": "2022-01-20T07:20:00-SEP-001",
+     "date": "2022-01-20",
+     "flareClass": "M5.5",
+     "flareId": "2022-01-20T05:41:00-FLR-001",
+     "cmeId": "2022-01-20T06:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18899/-1"
+    },
+    {
+     "id": "2022-01-20T08:00:00-SEP-001",
+     "date": "2022-01-20",
+     "flareClass": "M5.5",
+     "flareId": "2022-01-20T05:41:00-FLR-001",
+     "cmeId": "2022-01-20T06:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18901/-1"
+    },
+    {
+     "id": "2022-01-20T08:07:00-SEP-001",
+     "date": "2022-01-20",
+     "flareClass": "M5.5",
+     "flareId": "2022-01-20T05:41:00-FLR-001",
+     "cmeId": "2022-01-20T06:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18905/-1"
+    },
+    {
+     "id": "2022-01-20T08:10:00-SEP-001",
+     "date": "2022-01-20",
+     "flareClass": "M5.5",
+     "flareId": "2022-01-20T05:41:00-FLR-001",
+     "cmeId": "2022-01-20T06:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/18906/-1"
+    },
+    {
+     "id": "2022-03-28T12:25:00-SEP-001",
+     "date": "2022-03-28",
+     "flareClass": "M4.0",
+     "flareId": "2022-03-28T10:58:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19550/-1"
+    },
+    {
+     "id": "2022-03-28T12:45:00-SEP-001",
+     "date": "2022-03-28",
+     "flareClass": "M4.0",
+     "flareId": "2022-03-28T10:58:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19553/-1"
+    },
+    {
+     "id": "2022-03-28T13:25:00-SEP-001",
+     "date": "2022-03-28",
+     "flareClass": "M4.0",
+     "flareId": "2022-03-28T10:58:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19558/-1"
+    },
+    {
+     "id": "2022-03-28T13:44:00-SEP-001",
+     "date": "2022-03-28",
+     "flareClass": "M4.0",
+     "flareId": "2022-03-28T10:58:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19563/-1"
+    },
+    {
+     "id": "2022-03-30T18:24:00-SEP-001",
+     "date": "2022-03-30",
+     "flareClass": "X1.3",
+     "flareId": "2022-03-30T17:21:00-FLR-001",
+     "cmeId": "2022-03-30T18:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19594/-1"
+    },
+    {
+     "id": "2022-03-31T04:33:00-SEP-001",
+     "date": "2022-03-31",
+     "flareClass": "X1.3",
+     "flareId": "2022-03-30T17:21:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19613/-1"
+    },
+    {
+     "id": "2022-03-31T06:20:00-SEP-001",
+     "date": "2022-03-31",
+     "flareClass": "X1.3",
+     "flareId": "2022-03-30T17:21:00-FLR-001",
+     "cmeId": "2022-03-28T12:09:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19605/-1"
+    },
+    {
+     "id": "2022-04-02T14:30:00-SEP-001",
+     "date": "2022-04-02",
+     "flareClass": "M3.9",
+     "flareId": "2022-04-02T12:56:00-FLR-001",
+     "cmeId": "2022-04-02T13:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19633/-1"
+    },
+    {
+     "id": "2022-04-02T14:38:00-SEP-001",
+     "date": "2022-04-02",
+     "flareClass": "M3.9",
+     "flareId": "2022-04-02T12:56:00-FLR-001",
+     "cmeId": "2022-04-02T13:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19639/-1"
+    },
+    {
+     "id": "2022-04-02T14:39:00-SEP-001",
+     "date": "2022-04-02",
+     "flareClass": "M3.9",
+     "flareId": "2022-04-02T12:56:00-FLR-001",
+     "cmeId": "2022-04-02T13:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/19640/-1"
+    },
+    {
+     "id": "2022-07-09T15:23:00-SEP-001",
+     "date": "2022-07-09",
+     "flareClass": "C8.5",
+     "flareId": "2022-07-09T13:29:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/20796/-1"
+    },
+    {
+     "id": "2022-07-09T15:23:00-SEP-002",
+     "date": "2022-07-09",
+     "flareClass": "C8.5",
+     "flareId": "2022-07-09T13:29:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/20797/-1"
+    },
+    {
+     "id": "2022-07-09T15:49:00-SEP-001",
+     "date": "2022-07-09",
+     "flareClass": "C8.5",
+     "flareId": "2022-07-09T13:29:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/20764/-1"
+    },
+    {
+     "id": "2022-07-09T15:49:00-SEP-002",
+     "date": "2022-07-09",
+     "flareClass": "C8.5",
+     "flareId": "2022-07-09T13:29:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/20767/-1"
+    },
+    {
+     "id": "2022-08-27T11:12:00-SEP-001",
+     "date": "2022-08-27",
+     "flareClass": "M4.8",
+     "flareId": "2022-08-27T01:52:00-FLR-001",
+     "cmeId": "2022-08-27T02:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21389/-1"
+    },
+    {
+     "id": "2022-08-27T11:55:00-SEP-001",
+     "date": "2022-08-27",
+     "flareClass": "M4.8",
+     "flareId": "2022-08-27T01:52:00-FLR-001",
+     "cmeId": "2022-08-27T02:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21373/-1"
+    },
+    {
+     "id": "2022-09-12T06:15:00-SEP-001",
+     "date": "2022-09-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21609/-1"
+    },
+    {
+     "id": "2022-09-12T08:46:00-SEP-001",
+     "date": "2022-09-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21607/-1"
+    },
+    {
+     "id": "2022-09-12T09:30:00-SEP-001",
+     "date": "2022-09-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21610/-1"
+    },
+    {
+     "id": "2022-09-14T00:18:00-SEP-001",
+     "date": "2022-09-14",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21625/-1"
+    },
+    {
+     "id": "2022-09-14T02:53:00-SEP-001",
+     "date": "2022-09-14",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21624/-1"
+    },
+    {
+     "id": "2022-09-15T04:37:00-SEP-001",
+     "date": "2022-09-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21631/-1"
+    },
+    {
+     "id": "2022-09-15T09:32:00-SEP-001",
+     "date": "2022-09-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21632/-1"
+    },
+    {
+     "id": "2022-10-01T21:17:00-SEP-001",
+     "date": "2022-10-01",
+     "flareClass": "M5.8",
+     "flareId": "2022-10-01T19:58:00-FLR-001",
+     "cmeId": "2022-10-01T20:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21844/-1"
+    },
+    {
+     "id": "2022-10-01T21:17:00-SEP-002",
+     "date": "2022-10-01",
+     "flareClass": "M5.8",
+     "flareId": "2022-10-01T19:58:00-FLR-001",
+     "cmeId": "2022-10-01T20:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21845/-1"
+    },
+    {
+     "id": "2022-10-01T21:25:00-SEP-002",
+     "date": "2022-10-01",
+     "flareClass": "M5.8",
+     "flareId": "2022-10-01T19:58:00-FLR-001",
+     "cmeId": "2022-10-01T20:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21847/-1"
+    },
+    {
+     "id": "2022-10-01T21:25:00-SEP-001",
+     "date": "2022-10-01",
+     "flareClass": "M5.8",
+     "flareId": "2022-10-01T19:58:00-FLR-001",
+     "cmeId": "2022-10-01T20:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21846/-1"
+    },
+    {
+     "id": "2022-10-02T03:39:00-SEP-001",
+     "date": "2022-10-02",
+     "flareClass": "M8.7",
+     "flareId": "2022-10-02T02:08:00-FLR-001",
+     "cmeId": "2022-10-02T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21848/-1"
+    },
+    {
+     "id": "2022-10-02T03:39:00-SEP-002",
+     "date": "2022-10-02",
+     "flareClass": "M8.7",
+     "flareId": "2022-10-02T02:08:00-FLR-001",
+     "cmeId": "2022-10-02T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21849/-1"
+    },
+    {
+     "id": "2022-10-02T03:43:00-SEP-001",
+     "date": "2022-10-02",
+     "flareClass": "M8.7",
+     "flareId": "2022-10-02T02:08:00-FLR-001",
+     "cmeId": "2022-10-02T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21850/-1"
+    },
+    {
+     "id": "2022-10-02T03:43:00-SEP-002",
+     "date": "2022-10-02",
+     "flareClass": "M8.7",
+     "flareId": "2022-10-02T02:08:00-FLR-001",
+     "cmeId": "2022-10-02T02:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21851/-1"
+    },
+    {
+     "id": "2022-10-02T22:01:00-SEP-001",
+     "date": "2022-10-02",
+     "flareClass": "X1.0",
+     "flareId": "2022-10-02T19:53:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21867/-1"
+    },
+    {
+     "id": "2022-10-02T22:01:00-SEP-002",
+     "date": "2022-10-02",
+     "flareClass": "X1.0",
+     "flareId": "2022-10-02T19:53:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21868/-1"
+    },
+    {
+     "id": "2022-10-02T22:04:00-SEP-001",
+     "date": "2022-10-02",
+     "flareClass": "X1.0",
+     "flareId": "2022-10-02T19:53:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21869/-1"
+    },
+    {
+     "id": "2022-10-04T15:52:00-SEP-001",
+     "date": "2022-10-04",
+     "flareClass": "M1.6",
+     "flareId": "2022-10-04T12:48:00-FLR-001",
+     "cmeId": "2022-10-04T13:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21894/-1"
+    },
+    {
+     "id": "2022-10-04T15:53:00-SEP-001",
+     "date": "2022-10-04",
+     "flareClass": "M1.6",
+     "flareId": "2022-10-04T12:48:00-FLR-001",
+     "cmeId": "2022-10-04T13:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/21893/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2022-03-30T17:21:00-FLR-001",
+     "date": "2022-03-30",
+     "flareClass": "X1.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/19591/-1"
+    },
+    {
+     "id": "2022-03-31T18:23:00-FLR-001",
+     "date": "2022-03-31",
+     "flareClass": "M9.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/19616/-1"
+    },
+    {
+     "id": "2022-04-17T03:17:00-FLR-001",
+     "date": "2022-04-17",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/19807/-1"
+    },
+    {
+     "id": "2022-04-20T03:41:00-FLR-001",
+     "date": "2022-04-20",
+     "flareClass": "X2.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/19853/-1"
+    },
+    {
+     "id": "2022-04-21T01:47:00-FLR-001",
+     "date": "2022-04-21",
+     "flareClass": "M9.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/19881/-1"
+    },
+    {
+     "id": "2022-04-30T13:37:00-FLR-001",
+     "date": "2022-04-30",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/20001/-1"
+    },
+    {
+     "id": "2022-05-03T13:09:00-FLR-001",
+     "date": "2022-05-03",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/20054/-1"
+    },
+    {
+     "id": "2022-05-10T13:50:00-FLR-001",
+     "date": "2022-05-10",
+     "flareClass": "X1.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/20130/-1"
+    },
+    {
+     "id": "2022-08-29T10:48:00-FLR-001",
+     "date": "2022-08-29",
+     "flareClass": "M8.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/21428/-1"
+    },
+    {
+     "id": "2022-09-16T09:44:00-FLR-001",
+     "date": "2022-09-16",
+     "flareClass": "M7.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/21634/-1"
+    },
+    {
+     "id": "2022-10-02T19:53:00-FLR-001",
+     "date": "2022-10-02",
+     "flareClass": "X1.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/21860/-1"
+    },
+    {
+     "id": "2022-10-02T02:08:00-FLR-001",
+     "date": "2022-10-02",
+     "flareClass": "M8.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/21833/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "moderate"
+  },
+  {
+   "year": 2023,
+   "stormCount": 75,
+   "strongestFlare": "X5.0",
+   "storms": [
+    {
+     "id": "2023-02-24T21:53:00-SEP-002",
+     "date": "2023-02-24",
+     "flareClass": "M3.7",
+     "flareId": "2023-02-24T20:03:00-FLR-001",
+     "cmeId": "2023-02-24T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23913/-1"
+    },
+    {
+     "id": "2023-02-24T21:53:00-SEP-001",
+     "date": "2023-02-24",
+     "flareClass": "M3.7",
+     "flareId": "2023-02-24T20:03:00-FLR-001",
+     "cmeId": "2023-02-24T20:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23912/-1"
+    },
+    {
+     "id": "2023-02-25T20:41:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23937/-1"
+    },
+    {
+     "id": "2023-02-25T21:00:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23934/-1"
+    },
+    {
+     "id": "2023-02-25T21:00:00-SEP-002",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23935/-1"
+    },
+    {
+     "id": "2023-02-25T21:10:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23940/-1"
+    },
+    {
+     "id": "2023-02-25T21:56:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23949/-1"
+    },
+    {
+     "id": "2023-02-25T21:57:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23950/-1"
+    },
+    {
+     "id": "2023-02-25T23:19:00-SEP-001",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23954/-1"
+    },
+    {
+     "id": "2023-02-25T23:19:00-SEP-002",
+     "date": "2023-02-25",
+     "flareClass": "M6.3",
+     "flareId": "2023-02-25T18:40:00-FLR-001",
+     "cmeId": "2023-02-25T19:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/23955/-1"
+    },
+    {
+     "id": "2023-03-03T19:19:00-SEP-001",
+     "date": "2023-03-03",
+     "flareClass": "X2.0",
+     "flareId": "2023-03-03T17:42:00-FLR-001",
+     "cmeId": "2023-03-03T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24072/-1"
+    },
+    {
+     "id": "2023-03-03T22:11:00-SEP-002",
+     "date": "2023-03-03",
+     "flareClass": "X2.0",
+     "flareId": "2023-03-03T17:42:00-FLR-001",
+     "cmeId": "2023-03-03T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24073/-1"
+    },
+    {
+     "id": "2023-03-03T22:11:00-SEP-001",
+     "date": "2023-03-03",
+     "flareClass": "X2.0",
+     "flareId": "2023-03-03T17:42:00-FLR-001",
+     "cmeId": "2023-03-03T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24067/-1"
+    },
+    {
+     "id": "2023-03-13T07:45:00-SEP-001",
+     "date": "2023-03-13",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-03-13T03:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24203/-1"
+    },
+    {
+     "id": "2023-03-13T14:05:00-SEP-001",
+     "date": "2023-03-13",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-03-13T03:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24225/-1"
+    },
+    {
+     "id": "2023-03-13T16:20:00-SEP-001",
+     "date": "2023-03-13",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-03-13T03:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24226/-1"
+    },
+    {
+     "id": "2023-03-13T20:26:00-SEP-001",
+     "date": "2023-03-13",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-03-13T03:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24230/-1"
+    },
+    {
+     "id": "2023-03-14T11:55:00-SEP-001",
+     "date": "2023-03-14",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-03-10T17:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24233/-1"
+    },
+    {
+     "id": "2023-03-14T15:13:00-SEP-001",
+     "date": "2023-03-14",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24279/-1"
+    },
+    {
+     "id": "2023-04-23T11:48:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24746/-1"
+    },
+    {
+     "id": "2023-04-23T13:58:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24742/-1"
+    },
+    {
+     "id": "2023-04-23T17:28:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24760/-1"
+    },
+    {
+     "id": "2023-04-23T17:44:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24771/-1"
+    },
+    {
+     "id": "2023-04-23T18:15:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24763/-1"
+    },
+    {
+     "id": "2023-04-23T18:29:00-SEP-001",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24769/-1"
+    },
+    {
+     "id": "2023-04-23T18:29:00-SEP-002",
+     "date": "2023-04-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-04-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24770/-1"
+    },
+    {
+     "id": "2023-05-08T06:19:00-SEP-001",
+     "date": "2023-05-08",
+     "flareClass": "M1.6",
+     "flareId": "2023-05-07T22:53:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24993/-1"
+    },
+    {
+     "id": "2023-05-08T11:45:00-SEP-001",
+     "date": "2023-05-08",
+     "flareClass": "M1.6",
+     "flareId": "2023-05-07T22:53:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/24997/-1"
+    },
+    {
+     "id": "2023-05-08T13:13:00-SEP-001",
+     "date": "2023-05-08",
+     "flareClass": "M1.6",
+     "flareId": "2023-05-07T22:53:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25006/-1"
+    },
+    {
+     "id": "2023-05-09T20:39:00-SEP-001",
+     "date": "2023-05-09",
+     "flareClass": "M4.2",
+     "flareId": "2023-05-09T18:20:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25046/-1"
+    },
+    {
+     "id": "2023-05-09T22:31:00-SEP-001",
+     "date": "2023-05-09",
+     "flareClass": "M4.2",
+     "flareId": "2023-05-09T18:20:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25068/-1"
+    },
+    {
+     "id": "2023-05-09T22:52:00-SEP-001",
+     "date": "2023-05-09",
+     "flareClass": "M4.2",
+     "flareId": "2023-05-09T18:20:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25069/-1"
+    },
+    {
+     "id": "2023-05-09T23:15:00-SEP-001",
+     "date": "2023-05-09",
+     "flareClass": "M4.2",
+     "flareId": "2023-05-09T18:20:00-FLR-001",
+     "cmeId": "2023-05-07T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25061/-1"
+    },
+    {
+     "id": "2023-07-15T21:00:00-SEP-001",
+     "date": "2023-07-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26017/-1"
+    },
+    {
+     "id": "2023-07-16T06:35:00-SEP-001",
+     "date": "2023-07-16",
+     "flareClass": "C8.8",
+     "flareId": "2023-07-15T19:50:00-FLR-001",
+     "cmeId": "2023-07-15T20:13:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/25996/-1"
+    },
+    {
+     "id": "2023-07-16T18:49:00-SEP-001",
+     "date": "2023-07-16",
+     "flareClass": "M4.0",
+     "flareId": "2023-07-16T17:36:00-FLR-001",
+     "cmeId": "2023-07-16T17:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26015/-1"
+    },
+    {
+     "id": "2023-07-16T18:49:00-SEP-002",
+     "date": "2023-07-16",
+     "flareClass": "M4.0",
+     "flareId": "2023-07-16T17:36:00-FLR-001",
+     "cmeId": "2023-07-16T17:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26016/-1"
+    },
+    {
+     "id": "2023-07-18T00:53:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26062/-1"
+    },
+    {
+     "id": "2023-07-18T01:00:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26056/-1"
+    },
+    {
+     "id": "2023-07-18T01:00:00-SEP-002",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26057/-1"
+    },
+    {
+     "id": "2023-07-18T01:06:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26059/-1"
+    },
+    {
+     "id": "2023-07-18T01:06:00-SEP-002",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26070/-1"
+    },
+    {
+     "id": "2023-07-18T01:09:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26060/-1"
+    },
+    {
+     "id": "2023-07-18T01:12:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26071/-1"
+    },
+    {
+     "id": "2023-07-18T01:15:00-SEP-001",
+     "date": "2023-07-18",
+     "flareClass": "M5.0",
+     "flareId": "2023-07-17T23:18:00-FLR-001",
+     "cmeId": "2023-07-17T23:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26065/-1"
+    },
+    {
+     "id": "2023-07-28T18:12:00-SEP-001",
+     "date": "2023-07-28",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26213/-1"
+    },
+    {
+     "id": "2023-07-28T19:05:00-SEP-001",
+     "date": "2023-07-28",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26218/-1"
+    },
+    {
+     "id": "2023-07-28T19:19:00-SEP-001",
+     "date": "2023-07-28",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26220/-1"
+    },
+    {
+     "id": "2023-07-28T19:23:00-SEP-001",
+     "date": "2023-07-28",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26221/-1"
+    },
+    {
+     "id": "2023-07-28T23:50:00-SEP-001",
+     "date": "2023-07-28",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26231/-1"
+    },
+    {
+     "id": "2023-07-29T00:53:00-SEP-001",
+     "date": "2023-07-29",
+     "flareClass": "M4.1",
+     "flareId": "2023-07-28T15:39:00-FLR-001",
+     "cmeId": "2023-07-28T15:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26233/-1"
+    },
+    {
+     "id": "2023-08-05T10:00:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26338/-1"
+    },
+    {
+     "id": "2023-08-05T10:19:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26349/-1"
+    },
+    {
+     "id": "2023-08-05T10:47:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26350/-1"
+    },
+    {
+     "id": "2023-08-05T10:59:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26348/-1"
+    },
+    {
+     "id": "2023-08-05T11:15:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26340/-1"
+    },
+    {
+     "id": "2023-08-05T12:33:00-SEP-001",
+     "date": "2023-08-05",
+     "flareClass": "M1.6",
+     "flareId": "2023-08-05T06:18:00-FLR-001",
+     "cmeId": "2023-08-05T07:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26347/-1"
+    },
+    {
+     "id": "2023-08-07T22:09:00-SEP-001",
+     "date": "2023-08-07",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26406/-1"
+    },
+    {
+     "id": "2023-08-07T22:19:00-SEP-001",
+     "date": "2023-08-07",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26407/-1"
+    },
+    {
+     "id": "2023-08-08T01:00:00-SEP-001",
+     "date": "2023-08-08",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26416/-1"
+    },
+    {
+     "id": "2023-08-08T01:48:00-SEP-001",
+     "date": "2023-08-08",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26415/-1"
+    },
+    {
+     "id": "2023-08-08T01:59:00-SEP-001",
+     "date": "2023-08-08",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26422/-1"
+    },
+    {
+     "id": "2023-08-08T04:26:00-SEP-001",
+     "date": "2023-08-08",
+     "flareClass": "X1.5",
+     "flareId": "2023-08-07T20:30:00-FLR-001",
+     "cmeId": "2023-08-07T20:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26419/-1"
+    },
+    {
+     "id": "2023-09-01T04:30:00-SEP-001",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26701/-1"
+    },
+    {
+     "id": "2023-09-01T04:34:00-SEP-002",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26696/-1"
+    },
+    {
+     "id": "2023-09-01T04:34:00-SEP-001",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26697/-1"
+    },
+    {
+     "id": "2023-09-01T04:34:00-SEP-003",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26706/-1"
+    },
+    {
+     "id": "2023-09-01T04:49:00-SEP-001",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26699/-1"
+    },
+    {
+     "id": "2023-09-01T04:49:00-SEP-002",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26700/-1"
+    },
+    {
+     "id": "2023-09-01T05:05:00-SEP-001",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26710/-1"
+    },
+    {
+     "id": "2023-09-01T05:05:00-SEP-002",
+     "date": "2023-09-01",
+     "flareClass": "M1.2",
+     "flareId": "2023-09-01T03:26:00-FLR-001",
+     "cmeId": "2023-09-01T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/26711/-1"
+    },
+    {
+     "id": "2023-12-15T10:05:00-SEP-001",
+     "date": "2023-12-15",
+     "flareClass": "X2.8",
+     "flareId": "2023-12-14T16:47:00-FLR-001",
+     "cmeId": "2023-12-12T00:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28177/-1"
+    },
+    {
+     "id": "2023-12-15T14:57:00-SEP-001",
+     "date": "2023-12-15",
+     "flareClass": "X2.8",
+     "flareId": "2023-12-14T16:47:00-FLR-001",
+     "cmeId": "2023-12-12T00:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28184/-1"
+    },
+    {
+     "id": "2023-12-15T15:42:00-SEP-001",
+     "date": "2023-12-15",
+     "flareClass": "X2.8",
+     "flareId": "2023-12-14T16:47:00-FLR-001",
+     "cmeId": "2023-12-12T00:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28185/-1"
+    },
+    {
+     "id": "2023-12-15T23:45:00-SEP-001",
+     "date": "2023-12-15",
+     "flareClass": "X2.8",
+     "flareId": "2023-12-14T16:47:00-FLR-001",
+     "cmeId": "2023-12-12T00:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28193/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2023-01-06T00:43:00-FLR-001",
+     "date": "2023-01-06",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23151/-1"
+    },
+    {
+     "id": "2023-01-09T18:37:00-FLR-001",
+     "date": "2023-01-09",
+     "flareClass": "X1.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23207/-1"
+    },
+    {
+     "id": "2023-01-10T22:39:00-FLR-001",
+     "date": "2023-01-10",
+     "flareClass": "X1.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23237/-1"
+    },
+    {
+     "id": "2023-02-11T15:40:00-FLR-001",
+     "date": "2023-02-11",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23706/-1"
+    },
+    {
+     "id": "2023-02-17T19:38:00-FLR-001",
+     "date": "2023-02-17",
+     "flareClass": "X2.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23799/-1"
+    },
+    {
+     "id": "2023-03-03T17:42:00-FLR-001",
+     "date": "2023-03-03",
+     "flareClass": "X2.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/24052/-1"
+    },
+    {
+     "id": "2023-03-29T02:18:00-FLR-001",
+     "date": "2023-03-29",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/24408/-1"
+    },
+    {
+     "id": "2023-06-20T16:42:00-FLR-001",
+     "date": "2023-06-20",
+     "flareClass": "X1.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/25637/-1"
+    },
+    {
+     "id": "2023-08-05T21:45:00-FLR-001",
+     "date": "2023-08-05",
+     "flareClass": "X1.6",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/26360/-1"
+    },
+    {
+     "id": "2023-08-07T20:30:00-FLR-001",
+     "date": "2023-08-07",
+     "flareClass": "X1.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/26403/-1"
+    },
+    {
+     "id": "2023-12-14T16:47:00-FLR-001",
+     "date": "2023-12-14",
+     "flareClass": "X2.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28145/-1"
+    },
+    {
+     "id": "2023-12-31T21:40:00-FLR-001",
+     "date": "2023-12-31",
+     "flareClass": "X5.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28419/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "stormy"
+  },
+  {
+   "year": 2024,
+   "stormCount": 119,
+   "strongestFlare": "X9.0",
+   "storms": [
+    {
+     "id": "2024-01-02T23:22:00-SEP-002",
+     "date": "2024-01-02",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-12-31T22:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28445/-1"
+    },
+    {
+     "id": "2024-01-02T23:22:00-SEP-001",
+     "date": "2024-01-02",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-12-31T22:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28444/-1"
+    },
+    {
+     "id": "2024-01-03T00:15:00-SEP-001",
+     "date": "2024-01-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-12-31T22:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28446/-1"
+    },
+    {
+     "id": "2024-01-03T19:10:00-SEP-001",
+     "date": "2024-01-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-12-31T22:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28467/-1"
+    },
+    {
+     "id": "2024-01-03T20:05:00-SEP-001",
+     "date": "2024-01-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2023-12-31T22:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28464/-1"
+    },
+    {
+     "id": "2024-01-22T13:00:00-SEP-001",
+     "date": "2024-01-22",
+     "flareClass": "C3.5",
+     "flareId": "2024-01-20T08:35:00-FLR-001",
+     "cmeId": "2024-01-20T09:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28683/-1"
+    },
+    {
+     "id": "2024-01-22T13:42:00-SEP-001",
+     "date": "2024-01-22",
+     "flareClass": "C4.0",
+     "flareId": "2024-01-21T00:03:00-FLR-001",
+     "cmeId": "2024-01-21T00:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28685/-1"
+    },
+    {
+     "id": "2024-01-22T16:48:00-SEP-001",
+     "date": "2024-01-22",
+     "flareClass": "C3.5",
+     "flareId": "2024-01-20T08:35:00-FLR-001",
+     "cmeId": "2024-01-20T09:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28703/-1"
+    },
+    {
+     "id": "2024-01-29T05:11:00-SEP-001",
+     "date": "2024-01-29",
+     "flareClass": "M6.8",
+     "flareId": "2024-01-29T03:54:00-FLR-001",
+     "cmeId": "2024-01-29T04:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28836/-1"
+    },
+    {
+     "id": "2024-01-29T05:50:00-SEP-001",
+     "date": "2024-01-29",
+     "flareClass": "M6.8",
+     "flareId": "2024-01-29T03:54:00-FLR-001",
+     "cmeId": "2024-01-29T04:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28840/-1"
+    },
+    {
+     "id": "2024-01-29T06:06:00-SEP-001",
+     "date": "2024-01-29",
+     "flareClass": "M6.8",
+     "flareId": "2024-01-29T03:54:00-FLR-001",
+     "cmeId": "2024-01-29T04:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28844/-1"
+    },
+    {
+     "id": "2024-01-29T06:08:00-SEP-001",
+     "date": "2024-01-29",
+     "flareClass": "M6.8",
+     "flareId": "2024-01-29T03:54:00-FLR-001",
+     "cmeId": "2024-01-29T04:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28845/-1"
+    },
+    {
+     "id": "2024-01-29T06:15:00-SEP-001",
+     "date": "2024-01-29",
+     "flareClass": "M6.8",
+     "flareId": "2024-01-29T03:54:00-FLR-001",
+     "cmeId": "2024-01-29T04:38:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28842/-1"
+    },
+    {
+     "id": "2024-02-06T05:25:00-SEP-001",
+     "date": "2024-02-06",
+     "flareClass": "M2.2",
+     "flareId": "2024-02-06T02:15:00-FLR-001",
+     "cmeId": "2024-02-06T02:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/28999/-1"
+    },
+    {
+     "id": "2024-02-06T07:28:00-SEP-001",
+     "date": "2024-02-06",
+     "flareClass": "M2.2",
+     "flareId": "2024-02-06T02:15:00-FLR-001",
+     "cmeId": "2024-02-06T02:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29013/-1"
+    },
+    {
+     "id": "2024-02-09T15:09:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29076/-1"
+    },
+    {
+     "id": "2024-02-09T15:30:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29079/-1"
+    },
+    {
+     "id": "2024-02-09T15:34:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29071/-1"
+    },
+    {
+     "id": "2024-02-09T15:37:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29073/-1"
+    },
+    {
+     "id": "2024-02-09T15:52:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29083/-1"
+    },
+    {
+     "id": "2024-02-09T15:59:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29084/-1"
+    },
+    {
+     "id": "2024-02-09T16:44:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29094/-1"
+    },
+    {
+     "id": "2024-02-09T16:45:00-SEP-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "flareId": "2024-02-09T12:53:00-FLR-001",
+     "cmeId": "2024-02-09T13:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29095/-1"
+    },
+    {
+     "id": "2024-02-12T07:41:00-SEP-001",
+     "date": "2024-02-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-02-12T06:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29154/-1"
+    },
+    {
+     "id": "2024-02-12T07:41:00-SEP-002",
+     "date": "2024-02-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-02-12T06:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29208/-1"
+    },
+    {
+     "id": "2024-02-12T08:05:00-SEP-001",
+     "date": "2024-02-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-02-12T06:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29156/-1"
+    },
+    {
+     "id": "2024-02-12T10:15:00-SEP-001",
+     "date": "2024-02-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-02-12T06:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29158/-1"
+    },
+    {
+     "id": "2024-03-15T20:29:00-SEP-001",
+     "date": "2024-03-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-03-15T02:10:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29606/-1"
+    },
+    {
+     "id": "2024-03-15T20:50:00-SEP-001",
+     "date": "2024-03-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-03-15T02:10:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29608/-1"
+    },
+    {
+     "id": "2024-03-15T22:14:00-SEP-001",
+     "date": "2024-03-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-03-15T02:10:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29612/-1"
+    },
+    {
+     "id": "2024-03-15T23:39:00-SEP-001",
+     "date": "2024-03-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-03-15T02:10:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29611/-1"
+    },
+    {
+     "id": "2024-03-16T02:57:00-SEP-001",
+     "date": "2024-03-16",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-03-15T02:10:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29614/-1"
+    },
+    {
+     "id": "2024-03-23T05:57:00-SEP-001",
+     "date": "2024-03-23",
+     "flareClass": "X1.1",
+     "flareId": "2024-03-23T00:58:00-FLR-001",
+     "cmeId": "2024-03-23T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29721/-1"
+    },
+    {
+     "id": "2024-03-23T06:49:00-SEP-001",
+     "date": "2024-03-23",
+     "flareClass": "X1.1",
+     "flareId": "2024-03-23T00:58:00-FLR-001",
+     "cmeId": "2024-03-23T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29722/-1"
+    },
+    {
+     "id": "2024-03-23T08:15:00-SEP-001",
+     "date": "2024-03-23",
+     "flareClass": "X1.1",
+     "flareId": "2024-03-23T00:58:00-FLR-001",
+     "cmeId": "2024-03-23T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29711/-1"
+    },
+    {
+     "id": "2024-03-23T09:55:00-SEP-001",
+     "date": "2024-03-23",
+     "flareClass": "X1.1",
+     "flareId": "2024-03-23T00:58:00-FLR-001",
+     "cmeId": "2024-03-23T01:25:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/29713/-1"
+    },
+    {
+     "id": "2024-05-09T13:59:00-SEP-001",
+     "date": "2024-05-09",
+     "flareClass": "X2.2",
+     "flareId": "2024-05-09T08:45:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30609/-1"
+    },
+    {
+     "id": "2024-05-09T14:25:00-SEP-001",
+     "date": "2024-05-09",
+     "flareClass": "X2.2",
+     "flareId": "2024-05-09T08:45:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30610/-1"
+    },
+    {
+     "id": "2024-05-10T12:59:00-SEP-001",
+     "date": "2024-05-10",
+     "flareClass": "X2.2",
+     "flareId": "2024-05-09T08:45:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30675/-1"
+    },
+    {
+     "id": "2024-05-10T13:02:00-SEP-001",
+     "date": "2024-05-10",
+     "flareClass": "X2.2",
+     "flareId": "2024-05-09T08:45:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30676/-1"
+    },
+    {
+     "id": "2024-05-10T13:35:00-SEP-001",
+     "date": "2024-05-10",
+     "flareClass": "M3.5",
+     "flareId": "2024-05-08T04:20:00-FLR-001",
+     "cmeId": "2024-05-08T05:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30677/-1"
+    },
+    {
+     "id": "2024-05-10T14:50:00-SEP-001",
+     "date": "2024-05-10",
+     "flareClass": "M3.5",
+     "flareId": "2024-05-08T04:20:00-FLR-001",
+     "cmeId": "2024-05-08T12:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30684/-1"
+    },
+    {
+     "id": "2024-05-11T02:10:00-SEP-001",
+     "date": "2024-05-11",
+     "flareClass": "X5.8",
+     "flareId": "2024-05-11T01:10:00-FLR-001",
+     "cmeId": "2024-05-11T01:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30714/-1"
+    },
+    {
+     "id": "2024-05-11T04:07:00-SEP-001",
+     "date": "2024-05-11",
+     "flareClass": "X5.8",
+     "flareId": "2024-05-11T01:10:00-FLR-001",
+     "cmeId": "2024-05-11T01:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30717/-1"
+    },
+    {
+     "id": "2024-05-13T12:44:00-SEP-001",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30811/-1"
+    },
+    {
+     "id": "2024-05-13T13:10:00-SEP-001",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30807/-1"
+    },
+    {
+     "id": "2024-05-13T14:00:00-SEP-001",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30817/-1"
+    },
+    {
+     "id": "2024-05-13T16:19:00-SEP-001",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30820/-1"
+    },
+    {
+     "id": "2024-05-13T18:07:00-SEP-002",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30825/-1"
+    },
+    {
+     "id": "2024-05-13T18:07:00-SEP-001",
+     "date": "2024-05-13",
+     "flareClass": "M1.2",
+     "flareId": "2024-05-13T08:06:00-FLR-001",
+     "cmeId": "2024-05-13T09:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30824/-1"
+    },
+    {
+     "id": "2024-06-08T02:25:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31338/-1"
+    },
+    {
+     "id": "2024-06-08T02:55:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31343/-1"
+    },
+    {
+     "id": "2024-06-08T03:09:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31359/-1"
+    },
+    {
+     "id": "2024-06-08T03:34:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31348/-1"
+    },
+    {
+     "id": "2024-06-08T03:36:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31349/-1"
+    },
+    {
+     "id": "2024-06-08T04:14:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31351/-1"
+    },
+    {
+     "id": "2024-06-08T04:14:00-SEP-002",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31360/-1"
+    },
+    {
+     "id": "2024-06-08T04:20:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31357/-1"
+    },
+    {
+     "id": "2024-06-08T04:48:00-SEP-001",
+     "date": "2024-06-08",
+     "flareClass": "M3.3",
+     "flareId": "2024-06-08T00:39:00-FLR-001",
+     "cmeId": "2024-06-08T01:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31358/-1"
+    },
+    {
+     "id": "2024-06-12T00:21:00-SEP-001",
+     "date": "2024-06-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-06-11T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31435/-1"
+    },
+    {
+     "id": "2024-06-12T00:30:00-SEP-001",
+     "date": "2024-06-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-06-11T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31437/-1"
+    },
+    {
+     "id": "2024-06-12T02:58:00-SEP-001",
+     "date": "2024-06-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-06-11T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31441/-1"
+    },
+    {
+     "id": "2024-06-12T04:03:00-SEP-001",
+     "date": "2024-06-12",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-06-11T23:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/31452/-1"
+    },
+    {
+     "id": "2024-07-23T01:20:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32110/-1"
+    },
+    {
+     "id": "2024-07-23T02:05:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32115/-1"
+    },
+    {
+     "id": "2024-07-23T02:28:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32122/-1"
+    },
+    {
+     "id": "2024-07-23T02:32:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32121/-1"
+    },
+    {
+     "id": "2024-07-23T02:47:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32114/-1"
+    },
+    {
+     "id": "2024-07-23T02:55:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32138/-1"
+    },
+    {
+     "id": "2024-07-23T03:00:00-SEP-001",
+     "date": "2024-07-23",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-07-23T00:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32118/-1"
+    },
+    {
+     "id": "2024-07-31T20:10:00-SEP-001",
+     "date": "2024-07-31",
+     "flareClass": "M5.3",
+     "flareId": "2024-07-31T18:05:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32396/-1"
+    },
+    {
+     "id": "2024-07-31T20:10:00-SEP-002",
+     "date": "2024-07-31",
+     "flareClass": "M5.3",
+     "flareId": "2024-07-31T18:05:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32397/-1"
+    },
+    {
+     "id": "2024-08-05T17:26:00-SEP-001",
+     "date": "2024-08-05",
+     "flareClass": "X1.7",
+     "flareId": "2024-08-05T13:24:00-FLR-001",
+     "cmeId": "2024-08-05T13:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/32560/-1"
+    },
+    {
+     "id": "2024-09-01T23:14:00-SEP-001",
+     "date": "2024-09-01",
+     "flareClass": "M5.5",
+     "flareId": "2024-09-01T11:45:00-FLR-001",
+     "cmeId": "2024-09-01T12:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33103/-1"
+    },
+    {
+     "id": "2024-09-03T08:39:00-SEP-001",
+     "date": "2024-09-03",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-09-03T08:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33136/-1"
+    },
+    {
+     "id": "2024-09-05T15:51:00-SEP-001",
+     "date": "2024-09-05",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-09-05T07:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33202/-1"
+    },
+    {
+     "id": "2024-09-09T07:58:00-SEP-001",
+     "date": "2024-09-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-09-09T05:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33255/-1"
+    },
+    {
+     "id": "2024-09-09T08:50:00-SEP-001",
+     "date": "2024-09-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-09-09T05:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33257/-1"
+    },
+    {
+     "id": "2024-09-09T16:35:00-SEP-001",
+     "date": "2024-09-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-09-09T05:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33282/-1"
+    },
+    {
+     "id": "2024-09-09T20:55:00-SEP-001",
+     "date": "2024-09-09",
+     "flareClass": "M3.4",
+     "flareId": "2024-09-09T16:58:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33287/-1"
+    },
+    {
+     "id": "2024-09-09T20:55:00-SEP-002",
+     "date": "2024-09-09",
+     "flareClass": "M3.4",
+     "flareId": "2024-09-09T16:58:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33290/-1"
+    },
+    {
+     "id": "2024-09-09T20:58:00-SEP-001",
+     "date": "2024-09-09",
+     "flareClass": "M3.4",
+     "flareId": "2024-09-09T16:58:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33286/-1"
+    },
+    {
+     "id": "2024-09-17T04:33:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33469/-1"
+    },
+    {
+     "id": "2024-09-17T04:40:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33473/-1"
+    },
+    {
+     "id": "2024-09-17T07:35:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33467/-1"
+    },
+    {
+     "id": "2024-09-17T08:14:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33470/-1"
+    },
+    {
+     "id": "2024-09-17T08:54:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33471/-1"
+    },
+    {
+     "id": "2024-09-17T14:31:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33476/-1"
+    },
+    {
+     "id": "2024-09-17T15:43:00-SEP-001",
+     "date": "2024-09-17",
+     "flareClass": "X4.5",
+     "flareId": "2024-09-14T15:13:00-FLR-001",
+     "cmeId": "2024-09-14T15:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33481/-1"
+    },
+    {
+     "id": "2024-10-09T03:50:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "X1.8",
+     "flareId": "2024-10-09T01:25:00-FLR-001",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33868/-1"
+    },
+    {
+     "id": "2024-10-09T04:28:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33893/-1"
+    },
+    {
+     "id": "2024-10-09T04:34:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33891/-1"
+    },
+    {
+     "id": "2024-10-09T05:05:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "X1.8",
+     "flareId": "2024-10-09T01:25:00-FLR-001",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33866/-1"
+    },
+    {
+     "id": "2024-10-09T05:30:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33892/-1"
+    },
+    {
+     "id": "2024-10-09T06:01:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "X1.8",
+     "flareId": "2024-10-09T01:25:00-FLR-001",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33874/-1"
+    },
+    {
+     "id": "2024-10-09T06:01:00-SEP-002",
+     "date": "2024-10-09",
+     "flareClass": "X1.8",
+     "flareId": "2024-10-09T01:25:00-FLR-001",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33875/-1"
+    },
+    {
+     "id": "2024-10-09T07:08:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33894/-1"
+    },
+    {
+     "id": "2024-10-09T08:55:00-SEP-001",
+     "date": "2024-10-09",
+     "flareClass": "X1.8",
+     "flareId": "2024-10-09T01:25:00-FLR-001",
+     "cmeId": "2024-10-09T02:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/33870/-1"
+    },
+    {
+     "id": "2024-10-26T16:45:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34214/-1"
+    },
+    {
+     "id": "2024-10-26T18:05:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34222/-1"
+    },
+    {
+     "id": "2024-10-26T18:57:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "X3.3",
+     "flareId": "2024-10-24T03:30:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34227/-1"
+    },
+    {
+     "id": "2024-10-26T19:02:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "X3.3",
+     "flareId": "2024-10-24T03:30:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34229/-1"
+    },
+    {
+     "id": "2024-10-26T19:50:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34234/-1"
+    },
+    {
+     "id": "2024-10-26T20:06:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34233/-1"
+    },
+    {
+     "id": "2024-10-26T21:43:00-SEP-001",
+     "date": "2024-10-26",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34311/-1"
+    },
+    {
+     "id": "2024-10-28T08:57:00-SEP-001",
+     "date": "2024-10-28",
+     "flareClass": "M9.5",
+     "flareId": "2024-10-26T05:57:00-FLR-001",
+     "cmeId": "2024-10-24T03:48:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/34250/-1"
+    },
+    {
+     "id": "2024-11-21T18:45:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35199/-1"
+    },
+    {
+     "id": "2024-11-21T19:10:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35206/-1"
+    },
+    {
+     "id": "2024-11-21T19:19:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35211/-1"
+    },
+    {
+     "id": "2024-11-21T19:21:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35307/-1"
+    },
+    {
+     "id": "2024-11-21T19:23:00-SEP-002",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35203/-1"
+    },
+    {
+     "id": "2024-11-21T19:23:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35197/-1"
+    },
+    {
+     "id": "2024-11-21T19:24:00-SEP-002",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35205/-1"
+    },
+    {
+     "id": "2024-11-21T19:24:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35204/-1"
+    },
+    {
+     "id": "2024-11-21T19:25:00-SEP-001",
+     "date": "2024-11-21",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-11-21T18:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35208/-1"
+    },
+    {
+     "id": "2024-12-08T10:20:00-SEP-001",
+     "date": "2024-12-08",
+     "flareClass": "X2.2",
+     "flareId": "2024-12-08T08:50:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35520/-1"
+    },
+    {
+     "id": "2024-12-08T10:20:00-SEP-002",
+     "date": "2024-12-08",
+     "flareClass": "X2.2",
+     "flareId": "2024-12-08T08:50:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35521/-1"
+    },
+    {
+     "id": "2024-12-18T12:01:00-SEP-001",
+     "date": "2024-12-18",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2024-12-17T16:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35736/-1"
+    },
+    {
+     "id": "2024-12-21T16:12:00-SEP-001",
+     "date": "2024-12-21",
+     "flareClass": "M2.1",
+     "flareId": "2024-12-20T07:20:00-FLR-001",
+     "cmeId": "2024-12-19T17:53:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/35838/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2024-02-09T12:53:00-FLR-001",
+     "date": "2024-02-09",
+     "flareClass": "X3.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/29062/-1"
+    },
+    {
+     "id": "2024-02-22T22:08:00-FLR-001",
+     "date": "2024-02-22",
+     "flareClass": "X6.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/29349/-1"
+    },
+    {
+     "id": "2024-05-06T05:38:00-FLR-001",
+     "date": "2024-05-06",
+     "flareClass": "X4.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30484/-1"
+    },
+    {
+     "id": "2024-05-10T06:27:00-FLR-001",
+     "date": "2024-05-10",
+     "flareClass": "X3.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30666/-1"
+    },
+    {
+     "id": "2024-05-11T01:10:00-FLR-001",
+     "date": "2024-05-11",
+     "flareClass": "X5.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30711/-1"
+    },
+    {
+     "id": "2024-05-14T16:46:00-FLR-001",
+     "date": "2024-05-14",
+     "flareClass": "X8.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30849/-1"
+    },
+    {
+     "id": "2024-05-15T08:18:00-FLR-001",
+     "date": "2024-05-15",
+     "flareClass": "X3.4",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30879/-1"
+    },
+    {
+     "id": "2024-05-15T14:20:00-FLR-001",
+     "date": "2024-05-15",
+     "flareClass": "X2.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30900/-1"
+    },
+    {
+     "id": "2024-09-14T15:13:00-FLR-001",
+     "date": "2024-09-14",
+     "flareClass": "X4.5",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/33428/-1"
+    },
+    {
+     "id": "2024-10-01T21:58:00-FLR-001",
+     "date": "2024-10-01",
+     "flareClass": "X7.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/33656/-1"
+    },
+    {
+     "id": "2024-10-03T12:08:00-FLR-001",
+     "date": "2024-10-03",
+     "flareClass": "X9.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/33693/-1"
+    },
+    {
+     "id": "2024-10-24T03:30:00-FLR-001",
+     "date": "2024-10-24",
+     "flareClass": "X3.3",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/34148/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "stormy"
+  },
+  {
+   "year": 2025,
+   "stormCount": 60,
+   "strongestFlare": "X5.1",
+   "storms": [
+    {
+     "id": "2025-01-04T21:46:00-SEP-001",
+     "date": "2025-01-04",
+     "flareClass": "C9.3",
+     "flareId": "2025-01-04T14:24:00-FLR-001",
+     "cmeId": "2025-01-04T15:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36261/-1"
+    },
+    {
+     "id": "2025-01-04T22:15:00-SEP-001",
+     "date": "2025-01-04",
+     "flareClass": "C9.3",
+     "flareId": "2025-01-04T14:24:00-FLR-001",
+     "cmeId": "2025-01-04T15:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36263/-1"
+    },
+    {
+     "id": "2025-01-04T22:23:00-SEP-001",
+     "date": "2025-01-04",
+     "flareClass": "C9.3",
+     "flareId": "2025-01-04T14:24:00-FLR-001",
+     "cmeId": "2025-01-04T15:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36267/-1"
+    },
+    {
+     "id": "2025-01-05T01:03:00-SEP-001",
+     "date": "2025-01-05",
+     "flareClass": "C9.3",
+     "flareId": "2025-01-04T14:24:00-FLR-001",
+     "cmeId": "2025-01-04T15:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36274/-1"
+    },
+    {
+     "id": "2025-01-05T02:35:00-SEP-001",
+     "date": "2025-01-05",
+     "flareClass": "C9.3",
+     "flareId": "2025-01-04T14:24:00-FLR-001",
+     "cmeId": "2025-01-04T15:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36278/-1"
+    },
+    {
+     "id": "2025-01-07T00:42:00-SEP-001",
+     "date": "2025-01-07",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/36313/-1"
+    },
+    {
+     "id": "2025-02-25T00:11:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37542/-1"
+    },
+    {
+     "id": "2025-02-25T00:17:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37524/-1"
+    },
+    {
+     "id": "2025-02-25T00:20:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37527/-1"
+    },
+    {
+     "id": "2025-02-25T00:42:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37525/-1"
+    },
+    {
+     "id": "2025-02-25T03:05:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37537/-1"
+    },
+    {
+     "id": "2025-02-25T03:52:00-SEP-001",
+     "date": "2025-02-25",
+     "flareClass": "M3.9",
+     "flareId": "2025-02-24T21:50:00-FLR-001",
+     "cmeId": "2025-02-24T21:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37543/-1"
+    },
+    {
+     "id": "2025-03-01T03:22:00-SEP-001",
+     "date": "2025-03-01",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-02-28T17:12:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/37619/-1"
+    },
+    {
+     "id": "2025-03-30T21:50:00-SEP-001",
+     "date": "2025-03-30",
+     "flareClass": "X1.1",
+     "flareId": "2025-03-28T15:03:00-FLR-001",
+     "cmeId": "2025-03-28T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38117/-1"
+    },
+    {
+     "id": "2025-03-31T02:17:00-SEP-001",
+     "date": "2025-03-31",
+     "flareClass": "X1.1",
+     "flareId": "2025-03-28T15:03:00-FLR-001",
+     "cmeId": "2025-03-28T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38126/-1"
+    },
+    {
+     "id": "2025-03-31T10:09:00-SEP-001",
+     "date": "2025-03-31",
+     "flareClass": "X1.1",
+     "flareId": "2025-03-28T15:03:00-FLR-001",
+     "cmeId": "2025-03-28T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38132/-1"
+    },
+    {
+     "id": "2025-03-31T11:05:00-SEP-001",
+     "date": "2025-03-31",
+     "flareClass": "X1.1",
+     "flareId": "2025-03-28T15:03:00-FLR-001",
+     "cmeId": "2025-03-28T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38129/-1"
+    },
+    {
+     "id": "2025-03-31T15:51:00-SEP-001",
+     "date": "2025-03-31",
+     "flareClass": "X1.1",
+     "flareId": "2025-03-28T15:03:00-FLR-001",
+     "cmeId": "2025-03-28T15:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38138/-1"
+    },
+    {
+     "id": "2025-05-13T18:14:00-SEP-001",
+     "date": "2025-05-13",
+     "flareClass": "X1.2",
+     "flareId": "2025-05-13T15:25:00-FLR-001",
+     "cmeId": "2025-05-13T16:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/38846/-1"
+    },
+    {
+     "id": "2025-05-31T15:00:00-SEP-001",
+     "date": "2025-05-31",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39197/-1"
+    },
+    {
+     "id": "2025-05-31T15:00:00-SEP-002",
+     "date": "2025-05-31",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39198/-1"
+    },
+    {
+     "id": "2025-05-31T17:10:00-SEP-001",
+     "date": "2025-05-31",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39201/-1"
+    },
+    {
+     "id": "2025-05-31T18:40:00-SEP-001",
+     "date": "2025-05-31",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39248/-1"
+    },
+    {
+     "id": "2025-05-31T19:47:00-SEP-001",
+     "date": "2025-05-31",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39206/-1"
+    },
+    {
+     "id": "2025-06-01T06:51:00-SEP-001",
+     "date": "2025-06-01",
+     "flareClass": "M8.1",
+     "flareId": "2025-05-30T23:31:00-FLR-001",
+     "cmeId": "2025-05-31T00:15:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/39232/-1"
+    },
+    {
+     "id": "2025-08-10T16:25:00-SEP-001",
+     "date": "2025-08-10",
+     "flareClass": "M2.2",
+     "flareId": "2025-08-10T14:57:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40507/-1"
+    },
+    {
+     "id": "2025-08-10T16:25:00-SEP-002",
+     "date": "2025-08-10",
+     "flareClass": "M2.2",
+     "flareId": "2025-08-10T14:57:00-FLR-001",
+     "cmeId": "",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40509/-1"
+    },
+    {
+     "id": "2025-08-24T16:34:00-SEP-001",
+     "date": "2025-08-24",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40782/-1"
+    },
+    {
+     "id": "2025-08-24T17:14:00-SEP-001",
+     "date": "2025-08-24",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40784/-1"
+    },
+    {
+     "id": "2025-08-24T17:20:00-SEP-001",
+     "date": "2025-08-24",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40787/-1"
+    },
+    {
+     "id": "2025-08-25T13:20:00-SEP-001",
+     "date": "2025-08-25",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40815/-1"
+    },
+    {
+     "id": "2025-08-25T17:55:00-SEP-001",
+     "date": "2025-08-25",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40836/-1"
+    },
+    {
+     "id": "2025-08-26T10:59:00-SEP-001",
+     "date": "2025-08-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40876/-1"
+    },
+    {
+     "id": "2025-08-26T12:10:00-SEP-001",
+     "date": "2025-08-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40848/-1"
+    },
+    {
+     "id": "2025-08-26T14:27:00-SEP-001",
+     "date": "2025-08-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40874/-1"
+    },
+    {
+     "id": "2025-08-26T15:19:00-SEP-001",
+     "date": "2025-08-26",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-08-21T08:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/40894/-1"
+    },
+    {
+     "id": "2025-10-22T00:09:00-SEP-001",
+     "date": "2025-10-22",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-10-21T20:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/41966/-1"
+    },
+    {
+     "id": "2025-11-10T10:24:00-SEP-001",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42581/-1"
+    },
+    {
+     "id": "2025-11-10T10:24:00-SEP-002",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42582/-1"
+    },
+    {
+     "id": "2025-11-10T10:28:00-SEP-001",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42579/-1"
+    },
+    {
+     "id": "2025-11-10T10:45:00-SEP-001",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42580/-1"
+    },
+    {
+     "id": "2025-11-10T10:45:00-SEP-002",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42585/-1"
+    },
+    {
+     "id": "2025-11-10T11:25:00-SEP-001",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42572/-1"
+    },
+    {
+     "id": "2025-11-10T15:04:00-SEP-001",
+     "date": "2025-11-10",
+     "flareClass": "X1.2",
+     "flareId": "2025-11-10T08:55:00-FLR-001",
+     "cmeId": "2025-11-10T09:36:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42591/-1"
+    },
+    {
+     "id": "2025-11-11T09:45:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42608/-1"
+    },
+    {
+     "id": "2025-11-11T10:20:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42612/-1"
+    },
+    {
+     "id": "2025-11-11T11:09:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42617/-1"
+    },
+    {
+     "id": "2025-11-11T11:23:00-SEP-002",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42629/-1"
+    },
+    {
+     "id": "2025-11-11T11:23:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42628/-1"
+    },
+    {
+     "id": "2025-11-11T11:24:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42618/-1"
+    },
+    {
+     "id": "2025-11-11T11:24:00-SEP-002",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42631/-1"
+    },
+    {
+     "id": "2025-11-11T11:35:00-SEP-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 28.2-50.1 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42630/-1"
+    },
+    {
+     "id": "2025-11-12T01:48:00-SEP-001",
+     "date": "2025-11-12",
+     "flareClass": "X5.1",
+     "flareId": "2025-11-11T09:49:00-FLR-001",
+     "cmeId": "2025-11-11T10:23:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42639/-1"
+    },
+    {
+     "id": "2025-11-14T09:20:00-SEP-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "flareId": "2025-11-14T07:44:00-FLR-001",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "GOES-P: SEISS >10 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42704/-1"
+    },
+    {
+     "id": "2025-11-14T09:44:00-SEP-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "flareId": "2025-11-14T07:44:00-FLR-001",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42712/-1"
+    },
+    {
+     "id": "2025-11-14T12:32:00-SEP-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "flareId": "2025-11-14T07:44:00-FLR-001",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "SOHO: COSTEP 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42711/-1"
+    },
+    {
+     "id": "2025-11-14T12:33:00-SEP-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "flareId": "2025-11-14T07:44:00-FLR-001",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42708/-1"
+    },
+    {
+     "id": "2025-11-14T16:10:00-SEP-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "flareId": "2025-11-14T07:44:00-FLR-001",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42720/-1"
+    },
+    {
+     "id": "2025-11-15T03:42:00-SEP-001",
+     "date": "2025-11-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-11-13T03:24:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42742/-1"
+    },
+    {
+     "id": "2025-11-15T09:34:00-SEP-001",
+     "date": "2025-11-15",
+     "flareClass": "",
+     "flareId": "",
+     "cmeId": "2025-11-14T08:00:00-CME-001",
+     "marsRelated": false,
+     "instruments": "STEREO A: IMPACT 13-100 MeV",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/42755/-1"
+    }
+   ],
+   "flares": [
+    {
+     "id": "2025-01-03T11:29:00-FLR-001",
+     "date": "2025-01-03",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/36210/-1"
+    },
+    {
+     "id": "2025-01-04T12:34:00-FLR-001",
+     "date": "2025-01-04",
+     "flareClass": "X1.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/36237/-1"
+    },
+    {
+     "id": "2025-02-23T19:22:00-FLR-001",
+     "date": "2025-02-23",
+     "flareClass": "X2.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/37484/-1"
+    },
+    {
+     "id": "2025-05-13T15:25:00-FLR-001",
+     "date": "2025-05-13",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/38840/-1"
+    },
+    {
+     "id": "2025-05-14T08:04:00-FLR-001",
+     "date": "2025-05-14",
+     "flareClass": "X2.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/38862/-1"
+    },
+    {
+     "id": "2025-06-17T21:38:00-FLR-001",
+     "date": "2025-06-17",
+     "flareClass": "X1.2",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/39576/-1"
+    },
+    {
+     "id": "2025-06-19T23:37:00-FLR-001",
+     "date": "2025-06-19",
+     "flareClass": "X1.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/39625/-1"
+    },
+    {
+     "id": "2025-11-04T17:15:00-FLR-001",
+     "date": "2025-11-04",
+     "flareClass": "X1.8",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/42382/-1"
+    },
+    {
+     "id": "2025-11-09T07:01:00-FLR-001",
+     "date": "2025-11-09",
+     "flareClass": "X1.7",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/42543/-1"
+    },
+    {
+     "id": "2025-11-11T09:49:00-FLR-001",
+     "date": "2025-11-11",
+     "flareClass": "X5.1",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/42610/-1"
+    },
+    {
+     "id": "2025-11-14T07:44:00-FLR-001",
+     "date": "2025-11-14",
+     "flareClass": "X4.0",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/42702/-1"
+    },
+    {
+     "id": "2025-12-01T02:27:00-FLR-001",
+     "date": "2025-12-01",
+     "flareClass": "X1.9",
+     "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/43152/-1"
+    }
+   ],
+   "source": "NASA CCMC DONKI (SEP, FLR) ccmc.gsfc.nasa.gov/DONKI/WS/get",
+   "retrieved_on": "2026-11-14",
+   "kind": "stormy"
+  }
+ ]
+}

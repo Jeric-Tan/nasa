@@ -1,0 +1,54 @@
+{
+ "facts": [
+  {
+   "id": "OSD-489",
+   "title": "Bones in space",
+   "text": "Scientists flew mice to the International Space Station to see how bones change without gravity. Bones that carry weight on Earth changed the most. That is why astronauts exercise every day.",
+   "meter": "health",
+   "studyTitle": "Quantifying Cancellous Bone Structural Changes in Microgravity: Axial Skeleton Results from the RR-1 Mission",
+   "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-489",
+   "source": "NASA Open Science Data Repository (OSDR)",
+   "retrieved_on": "2026-11-14"
+  },
+  {
+   "id": "OSD-104",
+   "title": "Muscles in space",
+   "text": "Mice on the space station helped scientists study how leg muscles change in low gravity. On Mars, gravity is only about a third of Earth's, so crews need a gym.",
+   "meter": "health",
+   "studyTitle": "Rodent Research-1 (RR1) NASA Validation Flight: Mouse soleus muscle transcriptomic and epigenomic data",
+   "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-104",
+   "source": "NASA Open Science Data Repository (OSDR)",
+   "retrieved_on": "2026-11-14"
+  },
+  {
+   "id": "OSD-7",
+   "title": "Plants in orbit",
+   "text": "Scientists grew a small plant called Arabidopsis in space and checked which genes switched on in its roots and leaves. Learning how plants cope helps us grow food far from Earth.",
+   "meter": "life",
+   "studyTitle": "The Arabidopsis spaceflight transcriptome: a comparison of whole plants to discrete root, hypocotyl and shoot responses to the orbital environment",
+   "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-7",
+   "source": "NASA Open Science Data Repository (OSDR)",
+   "retrieved_on": "2026-11-14"
+  },
+  {
+   "id": "OSD-678",
+   "title": "Plants need light",
+   "text": "A space station experiment found that light plays a big part in how plants respond to spaceflight. A greenhouse on Mars needs power for its lamps.",
+   "meter": "power",
+   "studyTitle": "Light has a principal role in the Arabidopsis transcriptomic response to the spaceflight environment",
+   "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-678",
+   "source": "NASA Open Science Data Repository (OSDR)",
+   "retrieved_on": "2026-11-14"
+  },
+  {
+   "id": "OSD-334",
+   "title": "Space radiation",
+   "text": "On Earth, scientists use particle beams to copy space radiation and study its effect on the heart in mice. It helps NASA plan shielding for long missions.",
+   "meter": "health",
+   "studyTitle": "miRNA signature detection and countermeasures against HZE radiation exposure for tissue degeneration-Heart tissue",
+   "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-334",
+   "source": "NASA Open Science Data Repository (OSDR)",
+   "retrieved_on": "2026-11-14"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+  "speakers": ["bolt=BOLT", "mira=Mira", "tomas=Tomas", "earth=Dr. Okafor (Earth)", "you=You"],
+  "beats": [
+    { "id": "intro", "trigger": "act:1", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Welcome to Outpost Gale, Commander {name}! I'm BOLT, the base robot. I explain things. You make the calls." },
+      { "speaker": "mira", "text": "I'm Mira, the botanist. My job is food, so I worry about food." },
+      { "speaker": "tomas", "text": "Tomas, geologist. We came to Mars for science, Commander!" } ] },
+    { "id": "tutorial1", "trigger": "sol:1", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "A [[sol]] is one Mars day. The next crew lands after the last sol, and our job is to get the base ready for them." },
+      { "speaker": "bolt", "text": "Three meters keep us alive: Power, Life Support and Crew Health. Every action spends daylight hours, and you get 8 each sol." },
+      { "speaker": "bolt", "text": "Click a room to walk there and use it. Try the Airlock: go to the crater rim and bring back some [[regolith]]." } ] },
+    { "id": "first_trip", "trigger": "first:trip", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Outside, the crew takes a [[dose|radiation dose]]. The farther you go, the better the haul, and the bigger the dose." },
+      { "speaker": "tomas", "text": "Living off what we find on Mars has a name: [[isru|ISRU]]. Every rock counts!" } ] },
+    { "id": "first_build", "trigger": "first:build", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Nice build! Every upgrade helps one meter and costs something else. No choice is free." },
+      { "speaker": "bolt", "text": "New machines switch on at the start of the next sol." } ] },
+    { "id": "first_leak", "trigger": "first:event:leak", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "An air leak! Fix it now, or let it drain Life Support every night. Both are allowed. It's your call." } ] },
+    { "id": "first_dust", "trigger": "first:event:dust", "mode": "", "lines": [
+      { "speaker": "tomas", "text": "Dust all over the panels. We're on half power until someone goes out and wipes them." } ] },
+    { "id": "first_blight", "trigger": "first:event:blight", "mode": "", "lines": [
+      { "speaker": "mira", "text": "The plants look sick! The greenhouse won't make food until I treat them." } ] },
+    { "id": "first_jam", "trigger": "first:event:jam", "mode": "", "lines": [
+      { "speaker": "tomas", "text": "The water recycler is jammed. Machines on Mars break, just like on the space station." } ] },
+    { "id": "first_supply", "trigger": "first:event:supply", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Outpost Gale, a cargo pod landed near you. Grab the spare parts within 2 sols." } ] },
+    { "id": "first_fatigue", "trigger": "first:event:fatigue", "mode": "", "lines": [
+      { "speaker": "mira", "text": "Everyone's exhausted. We've been working non-stop. A rest in the hab would help." } ] },
+    { "id": "first_radio", "trigger": "first:radio", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Fun fact: real radio messages take about 4 to 24 minutes between Earth and Mars. In this game, Earth's news is always one sol late." },
+      { "speaker": "bolt", "text": "Earth watches the Sun for [[flare|flares]]. A flare is a warning sign. The fast particles that can follow are the danger." } ] },
+    { "id": "first_storm", "trigger": "first:storm", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Outpost Gale, that was a solar particle event, an [[sep|SEP]]. They often come after a big flare or a [[cme|CME]]." },
+      { "speaker": "bolt", "text": "Every storm in this game really happened. Check the storm card to see the date." },
+      { "speaker": "bolt", "text": "Tip: use the Radio, then decide about sealing the Storm Shelter." } ] },
+    { "id": "act2", "trigger": "act:2", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Act 2: Dust Season. Dust storms will cut solar power for days at a time." },
+      { "speaker": "tomas", "text": "Big battery or more panels? Mission Control just sent a battery blueprint." },
+      { "speaker": "mira", "text": "Whatever we pick, keep the greenhouse lamps on!" } ] },
+    { "id": "dustseason", "trigger": "dustseason", "mode": "", "lines": [
+      { "speaker": "tomas", "text": "See that haze on the horizon? Dust season is here. Keep some power in reserve." } ] },
+    { "id": "act3", "trigger": "act:3", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Act 3: Solar Maximum. The Sun is busy, and Earth's warnings still come a sol late." },
+      { "speaker": "earth", "text": "Commander {name}, we sent you a landing pad blueprint. The next crew can't land safely without one." },
+      { "speaker": "mira", "text": "Tomas looks worn out. Let's not overdo it." } ] },
+    { "id": "act4", "trigger": "act:4", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Outpost Gale, the next crew's landing window is set. A big storm may arrive with it." },
+      { "speaker": "bolt", "text": "Everything at once now. There's no perfect answer, just good choices." } ] },
+    { "id": "systemsdown", "trigger": "first:systemsdown", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "Power hit zero! The machines stopped and Life Support dropped. Try to keep a buffer." } ] },
+    { "id": "unlock_greenhouse", "trigger": "unlock:greenhouse", "mode": "", "lines": [
+      { "speaker": "mira", "text": "That rock sample unlocked a greenhouse blueprint! Fresh food, but the lamps need power." } ] },
+    { "id": "unlock_recycler", "trigger": "unlock:recycler", "mode": "", "lines": [
+      { "speaker": "tomas", "text": "A water recycler blueprint! Less water to worry about, as long as it doesn't jam." } ] },
+    { "id": "unlock_gym", "trigger": "unlock:gym", "mode": "", "lines": [
+      { "speaker": "mira", "text": "A gym corner! Mars gravity is only about a third of Earth's, so our bones and muscles need exercise." } ] },
+    { "id": "unlock_dish", "trigger": "unlock:dish", "mode": "", "lines": [
+      { "speaker": "earth", "text": "With a bigger dish you'll hear our warnings sooner. Light speed doesn't change, though!" } ] },
+    { "id": "build_wall", "trigger": "build:wall", "mode": "", "lines": [
+      { "speaker": "bolt", "text": "A wall segment only shields the room it touches. Cover the Hab and the Shelter for the full effect." } ] },
+    { "id": "build_pad", "trigger": "build:pad", "mode": "", "lines": [
+      { "speaker": "earth", "text": "We see the landing pad from orbit. Great work, Outpost Gale!" } ] },
+    { "id": "end_thriving", "trigger": "ending:thriving", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Touchdown! The next crew is safe on the pad, and they say your base feels like home." } ] },
+    { "id": "end_ready", "trigger": "ending:ready", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Touchdown on your pad! It was close, but you made it." } ] },
+    { "id": "end_holding", "trigger": "ending:holding", "mode": "", "lines": [
+      { "speaker": "tomas", "text": "No pad yet, so the next crew lands out on the plain. Everyone's safe, though." } ] },
+    { "id": "end_early", "trigger": "ending:early", "mode": "", "lines": [
+      { "speaker": "earth", "text": "Outpost Gale, we're bringing you home early. Everyone's safe. That's what matters." } ] }
+  ],
+  "terms": [
+    { "id": "sol", "word": "Sol", "explain": "One day on Mars. It lasts 24 hours and 39 minutes." },
+    { "id": "regolith", "word": "Regolith", "explain": "Loose Mars soil and dust. Piled up, it makes a good radiation shield." },
+    { "id": "dose", "word": "Radiation dose", "explain": "How much radiation a body soaks up. Mars has a thin atmosphere and no magnetic shield, so the dose is higher than on Earth." },
+    { "id": "isru", "word": "ISRU", "explain": "In-situ resource utilization: using what you find on Mars (soil, ice, air) instead of shipping everything from Earth." },
+    { "id": "flare", "word": "Solar flare", "explain": "A sudden flash of light and X-rays from the Sun. It's a warning sign that particles might follow." },
+    { "id": "sep", "word": "SEP event", "explain": "Solar energetic particles: a burst of fast particles from the Sun. These are what give astronauts a big radiation dose." },
+    { "id": "cme", "word": "CME", "explain": "Coronal mass ejection: a huge cloud of gas the Sun throws into space. It can push particles ahead of it." }
+  ],
+  "endings": [
+    { "id": "thriving", "title": "Thriving Outpost", "message": "The next crew walks into a real home.", "tip": "Try Commander mode, or a stormier season.", "parallel": "NASA plans missions so each one prepares the way for the next, just like you did." },
+    { "id": "ready", "title": "Ready, Just Barely", "message": "It was close, but you made it.", "tip": "Keep every meter above 40 and build at least 2 upgrades besides the pad.", "parallel": "The International Space Station was built up one mission at a time, starting in 1998." },
+    { "id": "holding", "title": "Holding On", "message": "Everyone's safe. The next crew has work to do.", "tip": "The landing pad blueprint arrives in Act 3. Save 8 regolith for it.", "parallel": "Curiosity has explored Gale crater since 2012, one careful sol at a time." },
+    { "id": "early", "title": "Early Ride Home", "message": "The crew is evacuated. Here's what happened, and what to try next time.", "tip": "Build something that refills your weakest meter early, and use the Radio before deciding about the shelter.", "parallel": "In 2018 a planet-wide dust storm covered the Opportunity rover's solar panels. Its mission ended after almost 15 years." }
+  ]
+}

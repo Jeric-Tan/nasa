@@ -1,0 +1,73 @@
+{
+  "start": { "power": 70, "life": 70, "health": 80, "hours": 8, "regolith": 0, "ice": 0, "parts": 3, "samples": 0 },
+  "modes": [
+    { "id": "cadet", "name": "Cadet", "sols": 20, "maxEvents": 2, "seasonKinds": ["calm", "moderate"], "minStorms": 3, "maxStorms": 5, "realUnits": false, "eventChanceScale": 0.85, "lateWarningChance": 0 },
+    { "id": "commander", "name": "Commander", "sols": 30, "maxEvents": 3, "seasonKinds": ["calm", "moderate", "stormy"], "minStorms": 5, "maxStorms": 8, "realUnits": true, "eventChanceScale": 1.2, "lateWarningChance": 0.5 }
+  ],
+  "power": { "baseProduction": 24, "perPanel": 8, "dustMultiplier": 0.5, "baseUse": 14, "shelterUse": 12, "batteryReserve": 20 },
+  "life": { "crewUse": 12, "systemsDownDrain": 8, "greenhouseDelaySols": 2, "adjacencyBonus": 2 },
+  "health": {
+    "baseline": 2, "baselineShielded": 1, "stormUnsealed": 22, "stormSealed": 6, "shelterNeighbourMax": 3,
+    "lowLifeThreshold": 25, "lowLifeDrain": 5, "rest": 6, "gym": 4, "fatigueDrain": 3, "dustCleanDose": 2, "fatigueHours": 7
+  },
+  "events": { "firstSol": 2, "chance": 0.45, "dustSeasonChance": 0.7, "dustSeasonDustWeight": 3, "farPanelDustWeight": 0.5 },
+  "eventDefs": [
+    { "id": "leak", "name": "Air leak", "hint": "Life support drains faster", "fixText": "Seal the leak", "fixHours": 1, "station": "hab", "weight": 1, "requires": "", "lifeDrain": 6, "expiresAfter": 0, "realBasis": "Habitat maintenance: small leaks are a real worry on the space station.", "rolled": true },
+    { "id": "dust", "name": "Dusty panels", "hint": "Solar power cut in half", "fixText": "Clean the panels (outside)", "fixHours": 1, "station": "solar", "weight": 1, "requires": "", "lifeDrain": 0, "expiresAfter": 0, "realBasis": "Mars dust storms, like the global storm of 2018, cover solar panels.", "rolled": true },
+    { "id": "blight", "name": "Sick crops", "hint": "Greenhouse makes no food", "fixText": "Treat the plants", "fixHours": 1, "station": "greenhouse", "weight": 1, "requires": "greenhouse", "lifeDrain": 0, "expiresAfter": 0, "realBasis": "Growing food in space is hard; the CSA food-in-space toolkit explains why.", "rolled": true },
+    { "id": "jam", "name": "Recycler jam", "hint": "Water recycler makes nothing", "fixText": "Unjam the recycler", "fixHours": 1, "station": "recycler", "weight": 1, "requires": "recycler", "lifeDrain": 0, "expiresAfter": 0, "realBasis": "The space station recycles most of its water, and the machines need repairs.", "rolled": true },
+    { "id": "supply", "name": "Supply drop spotted", "hint": "Spare parts wait outside for 2 sols", "fixText": "Fetch it (go outside)", "fixHours": 3, "station": "airlock", "weight": 0.6, "requires": "", "lifeDrain": 0, "expiresAfter": 2, "realBasis": "Real missions plan cargo resupply carefully.", "rolled": true },
+    { "id": "fatigue", "name": "Crew fatigue", "hint": "Tired crew lose health each night", "fixText": "Rest", "fixHours": 2, "station": "hab", "weight": 0, "requires": "", "lifeDrain": 0, "expiresAfter": 0, "realBasis": "NASA studies show rest matters for astronaut health.", "rolled": false }
+  ],
+  "modules": [
+    { "id": "hab", "name": "Hab core", "w": 3, "h": 2, "placement": "fixed", "countsAsUpgrade": false, "maxCount": 1, "unlock": "none", "color": "#FFE9A8", "plus": "Living quarters", "minus": "", "why": "" },
+    { "id": "airlock", "name": "Airlock", "w": 1, "h": 1, "placement": "fixed", "countsAsUpgrade": false, "maxCount": 1, "unlock": "none", "color": "#C9D6DF", "plus": "The way outside", "minus": "", "why": "" },
+    { "id": "shelter", "name": "Storm Shelter", "w": 2, "h": 2, "placement": "fixed", "countsAsUpgrade": false, "maxCount": 1, "unlock": "none", "color": "#B9A7D9", "plus": "Each room touching it blocks 1 more storm damage (max 3)", "minus": "Sealing it uses 12 power", "why": "Thick walls and neighbours stop particles." },
+    { "id": "solar", "name": "Solar array", "w": 3, "h": 1, "placement": "fixed", "countsAsUpgrade": false, "maxCount": 1, "unlock": "none", "color": "#3B5B92", "plus": "Makes 24 power a sol", "minus": "", "why": "" },
+    { "id": "panel", "name": "Extra solar panel", "w": 2, "h": 1, "regolith": 0, "ice": 0, "parts": 2, "buildHours": 2, "placement": "open", "minDistance": 3, "farDistance": 6, "powerUse": 0, "lifeGain": 0, "powerGain": 8, "maxCount": 3, "unlock": "start", "unlockOrder": 0, "color": "#3B5B92",
+      "plus": "+8 power every sol", "minus": "More panels to clean: dusty panels happen more often", "why": "Dust on panels cut power for NASA's solar rovers." },
+    { "id": "wall", "name": "Regolith shield wall", "w": 1, "h": 1, "regolith": 3, "ice": 0, "parts": 0, "buildHours": 1, "placement": "touching", "powerUse": 0, "lifeGain": 0, "maxCount": 12, "unlock": "start", "unlockOrder": 0, "color": "#B9502A",
+      "plus": "Halves radiation for the room it touches", "minus": "Needs lots of trips outside (more dose now)", "why": "Soil is a cheap, heavy radiation shield." },
+    { "id": "oxygen", "name": "Oxygen maker", "w": 2, "h": 1, "regolith": 0, "ice": 1, "parts": 2, "buildHours": 2, "placement": "connected", "powerUse": 8, "lifeGain": 10, "maxCount": 1, "unlock": "start", "unlockOrder": 0, "color": "#2F95D6",
+      "plus": "+10 life support every sol", "minus": "Uses 8 power every sol", "why": "Perseverance's MOXIE made oxygen from the Mars air." },
+    { "id": "greenhouse", "name": "Greenhouse", "w": 2, "h": 2, "regolith": 2, "ice": 2, "parts": 0, "buildHours": 3, "placement": "connected", "powerUse": 5, "lifeGain": 7, "maxCount": 1, "unlock": "sample", "unlockOrder": 1, "color": "#3FAE5A",
+      "plus": "+7 life support every sol (starts 2 sols after building)", "minus": "Uses 5 power every sol; crops can get sick", "why": "Plants need light, water and warmth." },
+    { "id": "battery", "name": "Big battery", "w": 1, "h": 1, "regolith": 0, "ice": 0, "parts": 3, "buildHours": 1, "placement": "connected", "powerUse": 0, "lifeGain": 0, "maxCount": 1, "unlock": "act2", "unlockOrder": 0, "color": "#F2B705",
+      "plus": "Covers up to 20 power on a dark night", "minus": "Uses parts you need for other machines", "why": "Storage is how solar bases get through storms." },
+    { "id": "recycler", "name": "Water recycler", "w": 2, "h": 1, "regolith": 0, "ice": 0, "parts": 3, "buildHours": 2, "placement": "connected", "powerUse": 2, "lifeGain": 6, "maxCount": 1, "unlock": "sample", "unlockOrder": 2, "color": "#7FC8F8",
+      "plus": "+6 life support every sol", "minus": "It jams sometimes and needs repairs", "why": "The space station recycles most of its water." },
+    { "id": "gym", "name": "Gym corner", "w": 1, "h": 1, "regolith": 0, "ice": 0, "parts": 1, "buildHours": 1, "placement": "connected", "powerUse": 0, "lifeGain": 0, "maxCount": 1, "unlock": "sample", "unlockOrder": 3, "color": "#F28C8C",
+      "plus": "+4 health on nights after you exercise", "minus": "Costs an hour each sol to use", "why": "Low gravity weakens bones and muscles (NASA OSDR studies)." },
+    { "id": "dish", "name": "Comms dish", "w": 1, "h": 1, "regolith": 0, "ice": 0, "parts": 2, "buildHours": 1, "placement": "connected", "powerUse": 3, "lifeGain": 0, "maxCount": 1, "unlock": "sample", "unlockOrder": 4, "color": "#DADADA",
+      "plus": "The Radio also warns about tomorrow night", "minus": "Uses 3 power every sol", "why": "Bigger antennas hear better, but light speed doesn't change." },
+    { "id": "pad", "name": "Landing pad", "w": 3, "h": 3, "regolith": 8, "ice": 0, "parts": 0, "buildHours": 4, "placement": "open", "minDistance": 5, "farDistance": 0, "powerUse": 0, "lifeGain": 0, "maxCount": 1, "unlock": "act3", "unlockOrder": 0, "color": "#8C7B70",
+      "plus": "The next crew can land safely (best endings)", "minus": "A big build right before the finale", "why": "Pads stop rocket engines blasting dust and rocks." }
+  ],
+  "spots": [
+    { "id": "crater", "name": "Crater rim", "material": "regolith", "amount": 2, "hours": 2, "dose": 3, "stormDose": 5, "partChance": 0, "onlyWithEvent": "", "blurb": "Close by. Loose soil for shield walls and the landing pad." },
+    { "id": "ice", "name": "Ice field", "material": "ice", "amount": 2, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0.25, "onlyWithEvent": "", "blurb": "Farther out. Dig up buried ice. Old crates sometimes lie around." },
+    { "id": "science", "name": "Science spot", "material": "samples", "amount": 1, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0, "onlyWithEvent": "", "blurb": "Layered rocks like the ones Curiosity studies. Samples unlock blueprints." },
+    { "id": "supply", "name": "Supply drop", "material": "parts", "amount": 2, "hours": 3, "dose": 4, "stormDose": 6, "partChance": 0, "onlyWithEvent": "supply", "blurb": "A cargo pod landed nearby. Grab the spare parts before they're lost." }
+  ],
+  "actions": { "rest": 2, "radio": 1, "seal": 1, "exercise": 1, "work": 1, "pushLuckHours": 1, "pushLuckDose": 2, "hazardChance": 0.3, "walkTilesPerQuarter": 8 },
+  "grid": { "width": 16, "height": 10, "maxCorridor": 3 },
+  "sites": [
+    { "id": "gale", "name": "Gale crater", "blurb": "Curiosity's home. Radiation numbers come from its real instrument here.", "iceBonus": 0,
+      "rocks": [0,0, 8,1, 9,1, 12,0, 13,3, 10,8, 0,9, 1,9, 9,9, 14,9, 15,9, 15,8],
+      "startModules": [ { "id": "shelter", "x": 1, "y": 4 }, { "id": "hab", "x": 3, "y": 4 }, { "id": "airlock", "x": 6, "y": 4 }, { "id": "solar", "x": 2, "y": 0 } ] },
+    { "id": "jezero", "name": "Jezero crater", "blurb": "Perseverance's home, an old lake bed. More ice, rockier ground.", "iceBonus": 1,
+      "rocks": [0,0, 1,0, 7,1, 8,1, 11,2, 12,2, 13,6, 10,9, 11,9, 0,9, 15,9, 15,5, 14,0],
+      "startModules": [ { "id": "shelter", "x": 1, "y": 4 }, { "id": "hab", "x": 3, "y": 4 }, { "id": "airlock", "x": 6, "y": 4 }, { "id": "solar", "x": 2, "y": 0 } ] }
+  ],
+  "traits": [
+    { "id": "green_thumb", "name": "Green thumb", "text": "The greenhouse makes 2 more life support" },
+    { "id": "fast_walker", "name": "Fast walker", "text": "Walking around the base takes half the time" },
+    { "id": "light_sleeper", "name": "Power napper", "text": "Rest gives 5 more health" },
+    { "id": "rock_hound", "name": "Rock hound", "text": "Science trips can find a bonus sample" },
+    { "id": "handy", "name": "Handy", "text": "Every hour of building counts a bit extra" },
+    { "id": "quick_trips", "name": "Trail runner", "text": "Long trips outside take 30 minutes less" }
+  ],
+  "endings": { "healthyMeter": 50, "thrivingUpgrades": 3 },
+  "acts": { "starts": [0, 0.1667, 0.5, 0.8333] },
+  "fallbackSeasons": [ { "nights": [4, 8] }, { "nights": [3, 6, 9] }, { "nights": [5, 9] }, { "nights": [2, 7, 10] } ]
+}

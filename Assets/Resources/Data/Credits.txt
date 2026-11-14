@@ -1,0 +1,12 @@
+DATA
+• NASA CCMC DONKI space weather database (solar storms, flares)
+• NASA Open Science Data Repository (OSDR) studies OSD-489, OSD-104, OSD-7, OSD-678, OSD-334
+• Curiosity RAD radiation: Hassler et al. 2014, Science 343
+
+FONTS
+• Nunito and Baloo 2, SIL Open Font License
+
+ART AND SOUND
+• Placeholder art and sounds made in code. Full list in CREDITS.md.
+
+Outpost Gale is a fan-made learning game for NASA Space Apps. NASA does not endorse it.

@@ -1,0 +1,10 @@
+{
+ "site": "Gale crater, Mars (Curiosity rover)",
+ "baselineDoseEquivalent_mSvPerSol": 0.64,
+ "baselineAbsorbedDose_mGyPerSol": 0.21,
+ "chestXray_mSv": 0.1,
+ "citation": "Hassler, D. M. et al. (2014). Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover. Science 343, 1244797.",
+ "note": "Published Curiosity RAD averages. The RadLab API returned MSL-RAD-Surface rows (58 on 2017-09-10) but no dose column, so these are published values, not a live query.",
+ "source": "Curiosity RAD, published values (RadLab API probed)",
+ "retrieved_on": "2026-11-14"
+}
