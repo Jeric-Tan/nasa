@@ -116,15 +116,17 @@ namespace OutpostGale
             rh.childForceExpandWidth = true;
             UIKit.Size(row, -1, 52, -1, 52);
             hud.build = UIKit.Button(row, "Build (B)", OpenBuildMenu, Theme.Paper, 17);
-            UIKit.Button(row, "Logbook", () => ShowLogbook(null), Theme.Paper, 17);
+            UIKit.Icon(hud.build, "icon_build");
+            UIKit.Icon(UIKit.Button(row, "Logbook", () => ShowLogbook(null), Theme.Paper, 17), "icon_logbook");
             var row2 = UIKit.Rect("Row2", rightCol);
             var rh2 = UIKit.HStack(row2.gameObject, 8);
             rh2.childForceExpandWidth = true;
             UIKit.Size(row2, -1, 52, -1, 52);
             hud.radioBtn = UIKit.Button(row2, "Radio", () => QuickAction("hab", "radio"), Theme.Paper, 17);
+            UIKit.Icon(hud.radioBtn, "icon_radio");
             hud.radioBadge = UIKit.Label(hud.radioBtn.transform, "", 12, Theme.Warn, TextAnchor.UpperRight);
             UIKit.Stretch(hud.radioBadge.rectTransform, 0, 0, 8, 2);
-            UIKit.Button(row2, "Menu", ShowPause, Theme.Paper, 17);
+            UIKit.Icon(UIKit.Button(row2, "Menu", ShowPause, Theme.Paper, 17), "icon_menu");
             hud.endSol = UIKit.Button(rightCol, "Sleep: end the sol", EndSolPressed, Theme.Night, 19);
             hud.endSol.GetComponentInChildren<Text>().color = Theme.Gold;
 
@@ -222,8 +224,9 @@ namespace OutpostGale
             {
                 var def = Balance.Event(e.id);
                 var ev = e;
-                var b = UIKit.Button(hud.events, "! " + def.name + "  ·  " + def.hint.ToLowerInvariant() + (e.expiresSol > 0 ? "  ·  until sol " + e.expiresSol : ""), () => GoFixEvent(ev), Theme.Paper, 14);
+                var b = UIKit.Button(hud.events, def.name + "  ·  " + def.hint.ToLowerInvariant() + (e.expiresSol > 0 ? "  ·  until sol " + e.expiresSol : ""), () => GoFixEvent(ev), Theme.Paper, 14);
                 b.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
+                UIKit.Icon(b, "icon_warning", Theme.Warn);
                 UIKit.Size(b, -1, 44, -1, 44);
             }
 

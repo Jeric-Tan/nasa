@@ -93,6 +93,7 @@ namespace OutpostGale
             {
                 var card = Modal(600, null, true);
                 UIKit.Label(card, "Radio from Earth", 26, Theme.Gold, TextAnchor.MiddleLeft, true);
+                AudioFx.Radio();
                 var bar = UIKit.Label(card, "Signal travelling…", 14, Theme.Hex("#D9CFE0"));
                 var text = UIKit.Label(card, "", 19, Theme.Paper);
                 StartCoroutine(Crawl(text, message, bar));
@@ -287,7 +288,7 @@ namespace OutpostGale
             var img = UIKit.Rect("Image", frame.transform);
             UIKit.Stretch(img, 6, 6, 6, 6);
             var i = img.gameObject.AddComponent<Image>();
-            if (art) { i.sprite = art; i.preserveAspect = false; }
+            if (art) { i.sprite = art; i.preserveAspect = false; i.color = new Color(1f, 0.68f, 0.5f); } // orbital mosaic, tinted Mars-red
             else
             {
                 i.sprite = Theme.Circle(128);
@@ -305,18 +306,26 @@ namespace OutpostGale
             }
             // Spot markers, rearranged each mission (seeded by the Classroom Code).
             var rnd = new System.Random(Mission.S.seed);
-            Vector2 basePos = new Vector2(0.5f, 0.32f);
+            // With the real Gale image, the base sits in Curiosity's landing ellipse (north-west crater floor).
+            Vector2 basePos = art ? new Vector2(0.41f, 0.70f) : new Vector2(0.5f, 0.32f);
             Marker(img, basePos, "Base", Theme.Paper);
-            foreach (var spot in Balance.spots)
+            // Spread the spots over the upper half of the crater, each at its own angle.
+            var spots = new List<SpotDef>(Balance.spots);
+            for (int k = spots.Count - 1; k > 0; k--) { int j = rnd.Next(k + 1); var t = spots[k]; spots[k] = spots[j]; spots[j] = t; }
+            float offset = (float)(rnd.NextDouble() * 20 - 10);
+            for (int k = 0; k < spots.Count; k++)
             {
-                float dist = spot.hours <= 2 ? 0.18f : 0.34f;
-                float ang = (float)(rnd.NextDouble() * Mathf.PI * 2);
-                var pos = basePos + new Vector2(Mathf.Cos(ang), Mathf.Abs(Mathf.Sin(ang)) * 1.4f) * dist;
+                var spot = spots[k];
+                float dist = spot.hours <= 2 ? 0.22f : 0.36f;
+                float start = art ? 225 : 20, spread = art ? 110 : 140; // real map: fan out into the crater toward Mount Sharp
+                float ang = (start + offset + k * spread / Mathf.Max(1, spots.Count - 1)) * Mathf.Deg2Rad;
+                var pos = basePos + new Vector2(Mathf.Cos(ang), Mathf.Sin(ang) * (art ? 1f : 1.2f)) * dist;
                 pos = new Vector2(Mathf.Clamp(pos.x, 0.1f, 0.9f), Mathf.Clamp(pos.y, 0.1f, 0.9f));
                 bool open = Mission.SpotsToday().Contains(spot);
                 if (open) Marker(img, pos, spot.name, spot.material == "samples" ? Theme.Power : spot.material == "ice" ? Theme.Life : spot.material == "parts" ? Theme.Health : Theme.Sand);
             }
-            UIKit.Label(frame.transform, art ? "Map: NASA Mars Trek" : "Map placeholder (add a Mars Trek image)", 11, Theme.Paper, TextAnchor.LowerCenter).rectTransform.anchoredPosition = new Vector2(0, 4);
+            var credit = UIKit.Label(frame.transform, art ? "Map: NASA Mars Trek" : "Placeholder map (add a Mars Trek image)", 11, Theme.Paper, TextAnchor.LowerCenter);
+            UIKit.Anchor(credit.rectTransform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 8), new Vector2(320, 18));
             return frame.rectTransform;
         }
 
@@ -340,6 +349,7 @@ namespace OutpostGale
         {
             var r = Mission.StartTrip(spotId);
             if (!r.ok) { Toast(r.message); AudioFx.Error(); return; }
+            AudioFx.Trip();
             AfterChange();
             Queue(done => ShowTripResult(r.message, done));
         }
@@ -356,6 +366,11 @@ namespace OutpostGale
                     : trip.hazard == "dust_devil" ? "A dust devil is spinning across the plain toward you!"
                     : "Earth relays a flare warning from yesterday.";
                 UIKit.Label(card, "<color=#B42318><b>" + hz + "</b></color>", 18);
+                if (trip.hazard == "dust_devil")
+                {
+                    AudioFx.DustDevil();
+                    UIKit.Label(card, "<size=13>You're hearing a real dust devil, recorded by NASA's Perseverance rover in 2021.</size>", 13, Theme.Muted);
+                }
             }
             if (Mission.CanPush)
             {
@@ -412,7 +427,7 @@ namespace OutpostGale
             UIKit.Button(card, "Start sol " + s.sol, () => { CloseModal(card); done(); }, Theme.Gold, 20);
         }
 
-        static string Tag(string text) => "<color=#2A1A2E><b>[" + text + "]</b></color>";
+        static string Tag(string text) => "<color=#FFD27A><b>[" + text + "]</b></color>";
 
         // ---------- night report ----------
 

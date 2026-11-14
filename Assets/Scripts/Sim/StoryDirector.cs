@@ -92,7 +92,8 @@ namespace OutpostGale.Sim
         public static string Format(string text, MissionState s, List<string> termsFound)
         {
             if (string.IsNullOrEmpty(text)) return "";
-            text = text.Replace("{name}", s.commanderName ?? "Commander");
+            string name = string.IsNullOrWhiteSpace(s.commanderName) ? "Commander" : s.commanderName.Trim();
+            text = name == "Commander" ? text.Replace("Commander {name}", "Commander").Replace("{name}", "Commander") : text.Replace("{name}", name);
             int start;
             while ((start = text.IndexOf("[[", StringComparison.Ordinal)) >= 0)
             {

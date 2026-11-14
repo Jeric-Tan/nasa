@@ -53,6 +53,8 @@ namespace OutpostGale
         {
             public GameObject root;
             public SpriteRenderer body, face, dust, progressBg, progressFill;
+            public List<SpriteRenderer> art;
+            public bool hasArt;
             public TextMesh label, status;
             public Light2D glow;
             public string signature;
@@ -96,13 +98,17 @@ namespace OutpostGale
             for (int x = 0; x < width; x++)
                 for (int y = 0; y < height; y++)
                 {
-                    var g = Sprite("Tile", ground, Theme.Ground((x * 7 + y * 3) % 3), Color.white, -90);
+                    int v = (x * 7 + y * 3) % 3;
+                    var groundArt = Theme.Art(v == 0 ? "ground1" : "ground2");
+                    var g = Sprite("Tile", ground, groundArt ?? Theme.Ground(v), Color.white, -90);
                     g.transform.localPosition = Tile(x, y);
+                    if (groundArt) Fit(g, 1.01f, 1.01f, stretch: true);
                     if (grid.IsRock(x, y))
                     {
-                        var r = Sprite("Rock", ground, Theme.Art("rock") ?? Theme.Rock(), Color.white, Order(y) + 1);
-                        r.transform.localPosition = Tile(x, y) + new Vector3(0, -0.15f, 0);
-                        r.transform.localScale = Vector3.one * 0.95f;
+                        var rockArt = Theme.Art((x + y) % 3 == 0 ? "rock2" : (x + y) % 3 == 1 ? "rock3" : "rock");
+                        var r = Sprite("Rock", ground, rockArt ?? Theme.Rock(), Color.white, Order(y) + 1);
+                        r.transform.localPosition = Tile(x, y);
+                        if (rockArt) Fit(r, 0.9f, 0.9f); else r.transform.localScale = Vector3.one * 0.95f;
                     }
                 }
             // Grid lines, faint.
@@ -131,16 +137,21 @@ namespace OutpostGale
             var hab = grid.First("hab");
             playerCell = grid.HabCentre();
             playerPos = Tile(playerCell.x, playerCell.y);
-            player = MakePerson("Commander", SuitColor(M.S.suitColor), 0.62f, out playerBody).transform;
+            player = MakePerson(string.IsNullOrWhiteSpace(M.S.commanderName) ? "You" : M.S.commanderName, SuitColor(M.S.suitColor), 0.62f, out playerBody, "astronaut").transform;
             player.localPosition = playerPos;
             var boltGo = new GameObject("BOLT");
             boltGo.transform.SetParent(transform, false);
-            var bb = Sprite("Body", boltGo.transform, Theme.Rounded(8, 3), Theme.Hex("#9FB7C9"), 0);
-            bb.drawMode = SpriteDrawMode.Sliced;
-            bb.size = new Vector2(0.36f, 0.3f);
-            var eye = Sprite("Eye", boltGo.transform, Theme.Circle(32, true), Theme.Power, 1);
-            eye.transform.localScale = Vector3.one * 0.14f;
-            eye.transform.localPosition = new Vector3(0, 0.02f, 0);
+            var boltArt = Theme.Art("bolt");
+            if (boltArt) Fit(Sprite("Body", boltGo.transform, boltArt, Color.white, 0), 0.5f, 0.5f);
+            else
+            {
+                var bb = Sprite("Body", boltGo.transform, Theme.Rounded(8, 3), Theme.Hex("#9FB7C9"), 0);
+                bb.drawMode = SpriteDrawMode.Sliced;
+                bb.size = new Vector2(0.36f, 0.3f);
+                var eye = Sprite("Eye", boltGo.transform, Theme.Circle(32, true), Theme.Power, 1);
+                eye.transform.localScale = Vector3.one * 0.14f;
+                eye.transform.localPosition = new Vector3(0, 0.02f, 0);
+            }
             bolt = boltGo.transform;
             bolt.localPosition = playerPos + new Vector3(0.5f, 0.2f, 0);
 
@@ -148,8 +159,9 @@ namespace OutpostGale
             Color[] colors = { Theme.Health, Theme.Life };
             for (int i = 0; i < 2; i++)
             {
-                var go = MakePerson(names[i], colors[i], 0.5f, out var body);
-                var c = new Crew { t = go.transform, face = body, baseColor = colors[i] };
+                string artName = i == 0 ? "mira" : "tomas";
+                var go = MakePerson(names[i], colors[i], 0.5f, out var body, artName);
+                var c = new Crew { t = go.transform, face = body, baseColor = Theme.Art(artName) ? Color.white : colors[i] };
                 c.t.localPosition = hab != null ? Rect(hab) + new Vector3(i == 0 ? -0.8f : 0.8f, -0.2f, 0) : Vector3.zero;
                 c.target = c.t.localPosition;
                 crew.Add(c);
@@ -165,13 +177,23 @@ namespace OutpostGale
             return suits[Mathf.Abs(i) % suits.Length];
         }
 
-        GameObject MakePerson(string name, Color suit, float scale, out SpriteRenderer body)
+        GameObject MakePerson(string name, Color suit, float scale, out SpriteRenderer body, string artName = null)
         {
             var go = new GameObject(name);
             go.transform.SetParent(transform, false);
             var shadow = Sprite("Shadow", go.transform, Theme.Dot(), new Color(0, 0, 0, 0.35f), 0);
             shadow.transform.localScale = new Vector3(0.9f, 0.35f, 1) * scale;
             shadow.transform.localPosition = new Vector3(0, -0.28f * scale, 0);
+            var art = artName == null ? null : Theme.Art(artName);
+            if (art)
+            {
+                // Kenney astronaut; the commander's sprite takes the suit colour.
+                body = Sprite("Suit", go.transform, art, artName == "astronaut" ? Color.Lerp(Color.white, suit, 0.6f) : Color.white, 1);
+                Fit(body, 0.9f * scale / 0.62f, 1.1f * scale / 0.62f);
+                var label = Text("Name", go.transform, name, 0.06f, Theme.Paper, 6);
+                label.transform.localPosition = new Vector3(0, -0.5f * scale - 0.12f, 0);
+                return go;
+            }
             body = Sprite("Suit", go.transform, Theme.Circle(64, true), suit, 1);
             body.transform.localScale = Vector3.one * scale;
             var visor = Sprite("Visor", go.transform, Theme.Rounded(10, 0, false), Theme.Night, 2);
@@ -193,7 +215,7 @@ namespace OutpostGale
             cam.backgroundColor = Theme.MarsDeep;
             float aspect = Mathf.Max(0.5f, (float)Screen.width / Mathf.Max(1, Screen.height));
             // Leave room for the HUD bands: ~15% top, ~18% bottom.
-            float usable = 0.66f;
+            float usable = 0.7f;
             float sizeForHeight = (height + 0.6f) / 2f / usable;
             float sizeForWidth = (width + 0.6f) / 2f / aspect;
             cam.orthographicSize = Mathf.Max(sizeForHeight, sizeForWidth) * (1 + nightAmount * 0.06f);
@@ -240,29 +262,60 @@ namespace OutpostGale
             v.root.transform.localPosition = Rect(m);
             int order = Order(m.y);
             var art = Theme.Art(m.id);
-            // Front face for a 2.5D look.
+            // Footprint plate (shows the module's tiles); without art it is a front face for a 2.5D look.
             v.face = Sprite("Face", v.root.transform, Theme.Rounded(12, 4), Color.white, order);
             v.face.drawMode = SpriteDrawMode.Sliced;
-            v.face.size = new Vector2(m.w - 0.1f, 0.42f);
-            v.face.transform.localPosition = new Vector3(0, -m.h / 2f + 0.17f, 0);
+            v.face.size = art ? new Vector2(m.w - 0.06f, m.h - 0.06f) : new Vector2(m.w - 0.1f, 0.42f);
+            v.face.transform.localPosition = art ? Vector3.zero : new Vector3(0, -m.h / 2f + 0.17f, 0);
             v.body = Sprite("Body", v.root.transform, art ?? Theme.Rounded(m.id == "wall" ? 8 : 16, 4), Color.white, order + 1);
+            v.art = new List<SpriteRenderer>();
             if (art == null)
             {
                 v.body.drawMode = SpriteDrawMode.Sliced;
                 v.body.size = new Vector2(m.w - 0.1f, m.h - 0.22f);
+                v.body.transform.localPosition = new Vector3(0, 0.08f, 0);
             }
-            else v.body.transform.localScale = new Vector3((m.w - 0.1f) / art.bounds.size.x, (m.h - 0.1f) / art.bounds.size.y, 1);
-            v.body.transform.localPosition = new Vector3(0, 0.08f, 0);
+            else
+            {
+                // Long modules (solar rows) repeat the sprite along their length; others fit one sprite.
+                int copies = m.w >= m.h * 2 ? m.w / m.h : m.h >= m.w * 2 ? m.h / m.w : 1;
+                bool alongX = m.w >= m.h;
+                float cw = alongX ? m.w / (float)copies : m.w, ch = alongX ? m.h : m.h / (float)copies;
+                for (int k = 0; k < copies; k++)
+                {
+                    var sr = k == 0 ? v.body : Sprite("Body" + k, v.root.transform, art, Color.white, order + 1);
+                    float off = (k + 0.5f) - copies / 2f;
+                    sr.transform.localPosition = alongX ? new Vector3(off * cw, 0.05f, 0) : new Vector3(0, off * ch + 0.05f, 0);
+                    Fit(sr, cw * 0.92f, ch * 0.92f);
+                    v.art.Add(sr);
+                }
+            }
 
             v.dust = Sprite("Dust", v.root.transform, Theme.Rounded(16, 0, false), new Color(0.55f, 0.33f, 0.18f, 0.55f), order + 2);
             v.dust.drawMode = SpriteDrawMode.Sliced;
             v.dust.size = new Vector2(m.w - 0.25f, m.h - 0.35f);
             v.dust.transform.localPosition = new Vector3(0, 0.08f, 0);
 
-            v.label = Text("Label", v.root.transform, ShortName(def), m.w >= 2 ? 0.075f : 0.055f, Theme.Ink, order + 3);
-            v.label.transform.localPosition = new Vector3(0, m.h > 1 ? 0.25f : 0.12f, 0);
-            v.status = Text("Status", v.root.transform, "", 0.05f, Theme.Ink, order + 3);
-            v.status.transform.localPosition = new Vector3(0, m.h > 1 ? -0.12f : -0.1f, 0);
+            v.hasArt = art != null;
+            if (v.hasArt)
+            {
+                // Name on a dark tag along the bottom edge; status above the top edge.
+                var tag = Sprite("Tag", v.root.transform, Theme.Rounded(8, 0, false), new Color(0.16f, 0.1f, 0.18f, 0.82f), order + 3);
+                tag.drawMode = SpriteDrawMode.Sliced;
+                tag.size = new Vector2(Mathf.Min(m.w - 0.1f, 0.2f + ShortName(def).Length * 0.105f), 0.26f);
+                tag.transform.localPosition = new Vector3(0, -m.h / 2f + 0.16f, 0);
+                v.label = Text("Label", v.root.transform, ShortName(def), 0.05f, Theme.Paper, order + 4);
+                v.label.transform.localPosition = tag.transform.localPosition;
+                v.status = Text("Status", v.root.transform, "", 0.05f, Theme.Gold, order + 4);
+                v.status.transform.localPosition = new Vector3(0, m.h / 2f - 0.12f, 0);
+            }
+            else
+            {
+                v.label = Text("Label", v.root.transform, ShortName(def), m.w >= 2 ? 0.075f : 0.055f, Theme.Ink, order + 3);
+                v.label.transform.localPosition = new Vector3(0, m.h > 1 ? 0.25f : 0.12f, 0);
+                v.status = Text("Status", v.root.transform, "", 0.05f, Theme.Ink, order + 3);
+                v.status.transform.localPosition = new Vector3(0, m.h > 1 ? -0.12f : -0.1f, 0);
+            }
 
             v.progressBg = Sprite("BarBg", v.root.transform, Theme.Rounded(6, 2), Theme.Night, order + 4);
             v.progressBg.drawMode = SpriteDrawMode.Sliced;
@@ -311,10 +364,26 @@ namespace OutpostGale
             else if (usesPower && !powered) c = Color.Lerp(baseColor, Theme.Night, 0.55f);
             if (m.id == "shelter" && M.S.sealedTonight) c = Color.Lerp(baseColor, Theme.Gold, 0.35f);
             c.a = m.built ? 1f : 0.7f;
-            v.body.color = c;
-            v.face.color = Color.Lerp(c, Theme.Ink, 0.45f);
-            v.label.color = m.built && usesPower && !powered ? Theme.Paper : Theme.Ink;
-            v.status.color = v.label.color;
+            if (v.art != null && v.art.Count > 0)
+            {
+                // Real sprite: keep its colours; darken when unpowered, fade while under construction.
+                Color tint = !m.built ? new Color(1, 1, 1, 0.55f) : usesPower && !powered ? new Color(0.45f, 0.42f, 0.5f) : Color.white;
+                if (m.id == "shelter" && M.S.sealedTonight) tint = Color.Lerp(Color.white, Theme.Gold, 0.4f);
+                foreach (var sr in v.art) sr.color = tint;
+                var plate = baseColor;
+                plate.a = m.built ? 0.55f : 0.3f;
+                v.face.color = plate;
+            }
+            else
+            {
+                v.body.color = c;
+                v.face.color = Color.Lerp(c, Theme.Ink, 0.45f);
+            }
+            if (!v.hasArt)
+            {
+                v.label.color = m.built && usesPower && !powered ? Theme.Paper : Theme.Ink;
+                v.status.color = v.label.color;
+            }
 
             var e = M.S.events.Find(x => x.targetUid == m.uid || (x.targetUid == 0 && M.B.Event(x.id)?.station == m.id));
             bool dusty = M.S.events.Exists(x => x.id == "dust" && x.targetUid == m.uid);
@@ -643,6 +712,16 @@ namespace OutpostGale
 
         // ---------- helpers ----------
 
+        // Scale a sprite to fit inside w x h world units (keeping its shape unless stretch).
+        static void Fit(SpriteRenderer sr, float w, float h, bool stretch = false)
+        {
+            if (sr == null || sr.sprite == null) return;
+            var size = sr.sprite.bounds.size;
+            if (size.x <= 0 || size.y <= 0) return;
+            float sx = w / size.x, sy = h / size.y;
+            sr.transform.localScale = stretch ? new Vector3(sx, sy, 1) : Vector3.one * Mathf.Min(sx, sy);
+        }
+
         int Order(int y) => 200 - y * 10;
 
         static void SetOrder(Transform t, int baseOrder)
@@ -672,7 +751,7 @@ namespace OutpostGale
             var tm = go.AddComponent<TextMesh>();
             tm.font = Theme.BodyBlack;
             tm.fontSize = 64;
-            tm.characterSize = size * 0.25f;
+            tm.characterSize = size * 0.62f;
             tm.anchor = TextAnchor.MiddleCenter;
             tm.alignment = TextAlignment.Center;
             tm.color = color;

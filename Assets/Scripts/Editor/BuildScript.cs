@@ -43,6 +43,7 @@ namespace OutpostGale.EditorTools
             PlayerSettings.WebGL.dataCaching = true;
             PlayerSettings.WebGL.exceptionSupport = WebGLExceptionSupport.ExplicitlyThrownExceptionsOnly;
             PlayerSettings.WebGL.nameFilesAsHashes = false;
+            PlayerSettings.WebGL.template = "PROJECT:OutpostGale"; // full-window canvas, Mars loading bar
             PlayerSettings.defaultWebScreenWidth = 1280;
             PlayerSettings.defaultWebScreenHeight = 720;
             PlayerSettings.SetManagedStrippingLevel(UnityEditor.Build.NamedBuildTarget.WebGL, ManagedStrippingLevel.Low);

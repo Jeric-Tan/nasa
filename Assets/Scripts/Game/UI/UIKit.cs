@@ -91,6 +91,21 @@ namespace OutpostGale.UI
             return btn;
         }
 
+        // A small icon (Resources/Art/<name>) on the left of a button; no-op when the art is missing.
+        public static void Icon(Button b, string artName, Color? tint = null)
+        {
+            var sprite = Theme.Art(artName);
+            if (sprite == null) return;
+            var rt = Rect("Icon", b.transform);
+            Anchor(rt, new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(10, 0), new Vector2(22, 22));
+            var img = rt.gameObject.AddComponent<Image>();
+            img.sprite = sprite;
+            img.color = tint ?? Theme.Ink;
+            img.raycastTarget = false;
+            var label = b.GetComponentInChildren<Text>();
+            if (label) label.rectTransform.offsetMin = new Vector2(36, label.rectTransform.offsetMin.y);
+        }
+
         public static void SetLabel(Button b, string text)
         {
             var t = b.GetComponentInChildren<Text>();

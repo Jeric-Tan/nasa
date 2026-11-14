@@ -7,6 +7,9 @@ FONTS
 • Nunito and Baloo 2, SIL Open Font License
 
 ART AND SOUND
-• Placeholder art and sounds made in code. Full list in CREDITS.md.
+• Kenney (kenney.nl): Sci-Fi RTS, Game Icons, Interface Sounds, Sci-Fi Sounds (CC0)
+• Gale crater map: NASA/JPL-Caltech/ASU (PIA14290, Mars Odyssey)
+• Mars wind and dust devil: real recordings by NASA's Perseverance rover (SuperCam microphone)
+Full list in CREDITS.md.
 
 Outpost Gale is a fan-made learning game for NASA Space Apps. NASA does not endorse it.

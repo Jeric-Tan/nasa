@@ -30,7 +30,7 @@ namespace OutpostGale
             var title = UIKit.Label(col, "Outpost Gale", 88, Theme.Paper, TextAnchor.MiddleCenter, true);
             title.gameObject.AddComponent<Outline>().effectColor = Theme.Ink;
             UIKit.Size(title, -1, 110, -1, 110);
-            UIKit.Label(col, "Keep your crew alive on Mars for 30 sols. Every storm really happened.", 20, Theme.Ink, TextAnchor.MiddleCenter);
+            UIKit.Label(col, "Keep your crew alive on Mars until the next crew lands. Every solar storm in this game really happened.", 20, Theme.Ink, TextAnchor.MiddleCenter);
 
             var sun = UIKit.Panel(col, Theme.Night, "Sun", true, 14);
             UIKit.VStack(sun.gameObject, 2, 12);
@@ -78,8 +78,9 @@ namespace OutpostGale
             var bg = UIKit.Fill(screenLayer, Theme.Mars, "Setup");
             UIKit.Stretch(bg.rectTransform);
             var card = UIKit.Panel(bg.transform, Theme.Paper, "Card");
-            UIKit.Anchor(card.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(900, 660));
+            UIKit.Anchor(card.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(900, 600));
             UIKit.VStack(card.gameObject, 10, 26);
+            UIKit.Fit(card.gameObject);
             UIKit.Label(card.transform, "New mission", 36, Theme.Ink, TextAnchor.MiddleLeft, true);
             UIKit.Label(card.transform, "BOLT: Hi! I'm BOLT, the base robot. Set up your mission and I'll meet you on Mars.", 17, Theme.Muted);
 

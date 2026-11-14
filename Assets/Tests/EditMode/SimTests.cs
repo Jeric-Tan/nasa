@@ -199,7 +199,7 @@ namespace OutpostGale.Tests
             Assert.IsTrue(m.Do("rest", m.S.modules.First(x => x.id == "hab").uid).ok);
             Assert.IsTrue(m.Do("exercise", gym.uid).ok);
             m.Sleep();
-            int rest = m.HasTrait("light_sleeper") ? 15 : 10;
+            int rest = m.B.health.rest + (m.HasTrait("light_sleeper") ? 5 : 0);
             Assert.AreEqual(50 + rest - 2 + 4, m.S.health);
         }
     }
@@ -679,6 +679,23 @@ namespace OutpostGale.Tests
             m.Do("seal", m.S.modules.Find(x => x.id == "shelter").uid);
             m.Sleep();
             Assert.AreEqual(95, m.S.healthCap);
+        }
+    }
+}
+
+namespace OutpostGale.Tests
+{
+    public class StoryFormatTests
+    {
+        [Test]
+        public void DefaultNameIsNotRepeated()
+        {
+            var s = new MissionState { commanderName = "Commander" };
+            Assert.AreEqual("Hi, Commander!", StoryDirector.Format("Hi, Commander {name}!", s, null));
+            s.commanderName = "Ada";
+            Assert.AreEqual("Hi, Commander Ada!", StoryDirector.Format("Hi, Commander {name}!", s, null));
+            s.commanderName = "  ";
+            Assert.AreEqual("Hello Commander", StoryDirector.Format("Hello {name}", s, null));
         }
     }
 }
