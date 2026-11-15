@@ -75,5 +75,5 @@ an HTML game, or serve it locally with `python -m http.server 8765 --directory B
 
 All data, images, sounds, fonts and their licences are listed in [CREDITS.md](CREDITS.md). NASA does not endorse
 this game. The game idea and design are the team's own; an AI coding assistant (Claude, by Anthropic) helped write
-the code, tests, data scripts and the scripts that draw the characters, which are labelled as AI-assisted in the
-game and in CREDITS.md. `CLAUDE.md` holds the instructions given to that assistant.
+the code, tests, data scripts and the scripts that draw the characters and help create the necessary references and documents in this repository, which are labelled as AI-assisted in the
+game and in CREDITS.md. `CLAUDE.md` holds the instructions given to that assistant. 
