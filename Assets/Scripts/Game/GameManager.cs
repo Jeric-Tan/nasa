@@ -31,6 +31,7 @@ namespace OutpostGale
         bool queueBusy;
         bool nightRunning;
         bool firstInput;
+        int lastNightDose; // radiation the last night added (shown in the night report)
 
         public bool WorldInputOpen => phase == Phase.Outpost && !queueBusy && !nightRunning && modalLayer.childCount == 0 && !Mission.S.over;
 
@@ -140,15 +141,16 @@ namespace OutpostGale
         // A centred card on a dimmed backdrop. Close with CloseModal(card).
         public RectTransform Modal(float width, Color? color = null, bool dark = false)
         {
-            var dim = UIKit.Fill(modalLayer, new Color(0.08f, 0.04f, 0.1f, 0.62f), "Modal");
+            var dim = UIKit.Fill(modalLayer, new Color(0.07f, 0.04f, 0.14f, 0.66f), "Modal");
             UIKit.Stretch(dim.rectTransform);
             dim.raycastTarget = true;
-            var card = UIKit.Panel(dim.transform, color ?? (dark ? Theme.Night : Theme.Paper), "Card");
+            var card = UIKit.Panel(dim.transform, color ?? (dark ? Theme.Night : Theme.Paper), "Card", true, 26);
+            UIKit.PopIn(card);
             var rt = card.rectTransform;
             rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
             rt.pivot = new Vector2(0.5f, 0.5f);
             rt.sizeDelta = new Vector2(width, 100);
-            UIKit.VStack(card.gameObject, 12, 24);
+            UIKit.VStack(card.gameObject, 14, 28);
             UIKit.Fit(card.gameObject);
             return rt;
         }
@@ -160,9 +162,11 @@ namespace OutpostGale
 
         public void Toast(string text, Color? color = null)
         {
-            var p = UIKit.Panel(toastLayer, color ?? Theme.Paper, "Toast");
-            UIKit.Anchor(p.rectTransform, new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0, -122), new Vector2(560, 56));
-            var t = UIKit.Label(p.transform, text, 19, Theme.Ink, TextAnchor.MiddleCenter);
+            UIKit.Clear(toastLayer); // one message at a time: a new toast replaces the old one
+            var p = UIKit.Panel(toastLayer, color ?? Theme.Night, "Toast", true, 22);
+            UIKit.Anchor(p.rectTransform, new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0, -122), new Vector2(580, 56));
+            UIKit.PopIn(p);
+            var t = UIKit.Label(p.transform, text, 18, Theme.TextOn(p.color), TextAnchor.MiddleCenter);
             UIKit.Stretch(t.rectTransform, 14, 4, 14, 4);
             StartCoroutine(FadeOut(p.gameObject, 2.6f));
         }
@@ -170,7 +174,10 @@ namespace OutpostGale
         IEnumerator FadeOut(GameObject go, float after)
         {
             yield return new WaitForSecondsRealtime(after);
-            var cg = go.AddComponent<CanvasGroup>();
+            if (!go) yield break;
+            // Reuse the pop-in's CanvasGroup: a second one can't be added, which used to leave toasts stuck on screen.
+            var cg = go.GetComponent<CanvasGroup>();
+            if (!cg) cg = go.AddComponent<CanvasGroup>();
             for (float t = 0; t < 0.4f && go; t += Time.unscaledDeltaTime)
             {
                 cg.alpha = 1 - t / 0.4f;
@@ -190,9 +197,8 @@ namespace OutpostGale
         void ShowLoading()
         {
             ClearScreens();
-            var bg = UIKit.Fill(screenLayer, Theme.Mars, "Loading");
-            UIKit.Stretch(bg.rectTransform);
-            var t = UIKit.Label(bg.transform, "Loading Outpost Gale…", 34, Theme.Paper, TextAnchor.MiddleCenter, true);
+            var bg = Backdrop("Loading", false);
+            var t = UIKit.Label(bg, "Unpacking the base…", 30, Theme.Paper, TextAnchor.MiddleCenter, true);
             UIKit.Stretch(t.rectTransform);
         }
 
@@ -224,10 +230,12 @@ namespace OutpostGale
             World.Build();
             World.SetNight(false);
             BuildHud();
+            World.SetInside(true, false); // every visit starts on the command deck, inside the base
             AudioFx.Music("music_calm");
             if (fresh) Queue(done => ShowCodeCard(done));
             DrainTriggers();
             Queue(done => ShowBriefing(Mission.S.lastReport, done));
+            if (fresh) QueueTour();
         }
 
         // Call after every change to the mission.
@@ -275,7 +283,9 @@ namespace OutpostGale
                 yield return new WaitForSeconds(2.2f);
                 World.stormFx = false;
             }
+            int doseBefore = Mission.S.totalDose;
             var report = Mission.Sleep();
+            lastNightDose = Mission.S.totalDose - doseBefore;
             nightRunning = false;
             World.Refresh();
             RefreshHud();

@@ -6,23 +6,28 @@ namespace OutpostGale
     // Look tokens from the plan's mockup, plus procedurally drawn placeholder sprites.
     public static class Theme
     {
-        public static readonly Color Ink = Hex("#2A1A2E");
-        public static readonly Color Mars = Hex("#E9773E");
+        public static readonly Color Ink = Hex("#241A33");
+        public static readonly Color Mars = Hex("#FF7A45");
         public static readonly Color MarsDeep = Hex("#B9502A");
         public static readonly Color Sand = Hex("#F3D9B8");
-        public static readonly Color Paper = Hex("#FFF6EA");
-        public static readonly Color Night = Hex("#2A2230");
-        public static readonly Color NightSoft = Hex("#3A3046");
-        public static readonly Color Power = Hex("#F2B705");
-        public static readonly Color Life = Hex("#2F95D6");
-        public static readonly Color Health = Hex("#3FAE5A");
-        public static readonly Color Warn = Hex("#E5483B");
-        public static readonly Color Muted = Hex("#6B5A63");
+        public static readonly Color Paper = Hex("#FFF9F2");
+        public static readonly Color Night = Hex("#1E1838");
+        public static readonly Color NightSoft = Hex("#2F2754");
+        public static readonly Color Glass = Hex("#1C1638");
+        public static readonly Color Power = Hex("#FFC23D");
+        public static readonly Color Life = Hex("#3BA7F0");
+        public static readonly Color Health = Hex("#46C66E");
+        public static readonly Color Warn = Hex("#FF5A4E");
+        public static readonly Color Muted = Hex("#76677F");
         public static readonly Color Gold = Hex("#FFD27A");
-        public static readonly Color Plus = Hex("#227A3B");
-        public static readonly Color Minus = Hex("#B42318");
+        public static readonly Color Plus = Hex("#1F8A44");
+        public static readonly Color Minus = Hex("#D23A2E");
+        public static readonly Color Soft = Hex("#C9BEE0"); // secondary text on dark glass
 
         public static Color MeterColor(string m) => m == "power" ? Power : m == "life" ? Life : Health;
+
+        public static float Luma(Color c) => 0.2126f * c.r + 0.7152f * c.g + 0.0722f * c.b;
+        public static Color TextOn(Color fill) => Luma(fill) < 0.6f ? Paper : Ink;
 
         public static Color Hex(string hex)
         {
@@ -75,6 +80,51 @@ namespace OutpostGale
             return s;
         }
 
+        // Rounded key face for buttons: a soft top-to-bottom gloss, no outline. 9-sliced, tint with colour.
+        public static Sprite Key(int radius = 16)
+        {
+            string key = "key" + radius;
+            if (cache.TryGetValue(key, out var s)) return s;
+            int size = radius * 2 + 8;
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
+            var px = new Color32[size * size];
+            for (int y = 0; y < size; y++)
+                for (int x = 0; x < size; x++)
+                {
+                    float d = RoundedDist(x + 0.5f, y + 0.5f, size, size, radius);
+                    float t = y / (float)(size - 1);
+                    float shade = Mathf.Lerp(0.9f, 1f, Mathf.SmoothStep(0, 1, t));
+                    // a thin bright line just inside the top edge
+                    if (d > -3.5f && d < -1.5f && t > 0.6f) shade = 1f;
+                    var c = new Color(shade, shade, shade, Mathf.Clamp01(0.5f - d));
+                    px[y * size + x] = c;
+                }
+            tex.SetPixels32(px);
+            tex.Apply();
+            float b = radius + 2;
+            s = Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 64, 0, SpriteMeshType.FullRect, new Vector4(b, b, b, b));
+            cache[key] = s;
+            return s;
+        }
+
+        // A vertical gradient strip (bottom colour to top colour), for skies and bars.
+        public static Sprite Gradient(Color bottom, Color top, int steps = 64)
+        {
+            string key = "grad" + ColorUtility.ToHtmlStringRGBA(bottom) + ColorUtility.ToHtmlStringRGBA(top);
+            if (cache.TryGetValue(key, out var s)) return s;
+            var tex = new Texture2D(2, steps, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
+            for (int y = 0; y < steps; y++)
+            {
+                var c = Color.Lerp(bottom, top, y / (float)(steps - 1));
+                tex.SetPixel(0, y, c);
+                tex.SetPixel(1, y, c);
+            }
+            tex.Apply();
+            s = Sprite.Create(tex, new Rect(0, 0, 2, steps), new Vector2(0.5f, 0.5f), 100);
+            cache[key] = s;
+            return s;
+        }
+
         static float RoundedDist(float x, float y, float w, float h, float r)
         {
             float qx = Mathf.Abs(x - w / 2f) - (w / 2f - r);
@@ -123,6 +173,30 @@ namespace OutpostGale
             tex.Apply();
             s = Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), size);
             cache["dot"] = s;
+            return s;
+        }
+
+        // Diagonal hazard stripes (gold and ink), tileable: use with Image.Type.Tiled.
+        public static Sprite Stripes()
+        {
+            if (cache.TryGetValue("stripes", out var s)) return s;
+            int size = 32;
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Repeat };
+            var px = new Color32[size * size];
+            for (int y = 0; y < size; y++)
+                for (int x = 0; x < size; x++)
+                {
+                    float t = ((x + y) % size) / (float)size;
+                    // soft edges between the bands
+                    float k = Mathf.Clamp01(Mathf.Min(Mathf.Abs(t - 0.5f), Mathf.Min(t, 1 - t)) * size * 0.5f);
+                    bool gold = t < 0.5f;
+                    var c = gold ? Color.Lerp(Ink, Power, 0.5f + 0.5f * k) : Color.Lerp(Power, Ink, 0.5f + 0.5f * k);
+                    px[y * size + x] = c;
+                }
+            tex.SetPixels32(px);
+            tex.Apply();
+            s = Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 100, 0, SpriteMeshType.FullRect);
+            cache["stripes"] = s;
             return s;
         }
 

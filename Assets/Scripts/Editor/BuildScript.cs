@@ -42,7 +42,7 @@ namespace OutpostGale.EditorTools
             PlayerSettings.WebGL.decompressionFallback = true; // works on hosts without gzip headers too
             PlayerSettings.WebGL.dataCaching = true;
             PlayerSettings.WebGL.exceptionSupport = WebGLExceptionSupport.ExplicitlyThrownExceptionsOnly;
-            PlayerSettings.WebGL.nameFilesAsHashes = false;
+            PlayerSettings.WebGL.nameFilesAsHashes = true; // new names each build, so browsers never run a stale cached copy
             PlayerSettings.WebGL.template = "PROJECT:OutpostGale"; // full-window canvas, Mars loading bar
             PlayerSettings.defaultWebScreenWidth = 1280;
             PlayerSettings.defaultWebScreenHeight = 720;
@@ -69,6 +69,13 @@ namespace OutpostGale.EditorTools
             ti.maxTextureSize = 1024;
             ti.crunchedCompression = true;
             ti.textureCompression = TextureImporterCompression.Compressed;
+            if (Path.GetFileName(assetPath).StartsWith("char_") || Path.GetFileName(assetPath).StartsWith("crew_") || Path.GetFileName(assetPath) == "bolt.png")
+            {
+                // Drawn character art is shown both large (setup screen) and small (outpost): keep it crisp.
+                ti.mipmapEnabled = true;
+                ti.crunchedCompression = false;
+                ti.textureCompression = TextureImporterCompression.CompressedHQ;
+            }
         }
 
         void OnPreprocessAudio()

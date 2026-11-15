@@ -8,10 +8,11 @@
     { "id": "tutorial1", "trigger": "sol:1", "mode": "", "lines": [
       { "speaker": "bolt", "text": "A [[sol]] is one Mars day. The next crew lands after the last sol, and our job is to get the base ready for them." },
       { "speaker": "bolt", "text": "Three meters keep us alive: Power, Life Support and Crew Health. Every action spends daylight hours, and you get 8 each sol." },
-      { "speaker": "bolt", "text": "Click a room to walk there and use it. Try the Airlock: go to the crater rim and bring back some [[regolith]]." } ] },
+      { "speaker": "bolt", "text": "Click a room to walk there and use it. Try the Airlock: go to the sand dunes and bring back some [[regolith]]." } ] },
     { "id": "first_trip", "trigger": "first:trip", "mode": "", "lines": [
       { "speaker": "bolt", "text": "Outside, the crew takes a [[dose|radiation dose]]. The farther you go, the better the haul, and the bigger the dose." },
-      { "speaker": "tomas", "text": "Living off what we find on Mars has a name: [[isru|ISRU]]. Every rock counts!" } ] },
+      { "speaker": "tomas", "text": "Living off what we find on Mars has a name: [[isru|ISRU]]. Every rock counts!" },
+      { "speaker": "bolt", "text": "Watch Crew health: radiation lowers it, outside and every night. If it reaches 0, the crew goes home early." } ] },
     { "id": "first_build", "trigger": "first:build", "mode": "", "lines": [
       { "speaker": "bolt", "text": "Nice build! Every upgrade helps one meter and costs something else. No choice is free." },
       { "speaker": "bolt", "text": "New machines switch on at the start of the next sol." } ] },
@@ -28,7 +29,7 @@
     { "id": "first_fatigue", "trigger": "first:event:fatigue", "mode": "", "lines": [
       { "speaker": "mira", "text": "Everyone's exhausted. We've been working non-stop. A rest in the hab would help." } ] },
     { "id": "first_radio", "trigger": "first:radio", "mode": "", "lines": [
-      { "speaker": "bolt", "text": "Fun fact: real radio messages take about 4 to 24 minutes between Earth and Mars. In this game, Earth's news is always one sol late." },
+      { "speaker": "bolt", "text": "Fun fact: real radio messages take about 3 to 22 minutes between Earth and Mars. In this game, Earth's news is always one sol late." },
       { "speaker": "bolt", "text": "Earth watches the Sun for [[flare|flares]]. A flare is a warning sign. The fast particles that can follow are the danger." } ] },
     { "id": "first_storm", "trigger": "first:storm", "mode": "", "lines": [
       { "speaker": "earth", "text": "Outpost Gale, that was a solar particle event, an [[sep|SEP]]. They often come after a big flare or a [[cme|CME]]." },

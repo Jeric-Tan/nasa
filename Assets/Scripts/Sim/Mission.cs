@@ -202,7 +202,7 @@ namespace OutpostGale.Sim
         {
             var parts = new List<string>();
             if (d.regolith > 0) parts.Add(d.regolith + " regolith");
-            if (d.ice > 0) parts.Add(d.ice + " ice");
+            if (d.ice > 0) parts.Add(d.ice + " water");
             if (d.parts > 0) parts.Add(d.parts + (d.parts == 1 ? " part" : " parts"));
             return parts.Count == 0 ? "free" : string.Join(", ", parts);
         }
@@ -589,7 +589,7 @@ namespace OutpostGale.Sim
             switch (material)
             {
                 case "regolith": return "regolith";
-                case "ice": return "ice";
+                case "ice": return "water"; // baked out of soil: Gale has no buried ice
                 case "samples": return n == 1 ? "rock sample" : "rock samples";
                 case "parts": return n == 1 ? "spare part" : "spare parts";
             }

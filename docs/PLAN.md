@@ -119,7 +119,7 @@ Going outside is how you get anything new, and it's never free: it costs hours a
 | Material | Real basis | Found | Used for |
 | --- | --- | --- | --- |
 | Regolith (Mars soil) | Piling soil around a habitat is a studied way to block radiation | Everywhere, near base | Shield walls, landing pad |
-| Water ice | Mars has ice buried under the surface | Farther out, needs digging | Water, oxygen, greenhouse |
+| Water (baked from soil) | Gale is near the equator with no shallow ice, but Curiosity found its soil is about 2% water (1.5–3%, Leshin et al. 2013) | Farther out, scoop and bake the soil | Water, oxygen, greenhouse |
 | Rock samples | What Curiosity studies | Marked science spots | Science score, unlocking blueprints |
 | Spare parts | Cargo from supply drops | Rare drop sites, events | Machines: panels, battery, recycler |
 

@@ -685,6 +685,27 @@ namespace OutpostGale.Tests
 
 namespace OutpostGale.Tests
 {
+    public class WaterNameTests
+    {
+        // Gale crater has no buried ice: the "ice" material is water baked out of soil, and is shown that way.
+        [Test]
+        public void IceMaterialIsShownAsWater()
+        {
+            Assert.AreEqual("water", Mission.MaterialName("ice", 2));
+            var m = TestData.Quiet();
+            string cost = m.CostText(m.B.Module("greenhouse"));
+            StringAssert.Contains("water", cost);
+            StringAssert.DoesNotContain("ice", cost);
+        }
+
+        [Test]
+        public void NoSiteClaimsExtraIce()
+        {
+            var m = TestData.Quiet();
+            foreach (var site in m.B.sites) Assert.AreEqual(0, site.iceBonus, site.id);
+        }
+    }
+
     public class StoryFormatTests
     {
         [Test]

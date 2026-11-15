@@ -181,7 +181,7 @@ namespace OutpostGale.Sim
     {
         public string id;
         public string name;
-        public string material;       // regolith | ice | samples | parts
+        public string material;       // regolith | ice (shown as "water": baked out of soil) | samples | parts
         public int amount;
         public float hours;
         public int dose;

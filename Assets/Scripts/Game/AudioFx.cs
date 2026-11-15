@@ -49,7 +49,7 @@ namespace OutpostGale
         public static void Step() => Play("step", 0.15f);
         public static void Error() => Play("error", 0.4f);
         public static void Trip() => Play("trip", 0.5f);
-        public static void Radio() => Play("radio", 0.35f);
+        public static void Radio() => Play("radio", 0.15f);
         public static void DustDevil() => Play("dust_devil", 0.8f);
 
         public static void Wind(bool on)

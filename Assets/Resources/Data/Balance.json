@@ -44,9 +44,9 @@
       "plus": "The next crew can land safely (best endings)", "minus": "A big build right before the finale", "why": "Pads stop rocket engines blasting dust and rocks." }
   ],
   "spots": [
-    { "id": "crater", "name": "Crater rim", "material": "regolith", "amount": 2, "hours": 2, "dose": 3, "stormDose": 5, "partChance": 0, "onlyWithEvent": "", "blurb": "Close by. Loose soil for shield walls and the landing pad." },
-    { "id": "ice", "name": "Ice field", "material": "ice", "amount": 2, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0.25, "onlyWithEvent": "", "blurb": "Farther out. Dig up buried ice. Old crates sometimes lie around." },
-    { "id": "science", "name": "Science spot", "material": "samples", "amount": 1, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0, "onlyWithEvent": "", "blurb": "Layered rocks like the ones Curiosity studies. Samples unlock blueprints." },
+    { "id": "crater", "name": "Sand dunes", "material": "regolith", "amount": 2, "hours": 2, "dose": 3, "stormDose": 5, "partChance": 0, "onlyWithEvent": "", "blurb": "Close by. Loose sand and soil for shield walls and the landing pad." },
+    { "id": "ice", "name": "Water-rich soil", "material": "ice", "amount": 2, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0.25, "onlyWithEvent": "", "blurb": "Farther out. Scoop soil and bake the water out of it. Leftover cargo crates sometimes turn up." },
+    { "id": "science", "name": "Layered rocks", "material": "samples", "amount": 1, "hours": 3, "dose": 5, "stormDose": 7, "partChance": 0, "onlyWithEvent": "", "blurb": "Rock laid down in an ancient lake, like the rock Curiosity drills. Samples unlock blueprints." },
     { "id": "supply", "name": "Supply drop", "material": "parts", "amount": 2, "hours": 3, "dose": 4, "stormDose": 6, "partChance": 0, "onlyWithEvent": "supply", "blurb": "A cargo pod landed nearby. Grab the spare parts before they're lost." }
   ],
   "actions": { "rest": 2, "radio": 1, "seal": 1, "exercise": 1, "work": 1, "pushLuckHours": 1, "pushLuckDose": 2, "hazardChance": 0.3, "walkTilesPerQuarter": 8 },
@@ -55,7 +55,7 @@
     { "id": "gale", "name": "Gale crater", "blurb": "Curiosity's home. Radiation numbers come from its real instrument here.", "iceBonus": 0,
       "rocks": [0,0, 8,1, 9,1, 12,0, 13,3, 10,8, 0,9, 1,9, 9,9, 14,9, 15,9, 15,8],
       "startModules": [ { "id": "shelter", "x": 1, "y": 4 }, { "id": "hab", "x": 3, "y": 4 }, { "id": "airlock", "x": 6, "y": 4 }, { "id": "solar", "x": 2, "y": 0 } ] },
-    { "id": "jezero", "name": "Jezero crater", "blurb": "Perseverance's home, an old lake bed. More ice, rockier ground.", "iceBonus": 1,
+    { "id": "jezero", "name": "Jezero crater", "blurb": "Perseverance's home, an old lake bed. Rockier ground.", "iceBonus": 0,
       "rocks": [0,0, 1,0, 7,1, 8,1, 11,2, 12,2, 13,6, 10,9, 11,9, 0,9, 15,9, 15,5, 14,0],
       "startModules": [ { "id": "shelter", "x": 1, "y": 4 }, { "id": "hab", "x": 3, "y": 4 }, { "id": "airlock", "x": 6, "y": 4 }, { "id": "solar", "x": 2, "y": 0 } ] }
   ],

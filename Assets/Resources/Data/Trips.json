@@ -1,0 +1,40 @@
+{
+  "places": [
+    {
+      "site": "gale",
+      "spot": "crater",
+      "place": "Bagnold Dunes",
+      "photo": "trip_dunes",
+      "caption": "Real photo: NASA's Curiosity rover (Mastcam), 25 Sept 2015. Colours adjusted to look like daylight on Earth.",
+      "credit": "NASA/JPL-Caltech/MSSS, PIA19928",
+      "fact": "Curiosity's visit here was the first up-close study of active sand dunes anywhere except Earth. The wind pushes these dunes up to about 1 meter a year.",
+      "action": "Scoop",
+      "source": "NASA Image and Video Library: PIA19928 and PIA20283 captions",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "site": "gale",
+      "spot": "ice",
+      "place": "Rocknest",
+      "photo": "trip_rocknest",
+      "caption": "Real photo: NASA's Curiosity rover (Mastcam), released 4 Oct 2012.",
+      "credit": "NASA/JPL-Caltech/MSSS, PIA16204",
+      "fact": "Curiosity scooped its first Mars soil at this sandy patch. Heated in the rover's oven, the soil gave off water: about 2% of its weight.",
+      "action": "Scoop",
+      "source": "NASA Image and Video Library: PIA16204; Leshin et al. (2013), Science 341, 1238937 (1.5 to 3 wt% water)",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "site": "gale",
+      "spot": "science",
+      "place": "Yellowknife Bay",
+      "photo": "trip_yellowknife",
+      "caption": "Real photo: NASA's Curiosity rover (Mastcam), released 15 Jan 2013.",
+      "credit": "NASA/JPL-Caltech/MSSS, PIA16701",
+      "fact": "Curiosity drilled its first rock here, at a spot called John Klein. The rock formed in an ancient freshwater lake that could once have supported tiny microbes.",
+      "action": "Drill",
+      "source": "NASA Image and Video Library: PIA16701, PIA17595; NASA JPL news (2013): 'NASA Rover Finds Conditions Once Suited for Ancient Life on Mars'",
+      "retrieved_on": "2026-11-15"
+    }
+  ]
+}

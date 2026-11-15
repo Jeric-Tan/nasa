@@ -1,15 +1,25 @@
 DATA
-• NASA CCMC DONKI space weather database (solar storms, flares)
+• NASA CCMC DONKI space weather database (solar storms, flares, live "Today's Sun")
 • NASA Open Science Data Repository (OSDR) studies OSD-489, OSD-104, OSD-7, OSD-678, OSD-334
 • Curiosity RAD radiation: Hassler et al. 2014, Science 343
+• Water in Gale crater soil (Curiosity SAM): Leshin et al. 2013, Science 341
 
-FONTS
-• Nunito and Baloo 2, SIL Open Font License
+IMAGES
+• Gale crater map: Courtesy NASA/JPL-Caltech/ASU (PIA14290, Mars Odyssey)
+• Trip photos by NASA's Curiosity rover: Courtesy NASA/JPL-Caltech/MSSS (PIA19928 Bagnold Dunes, PIA16204 Rocknest, PIA16701 Yellowknife Bay)
 
-ART AND SOUND
-• Kenney (kenney.nl): Sci-Fi RTS, Game Icons, Interface Sounds, Sci-Fi Sounds (CC0)
-• Gale crater map: NASA/JPL-Caltech/ASU (PIA14290, Mars Odyssey)
-• Mars wind and dust devil: real recordings by NASA's Perseverance rover (SuperCam microphone)
+SOUND
+• Mars wind and dust devil: real recordings by NASA's Perseverance rover (SuperCam microphone), public domain
+• Kenney (kenney.nl): Interface Sounds, Sci-Fi Sounds (CC0)
+
+ART AND FONTS
+• Kenney (kenney.nl): Sci-Fi RTS buildings, Game Icons (CC0)
+• Nunito and Baloo 2, SIL Open Font License 1.1
+
+MADE WITH AI ASSISTANCE
+• The game idea and design are the team's own. An AI coding assistant (Claude, by Anthropic) helped write the code.
+• AI-assisted art: BOLT, the astronaut, Mira, Tomas and the airlock suit rack were drawn by code written with the AI assistant.
+
 Full list in CREDITS.md.
 
-Outpost Gale is a fan-made learning game for NASA Space Apps. NASA does not endorse it.
+Outpost Gale is a free learning game made for NASA Space Apps. NASA does not endorse it.

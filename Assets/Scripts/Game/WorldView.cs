@@ -10,7 +10,7 @@ namespace OutpostGale
 {
     // Draws the base grid and handles world input (click/tap to move, WASD, E to use, build ghost).
     // Reads MissionState; every rule goes through Mission.
-    public class WorldView : MonoBehaviour
+    public partial class WorldView : MonoBehaviour
     {
         public GameManager gm;
         Mission M => gm.Mission;
@@ -48,6 +48,10 @@ namespace OutpostGale
         readonly List<Transform> particles = new List<Transform>();
         float particleTimer;
         public bool stormFx;
+        readonly List<Transform> clouds = new List<Transform>();
+        readonly List<Transform> motes = new List<Transform>();
+        readonly List<Light2D> padLights = new List<Light2D>();
+        float dustLevel;
 
         class ModuleVisual
         {
@@ -80,6 +84,11 @@ namespace OutpostGale
             cam = Camera.main;
             globalLight = FindAnyObjectByType<Light2D>();
             foreach (Transform c in transform) Destroy(c.gameObject);
+            Inside = false;
+            insideRoot = null;
+            roomsSignature = null;
+            rooms.Clear();
+            insideCrew.Clear();
             visuals.Clear();
             corridorObjs.Clear();
             crew.Clear();
@@ -92,25 +101,22 @@ namespace OutpostGale
             fxRoot.SetParent(transform, false);
 
             var grid = M.Layout();
-            // Backdrop beyond the grid, then tiles.
-            var back = Sprite("Backdrop", ground, Theme.White(), Theme.MarsDeep, -100);
-            back.transform.localScale = new Vector3(width + 40, height + 30, 1);
+            // Shaded Mars terrain (or Resources/Art/terrain.png), with the base pad in the middle.
+            var terrainArt = Theme.Art("terrain");
+            var back = Sprite("Terrain", ground, terrainArt ?? MarsTerrain.Ground(M.S.seed, width, height), Color.white, -100);
+            if (terrainArt) Fit(back, MarsTerrain.WidthUnits, MarsTerrain.HeightUnits, stretch: true);
             for (int x = 0; x < width; x++)
                 for (int y = 0; y < height; y++)
-                {
-                    int v = (x * 7 + y * 3) % 3;
-                    var groundArt = Theme.Art(v == 0 ? "ground1" : "ground2");
-                    var g = Sprite("Tile", ground, groundArt ?? Theme.Ground(v), Color.white, -90);
-                    g.transform.localPosition = Tile(x, y);
-                    if (groundArt) Fit(g, 1.01f, 1.01f, stretch: true);
                     if (grid.IsRock(x, y))
                     {
                         var rockArt = Theme.Art((x + y) % 3 == 0 ? "rock2" : (x + y) % 3 == 1 ? "rock3" : "rock");
+                        CastShadow(ground, Tile(x, y), 0.85f, Order(y));
                         var r = Sprite("Rock", ground, rockArt ?? Theme.Rock(), Color.white, Order(y) + 1);
                         r.transform.localPosition = Tile(x, y);
                         if (rockArt) Fit(r, 0.9f, 0.9f); else r.transform.localScale = Vector3.one * 0.95f;
                     }
-                }
+            Scenery();
+            PadMarkers();
             // Grid lines, faint.
             for (int x = 0; x <= width; x++)
             {
@@ -137,12 +143,12 @@ namespace OutpostGale
             var hab = grid.First("hab");
             playerCell = grid.HabCentre();
             playerPos = Tile(playerCell.x, playerCell.y);
-            player = MakePerson(string.IsNullOrWhiteSpace(M.S.commanderName) ? "You" : M.S.commanderName, SuitColor(M.S.suitColor), 0.62f, out playerBody, "astronaut").transform;
+            player = MakePerson(string.IsNullOrWhiteSpace(M.S.commanderName) ? "You" : M.S.commanderName, SuitTint(M.S.suitColor), 0.62f, out playerBody, "astronaut").transform;
             player.localPosition = playerPos;
             var boltGo = new GameObject("BOLT");
             boltGo.transform.SetParent(transform, false);
             var boltArt = Theme.Art("bolt");
-            if (boltArt) Fit(Sprite("Body", boltGo.transform, boltArt, Color.white, 0), 0.5f, 0.5f);
+            if (boltArt) Fit(Sprite("Body", boltGo.transform, boltArt, Color.white, 0), 0.6f, 0.6f);
             else
             {
                 var bb = Sprite("Body", boltGo.transform, Theme.Rounded(8, 3), Theme.Hex("#9FB7C9"), 0);
@@ -156,12 +162,12 @@ namespace OutpostGale
             bolt.localPosition = playerPos + new Vector3(0.5f, 0.2f, 0);
 
             string[] names = { "Mira", "Tomas" };
-            Color[] colors = { Theme.Health, Theme.Life };
+            Color[] colors = { Color.Lerp(Color.white, Theme.Health, 0.7f), Color.Lerp(Color.white, Theme.Life, 0.7f) };
             for (int i = 0; i < 2; i++)
             {
                 string artName = i == 0 ? "mira" : "tomas";
                 var go = MakePerson(names[i], colors[i], 0.5f, out var body, artName);
-                var c = new Crew { t = go.transform, face = body, baseColor = Theme.Art(artName) ? Color.white : colors[i] };
+                var c = new Crew { t = go.transform, face = body, baseColor = CrewColor(colors[i], artName) };
                 c.t.localPosition = hab != null ? Rect(hab) + new Vector3(i == 0 ? -0.8f : 0.8f, -0.2f, 0) : Vector3.zero;
                 c.target = c.t.localPosition;
                 crew.Add(c);
@@ -170,6 +176,124 @@ namespace OutpostGale
             FitCamera();
             Refresh();
         }
+
+        // A soft shadow down-right of an object (the sun is upper left).
+        static SpriteRenderer CastShadow(Transform parent, Vector3 pos, float size, int order)
+        {
+            var s = Sprite("Shadow", parent, Theme.Dot(), new Color(0.16f, 0.05f, 0.08f, 0.5f), order);
+            s.transform.localPosition = pos + new Vector3(0.2f * size, -0.28f * size, 0);
+            s.transform.localScale = new Vector3(1.15f * size, 0.55f * size, 1);
+            return s;
+        }
+
+        // Boulders scattered beyond the pad, plus drifting cloud shadows and dust motes.
+        void Scenery()
+        {
+            var rnd = new System.Random(M.S.seed ^ 0x5eed);
+            string[] rocks = { "rock", "rock2", "rock3" };
+            for (int k = 0; k < 46; k++)
+            {
+                float x = (float)(rnd.NextDouble() * 2 - 1) * 21f, y = (float)(rnd.NextDouble() * 2 - 1) * 14f;
+                float size = 0.35f + (float)System.Math.Pow(rnd.NextDouble(), 2) * 1.3f;
+                float ex = Mathf.Abs(x) - width / 2f, ey = Mathf.Abs(y) - height / 2f;
+                if (ex < size * 0.6f + 0.4f && ey < size * 0.6f + 0.4f) continue; // keep the pad clear
+                var pos = new Vector3(x, y, 0);
+                int order = 200 - Mathf.RoundToInt((y + height / 2f) * 10);
+                var art = Theme.Art(rocks[rnd.Next(rocks.Length)]);
+                CastShadow(ground, pos, size, order);
+                var r = Sprite("Boulder", ground, art ?? Theme.Rock(), new Color(0.92f, 0.86f, 0.84f), order + 1);
+                r.transform.localPosition = pos;
+                r.flipX = rnd.Next(2) == 0;
+                if (art) Fit(r, size, size); else r.transform.localScale = Vector3.one * size;
+            }
+
+            clouds.Clear();
+            for (int k = 0; k < 4; k++)
+            {
+                var c = Sprite("Cloud shadow", fxRoot, Theme.Dot(), new Color(0.12f, 0.03f, 0.08f, 0.12f), -70);
+                c.transform.localPosition = new Vector3(-24 + k * 13 + UnityEngine.Random.Range(-3f, 3f), UnityEngine.Random.Range(-9f, 9f), 0);
+                c.transform.localScale = new Vector3(UnityEngine.Random.Range(8f, 13f), UnityEngine.Random.Range(4f, 7f), 1);
+                clouds.Add(c.transform);
+            }
+            motes.Clear();
+            for (int k = 0; k < 60; k++)
+            {
+                var m = Sprite("Mote", fxRoot, Theme.Dot(), new Color(1f, 0.88f, 0.72f, UnityEngine.Random.Range(0.12f, 0.35f)), 440);
+                m.transform.localPosition = new Vector3(UnityEngine.Random.Range(-22f, 22f), UnityEngine.Random.Range(-14f, 14f), 0);
+                m.transform.localScale = Vector3.one * UnityEngine.Random.Range(0.05f, 0.11f);
+                motes.Add(m.transform);
+            }
+        }
+
+        // Corner brackets and beacon lights that mark out the buildable pad.
+        void PadMarkers()
+        {
+            padLights.Clear();
+            var col = new Color(1f, 0.96f, 0.9f, 0.55f);
+            var edge = new Color(1f, 0.96f, 0.9f, 0.16f);
+            float hw = width / 2f, hh = height / 2f;
+            Line(new Vector3(0, hh), new Vector2(width, 0.04f), edge);
+            Line(new Vector3(0, -hh), new Vector2(width, 0.04f), edge);
+            Line(new Vector3(-hw, 0), new Vector2(0.04f, height), edge);
+            Line(new Vector3(hw, 0), new Vector2(0.04f, height), edge);
+            foreach (var sx in new[] { -1, 1 })
+                foreach (var sy in new[] { -1, 1 })
+                {
+                    var corner = new Vector3(sx * hw, sy * hh, 0);
+                    Line(corner + new Vector3(-sx * 0.4f, 0), new Vector2(0.86f, 0.09f), col);
+                    Line(corner + new Vector3(0, -sy * 0.4f), new Vector2(0.09f, 0.86f), col);
+                    var beacon = Sprite("Beacon", ground, Theme.Dot(), Theme.Gold, -78);
+                    beacon.transform.localPosition = corner + new Vector3(sx * 0.22f, sy * 0.22f, 0);
+                    beacon.transform.localScale = Vector3.one * 0.2f;
+                    var lightGo = new GameObject("Beacon light");
+                    lightGo.transform.SetParent(beacon.transform, false);
+                    var l = lightGo.AddComponent<Light2D>();
+                    l.lightType = Light2D.LightType.Point;
+                    l.pointLightOuterRadius = 1.4f;
+                    l.pointLightInnerRadius = 0.05f;
+                    l.color = Theme.Gold;
+                    l.intensity = 0;
+                    padLights.Add(l);
+                }
+        }
+
+        void Line(Vector3 centre, Vector2 size, Color color)
+        {
+            var l = Sprite("Pad edge", ground, Theme.White(), color, -79);
+            l.transform.localPosition = centre;
+            l.transform.localScale = new Vector3(size.x, size.y, 1);
+        }
+
+        // Clouds drift with the wind; dust motes blow across, faster and thicker in a dust event.
+        void Ambience()
+        {
+            bool still = gm.Profile.reducedMotion;
+            var wind = new Vector3(1f, 0.25f, 0);
+            foreach (var c in clouds)
+            {
+                if (!still) c.localPosition += wind * 0.35f * Time.deltaTime;
+                if (c.localPosition.x > 30) c.localPosition = new Vector3(-30, UnityEngine.Random.Range(-9f, 9f), 0);
+            }
+            float speed = 1.2f + dustLevel * 14f;
+            for (int i = 0; i < motes.Count; i++)
+            {
+                var m = motes[i];
+                bool on = !still && (i < 30 || dustLevel > 0);
+                m.gameObject.SetActive(on);
+                if (!on) continue;
+                m.localPosition += (wind * speed + new Vector3(0, Mathf.Sin(Time.time * 1.3f + i) * 0.4f, 0)) * Time.deltaTime;
+                if (m.localPosition.x > 22) m.localPosition = new Vector3(-22, UnityEngine.Random.Range(-14f, 14f), 0);
+                if (m.localPosition.y > 14) m.localPosition -= new Vector3(0, 28, 0);
+            }
+            foreach (var l in padLights) l.intensity = nightAmount * (0.8f + 0.4f * Mathf.Sin(Time.time * 2.5f));
+        }
+
+        // The suit layer's tint: most of the way to the colour, so shading still reads.
+        public static Color SuitTint(int i) => Color.Lerp(Color.white, SuitColor(i), 0.78f);
+
+        // Drawn crew art keeps its own colours (tinted only by mood); the plain astronaut takes the crew colour.
+        static Color CrewColor(Color fallback, string artName) =>
+            Theme.Art("crew_" + artName) || (Theme.Art(artName) && !Theme.Art("char_base")) ? Color.white : fallback;
 
         public static Color SuitColor(int i)
         {
@@ -184,6 +308,40 @@ namespace OutpostGale
             var shadow = Sprite("Shadow", go.transform, Theme.Dot(), new Color(0, 0, 0, 0.35f), 0);
             shadow.transform.localScale = new Vector3(0.9f, 0.35f, 1) * scale;
             shadow.transform.localPosition = new Vector3(0, -0.28f * scale, 0);
+            // The crew (Mira, Tomas) have their own drawn characters in base jumpsuits.
+            var crewArt = artName == "mira" || artName == "tomas" ? Theme.Art("crew_" + artName) : null;
+            if (crewArt)
+            {
+                body = Sprite("Suit", go.transform, crewArt, Color.white, 1);
+                Fit(body, 0.9f * scale / 0.62f, 1.12f * scale / 0.62f);
+                body.transform.localPosition = new Vector3(0, 0.08f * scale, 0);
+                var crewWalk = go.AddComponent<PersonArt>();
+                crewWalk.front = crewArt;
+                crewWalk.side = Frames("crew_" + artName + "_side_");
+                var crewTag = Text("Name", go.transform, name, 0.06f, Theme.Paper, 6);
+                crewTag.transform.localPosition = new Vector3(0, -0.5f * scale - 0.12f, 0);
+                return go;
+            }
+            var charBase = Theme.Art("char_base");
+            var charDetail = Theme.Art("char_detail");
+            if (charBase && charDetail)
+            {
+                // The layered astronaut: the suit layer takes the colour, details stay as drawn.
+                body = Sprite("Suit", go.transform, charBase, suit, 1);
+                Fit(body, 0.9f * scale / 0.62f, 1.12f * scale / 0.62f);
+                body.transform.localPosition = new Vector3(0, 0.08f * scale, 0);
+                var detail = Sprite("Detail", go.transform, charDetail, Color.white, 2);
+                detail.transform.localScale = body.transform.localScale;
+                detail.transform.localPosition = body.transform.localPosition;
+                var walk = go.AddComponent<PersonArt>();
+                walk.front = charBase;
+                walk.frontDetail = charDetail;
+                walk.side = Frames("char_side_base_");
+                walk.sideDetail = Frames("char_side_detail_");
+                var nameTag = Text("Name", go.transform, name, 0.06f, Theme.Paper, 6);
+                nameTag.transform.localPosition = new Vector3(0, -0.5f * scale - 0.12f, 0);
+                return go;
+            }
             var art = artName == null ? null : Theme.Art(artName);
             if (art)
             {
@@ -212,7 +370,7 @@ namespace OutpostGale
         {
             if (!cam) return;
             cam.orthographic = true;
-            cam.backgroundColor = Theme.MarsDeep;
+            cam.backgroundColor = MarsTerrain.Edge;
             float aspect = Mathf.Max(0.5f, (float)Screen.width / Mathf.Max(1, Screen.height));
             // Leave room for the HUD bands: ~15% top, ~18% bottom.
             float usable = 0.7f;
@@ -252,6 +410,8 @@ namespace OutpostGale
 
             float dust = M.EventActive("dust") != null || M.InDustSeason(M.S.sol) ? (M.EventActive("dust") != null ? 0.22f : 0.1f) : 0f;
             haze.color = new Color(0.72f, 0.45f, 0.25f, dust);
+            dustLevel = dust;
+            if (insideRoot) { EnsureInterior(); RefreshInterior(); }
         }
 
         ModuleVisual MakeModule(PlacedModule m)
@@ -262,6 +422,11 @@ namespace OutpostGale
             v.root.transform.localPosition = Rect(m);
             int order = Order(m.y);
             var art = Theme.Art(m.id);
+            // Drop shadow down-right (the sun is upper left), under everything in this module.
+            var drop = Sprite("Drop shadow", v.root.transform, Theme.Rounded(16, 0, false), new Color(0.14f, 0.04f, 0.08f, 0.42f), order - 1);
+            drop.drawMode = SpriteDrawMode.Sliced;
+            drop.size = new Vector2(m.w - 0.02f, m.h - 0.08f);
+            drop.transform.localPosition = new Vector3(0.16f, -0.18f, 0);
             // Footprint plate (shows the module's tiles); without art it is a front face for a 2.5D look.
             v.face = Sprite("Face", v.root.transform, Theme.Rounded(12, 4), Color.white, order);
             v.face.drawMode = SpriteDrawMode.Sliced;
@@ -385,32 +550,38 @@ namespace OutpostGale
                 v.status.color = v.label.color;
             }
 
-            var e = M.S.events.Find(x => x.targetUid == m.uid || (x.targetUid == 0 && M.B.Event(x.id)?.station == m.id));
             bool dusty = M.S.events.Exists(x => x.id == "dust" && x.targetUid == m.uid);
             v.dust.enabled = dusty;
 
-            string status = "";
             if (!m.built)
             {
                 float p = m.progressQ / (float)Balance.Q(def.buildHours);
-                status = "Building " + Mathf.RoundToInt(p * 100) + "%";
                 v.progressBg.enabled = v.progressFill.enabled = true;
                 float w = v.progressBg.size.x - 0.06f;
                 v.progressFill.transform.localScale = new Vector3(Mathf.Max(0.001f, w * p), 0.12f, 1);
                 v.progressFill.transform.localPosition = new Vector3(-w / 2f + w * p / 2f, 0, 0);
             }
-            else
-            {
-                v.progressBg.enabled = v.progressFill.enabled = false;
-                if (!active) status = "On tomorrow";
-                else if (e != null) status = "! " + M.B.Event(e.id).name;
-                else if (m.id == "shelter") status = M.S.sealedTonight ? "Sealed" : "";
-                else if (m.id == "greenhouse") status = M.EventActive("blight") != null ? "Sick crops" : m.builtSol <= M.S.sol - M.B.life.greenhouseDelaySols ? "Growing food" : "Seedlings";
-                else if (usesPower && !powered) status = "No power";
-                else if (grid.IsShielded(m)) status = "Shielded";
-            }
-            v.status.text = status;
+            else v.progressBg.enabled = v.progressFill.enabled = false;
+            v.status.text = ModuleStatus(m, grid);
             v.glow.enabled = powered && usesPower;
+        }
+
+        // The short status shown on a module (map and inside view).
+        string ModuleStatus(PlacedModule m, BaseLayout grid)
+        {
+            var def = M.B.Module(m.id);
+            if (!m.built) return "Building " + Mathf.RoundToInt(m.progressQ / (float)Balance.Q(def.buildHours) * 100) + "%";
+            bool active = M.IsActive(m);
+            bool powered = active && !M.S.systemsDownLastNight;
+            bool usesPower = def.powerUse > 0 || m.id == "hab" || m.id == "shelter";
+            var e = M.S.events.Find(x => x.targetUid == m.uid || (x.targetUid == 0 && M.B.Event(x.id)?.station == m.id));
+            if (!active) return "On tomorrow";
+            if (e != null) return "! " + M.B.Event(e.id).name;
+            if (m.id == "shelter") return M.S.sealedTonight ? "Sealed" : "";
+            if (m.id == "greenhouse") return M.EventActive("blight") != null ? "Sick crops" : m.builtSol <= M.S.sol - M.B.life.greenhouseDelaySols ? "Growing food" : "Seedlings";
+            if (usesPower && !powered) return "No power";
+            if (grid.IsShielded(m)) return "Shielded";
+            return "";
         }
 
         // ---------- per-frame ----------
@@ -421,6 +592,7 @@ namespace OutpostGale
             nightAmount = Mathf.MoveTowards(nightAmount, nightTarget, Time.deltaTime * 0.8f);
             if (globalLight) globalLight.intensity = Mathf.Lerp(1f, 0.28f, nightAmount);
             foreach (var v in visuals.Values) if (v.glow && v.glow.enabled) v.glow.intensity = nightAmount * 1.3f;
+            if (Inside) { InteriorUpdate(); return; }
             FitCamera();
             if (shake > 0 && cam && !gm.Profile.reducedMotion)
             {
@@ -431,6 +603,7 @@ namespace OutpostGale
             MovePlayer();
             MoveCrew();
             Particles();
+            Ambience();
 
             if (!gm.WorldInputOpen) { highlight.gameObject.SetActive(false); if (ghost) ghost.SetActive(false); return; }
             HandleInput();
@@ -525,6 +698,7 @@ namespace OutpostGale
 
         public PlacedModule StationNearPlayer()
         {
+            if (Inside) return InsideStation();
             var grid = M.Layout();
             var m = grid.ModuleAt(playerCell.x, playerCell.y);
             if (m != null) return m;
@@ -539,6 +713,7 @@ namespace OutpostGale
         public Vector3 StationScreenPos(PlacedModule m)
         {
             if (!cam || m == null) return Vector3.zero;
+            if (Inside) return InsideScreenPos();
             return cam.WorldToScreenPoint(transform.TransformPoint(Rect(m) + new Vector3(0, m.h / 2f + 0.2f, 0)));
         }
 
@@ -546,6 +721,11 @@ namespace OutpostGale
         public void WalkTo(PlacedModule m, string action = null)
         {
             if (m == null) return;
+            if (Inside)
+            {
+                if (InsideWalkTo(m, action)) return;
+                SetInside(false); // an outdoor module: step back out to the map
+            }
             var p = GridPath.Find(M.Layout(), playerCell, c => m.Contains(c.x, c.y));
             path.Clear();
             walkTarget = m;
@@ -579,6 +759,7 @@ namespace OutpostGale
         void MovePlayer()
         {
             float speed = 4.5f;
+            var prevPos = playerPos;
             if (path.Count > 0)
             {
                 var target = Tile(path[0].x, path[0].y);
@@ -592,6 +773,7 @@ namespace OutpostGale
                 }
             }
             player.localPosition = playerPos + new Vector3(0, Mathf.Abs(Mathf.Sin(Time.time * 10)) * (path.Count > 0 ? 0.06f : 0), 0);
+            Pose(player, (playerPos - prevPos) / Mathf.Max(0.0001f, Time.deltaTime));
             SetOrder(player, Order(playerCell.y) + 20);
             var boltTarget = playerPos + new Vector3(0.55f, 0.35f + Mathf.Sin(Time.time * 3) * 0.06f, 0);
             bolt.localPosition = Vector3.Lerp(bolt.localPosition, boltTarget, Time.deltaTime * 4);
@@ -610,7 +792,9 @@ namespace OutpostGale
                     c.target = Rect(hab) + new Vector3(UnityEngine.Random.Range(-hab.w / 2f + 0.4f, hab.w / 2f - 0.4f), UnityEngine.Random.Range(-0.4f, 0.3f), 0);
                     c.wait = UnityEngine.Random.Range(2f, 5f);
                 }
+                var before = c.t.localPosition;
                 c.t.localPosition = Vector3.MoveTowards(c.t.localPosition, c.target, Time.deltaTime * 0.8f);
+                Pose(c.t, (c.t.localPosition - before) / Mathf.Max(0.0001f, Time.deltaTime));
                 // Faces: tired, hungry or happy, shown by suit tint.
                 float mood = Mathf.Min(M.S.health, M.S.life) / 100f;
                 c.face.color = Color.Lerp(Theme.Muted, c.baseColor, Mathf.Clamp01(mood * 2f)); // greyer when tired or hungry
@@ -654,6 +838,7 @@ namespace OutpostGale
 
         public void StartGhost(string moduleId)
         {
+            if (Inside) SetInside(false); // building happens on the map
             ghostModule = moduleId;
             ghostRotated = false;
             if (!ghost)

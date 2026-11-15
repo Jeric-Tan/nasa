@@ -4,23 +4,175 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
   <title>{{{ PRODUCT_NAME }}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #B9502A; }
-    #unity-canvas { width: 100%; height: 100%; display: block; background: #B9502A; outline: none; }
-    #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 18px; background: #E9773E; color: #FFF6EA; font: 800 20px "Nunito", system-ui, sans-serif; }
-    #loading h1 { margin: 0; font-size: 56px; letter-spacing: 1px; text-shadow: 0 4px 0 #2A1A2E; }
-    #bar { width: min(420px, 80vw); height: 22px; border: 4px solid #2A1A2E; border-radius: 14px; background: #FFF6EA; overflow: hidden; }
-    #fill { width: 0; height: 100%; background: #F2B705; transition: width .2s; }
-    #warning { position: fixed; left: 50%; top: 12px; transform: translateX(-50%); max-width: 90vw; display: none;
-      background: #FFF6EA; color: #2A1A2E; border: 3px solid #2A1A2E; border-radius: 12px; padding: 10px 14px; font: 700 15px system-ui, sans-serif; }
+    :root {
+      --ink: #241A33; --paper: #FFF9F2; --gold: #FFC23D; --coral: #FF7A45; --soft: #C9BEE0;
+      --sky-top: #140E35; --sky-mid: #4A2A5E; --sky-low: #E9925E;
+    }
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: var(--sky-top); }
+    #unity-canvas { width: 100%; height: 100%; display: block; background: var(--sky-top); outline: none; }
+
+    #loading {
+      position: fixed; inset: 0; overflow: hidden; color: var(--paper);
+      font-family: "Nunito", system-ui, sans-serif; font-weight: 700;
+      background: linear-gradient(180deg, var(--sky-top) 0%, #2A1A4E 38%, var(--sky-mid) 60%, #B45F5E 80%, var(--sky-low) 100%);
+      transition: opacity .6s ease;
+    }
+    #loading.done { opacity: 0; pointer-events: none; }
+    #stars { position: absolute; inset: 0; }
+    .star { position: absolute; border-radius: 50%; background: #FFF7E8; animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 50% { opacity: .25; } }
+
+    /* Mars horizon: a huge planet curve with dusty bands */
+    #mars {
+      position: absolute; left: 50%; bottom: -118vh; width: 170vh; height: 150vh; min-width: 1200px; transform: translateX(-50%);
+      border-radius: 50%;
+      background:
+        radial-gradient(ellipse at 30% 12%, rgba(255,214,170,.55), transparent 32%),
+        radial-gradient(circle at 62% 6%, rgba(120,40,30,.45) 0 3%, transparent 3.4%),
+        radial-gradient(circle at 40% 9%, rgba(120,40,30,.35) 0 1.6%, transparent 2%),
+        radial-gradient(circle at 75% 14%, rgba(120,40,30,.3) 0 2.2%, transparent 2.6%),
+        linear-gradient(180deg, #E07A4A 0%, #B9502A 18%, #7A2F2A 40%);
+      box-shadow: 0 -10px 60px rgba(255,140,90,.55), 0 -2px 0 rgba(255,200,150,.6);
+    }
+
+    #stage { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 14vh; }
+    #tag { font: 900 13px "Nunito", system-ui, sans-serif; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+    h1 {
+      margin: 0; font: 800 clamp(48px, 9vw, 104px)/1 "Baloo 2", "Nunito", system-ui, sans-serif; color: var(--paper);
+      text-shadow: 0 5px 0 var(--coral), 0 11px 0 rgba(26,12,52,.55);
+      animation: bob 4s ease-in-out infinite;
+    }
+    @keyframes bob { 50% { transform: translateY(-4px) rotate(-1deg); } }
+
+    /* The capsule drifts down under its parachute as the game loads. */
+    #sky-lane { position: relative; width: 140px; height: 190px; margin: 6px 0 2px; }
+    #lander { position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); transition: top .5s ease; }
+    #lander svg { display: block; animation: sway 3.2s ease-in-out infinite; transform-origin: 50% 10%; }
+    @keyframes sway { 50% { transform: rotate(4deg); } }
+    #flame { opacity: 0; transition: opacity .4s; }
+    .burn #flame { opacity: 1; }
+
+    #panel {
+      width: min(460px, 86vw); padding: 18px 20px 16px; border-radius: 22px;
+      background: rgba(26, 20, 52, .78); backdrop-filter: blur(6px);
+      box-shadow: 0 0 0 1.5px rgba(255,255,255,.12) inset, 0 10px 30px rgba(10,4,26,.45);
+    }
+    #status { display: flex; justify-content: space-between; align-items: baseline; font-size: 16px; margin-bottom: 10px; }
+    #pct { font: 900 15px "Nunito", system-ui, sans-serif; color: var(--gold); }
+    #bar { height: 18px; border-radius: 999px; background: #120D26; padding: 3px; box-sizing: border-box; }
+    #fill {
+      position: relative; height: 100%; width: 3%; border-radius: 999px; overflow: hidden;
+      background: linear-gradient(90deg, var(--gold), var(--coral));
+      box-shadow: 0 0 14px rgba(255,170,80,.6);
+      transition: width .35s ease;
+    }
+    #fill::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,.55) 40%, transparent 60%);
+      animation: shine 1.6s linear infinite;
+    }
+    @keyframes shine { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+    #fact { margin-top: 12px; min-height: 40px; font-size: 14px; color: var(--soft); transition: opacity .4s; }
+    #fact b { color: var(--paper); }
+
+    #warning { position: fixed; left: 50%; top: 12px; transform: translateX(-50%); max-width: 90vw; display: none; z-index: 5;
+      background: var(--paper); color: var(--ink); border-radius: 14px; padding: 10px 14px; font: 700 15px system-ui, sans-serif;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .star, h1, #lander svg, #fill::after { animation: none !important; }
+    }
   </style>
 </head>
 <body>
   <canvas id="unity-canvas" tabindex="-1"></canvas>
-  <div id="loading"><h1>Outpost Gale</h1><div>Getting the base ready…</div><div id="bar"><div id="fill"></div></div></div>
+  <div id="loading">
+    <div id="stars"></div>
+    <div id="mars"></div>
+    <div id="stage">
+      <div id="tag">Survive on Mars · every solar storm really happened</div>
+      <h1>Outpost Gale</h1>
+      <div id="sky-lane">
+        <div id="lander">
+          <svg width="110" height="150" viewBox="0 0 110 150" aria-hidden="true">
+            <!-- parachute canopy -->
+            <path d="M8 52 C8 18 30 4 55 4 C80 4 102 18 102 52 Z" fill="#FFF9F2"/>
+            <path d="M8 52 C8 18 30 4 55 4 L55 52 Z" fill="#FF7A45"/>
+            <path d="M31 52 C31 20 42 6 55 4 C68 6 79 20 79 52 Z" fill="#FFF9F2" opacity=".9"/>
+            <path d="M55 4 C68 6 79 20 79 52 L55 52 Z" fill="#FF7A45"/>
+            <circle cx="55" cy="10" r="4" fill="#241A33" opacity=".25"/>
+            <!-- lines -->
+            <g stroke="#FFF9F2" stroke-opacity=".7" stroke-width="1.2">
+              <line x1="10" y1="52" x2="47" y2="104"/><line x1="31" y1="52" x2="50" y2="104"/>
+              <line x1="79" y1="52" x2="60" y2="104"/><line x1="100" y1="52" x2="63" y2="104"/>
+            </g>
+            <!-- backshell capsule -->
+            <path d="M42 104 L68 104 L78 128 L32 128 Z" fill="#E9E4F0"/>
+            <path d="M55 104 L68 104 L78 128 L55 128 Z" fill="#C9BEE0"/>
+            <rect x="28" y="127" width="54" height="7" rx="3.5" fill="#FF7A45"/>
+            <g id="flame">
+              <path d="M44 135 Q47 147 50 135 Z" fill="#FFC23D"/>
+              <path d="M60 135 Q63 147 66 135 Z" fill="#FFC23D"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div id="panel">
+        <div id="status"><span id="phase">Entering the atmosphere…</span><span id="pct">0%</span></div>
+        <div id="bar"><div id="fill"></div></div>
+        <div id="fact"></div>
+      </div>
+    </div>
+  </div>
   <div id="warning"></div>
   <script>
+    // Stars
+    (function () {
+      var box = document.getElementById("stars"), n = 90;
+      for (var i = 0; i < n; i++) {
+        var s = document.createElement("div"), size = 1 + Math.random() * 2.4, y = Math.random() * 70;
+        s.className = "star";
+        s.style.cssText = "left:" + (Math.random() * 100) + "%;top:" + y + "%;width:" + size + "px;height:" + size + "px;opacity:" +
+          (0.35 + (1 - y / 70) * 0.6).toFixed(2) + ";animation-delay:" + (Math.random() * 3).toFixed(2) + "s;animation-duration:" + (2 + Math.random() * 3).toFixed(2) + "s";
+        box.appendChild(s);
+      }
+    })();
+
+    // Well-known Mars facts while you wait.
+    var facts = [
+      "<b>A Mars day is called a sol.</b> It lasts 24 hours and 39 minutes.",
+      "<b>Mars sunsets look blue,</b> because fine dust scatters blue light toward you near the Sun.",
+      "<b>From Mars, Earth looks like a bright evening star.</b>",
+      "<b>Curiosity landed in Gale crater in August 2012.</b> In 2014 it reached Mount Sharp and began climbing it.",
+      "<b>Gravity on Mars is about 38% of Earth's.</b> You could jump much higher there.",
+      "<b>Mars has two small moons:</b> Phobos and Deimos.",
+      "<b>Mars has no global magnetic field,</b> and only a thin atmosphere, so much more space radiation reaches the ground than on Earth. That's why your base needs a shelter."
+    ];
+    var factEl = document.getElementById("fact"), fi = Math.floor(Math.random() * facts.length);
+    function nextFact() {
+      factEl.style.opacity = 0;
+      setTimeout(function () { factEl.innerHTML = facts[fi++ % facts.length]; factEl.style.opacity = 1; }, 400);
+    }
+    factEl.innerHTML = facts[fi++ % facts.length];
+    var factTimer = setInterval(nextFact, 5200);
+
+    // Descent: the capsule drops as loading progresses; retro-rockets fire near the end.
+    var phases = [[0, "Entering the atmosphere…"], [0.25, "Heat shield glowing…"], [0.5, "Parachute out!"], [0.75, "Firing the landing rockets…"], [0.9, "Touchdown. Unpacking the base…"]];
+    function setProgress(p) {
+      var pct = Math.round(p * 100);
+      document.getElementById("fill").style.width = Math.max(3, pct) + "%";
+      document.getElementById("pct").textContent = pct + "%";
+      document.getElementById("lander").style.top = (p * 40) + "px";
+      var label = phases[0][1];
+      for (var i = 0; i < phases.length; i++) if (p >= phases[i][0]) label = phases[i][1];
+      document.getElementById("phase").textContent = label;
+      document.getElementById("lander").classList.toggle("burn", p >= 0.75);
+    }
+
     var canvas = document.querySelector("#unity-canvas");
     function showBanner(msg, type) {
       if (type !== 'error') { console.warn(msg); return; }
@@ -44,10 +196,11 @@
     var script = document.createElement("script");
     script.src = buildUrl + "/{{{ LOADER_FILENAME }}}";
     script.onload = function () {
-      createUnityInstance(canvas, config, function (progress) {
-        document.querySelector("#fill").style.width = (100 * progress) + "%";
-      }).then(function () {
-        document.querySelector("#loading").style.display = "none";
+      createUnityInstance(canvas, config, setProgress).then(function () {
+        setProgress(1);
+        var l = document.querySelector("#loading");
+        l.classList.add("done");
+        setTimeout(function () { l.style.display = "none"; clearInterval(factTimer); }, 700);
         canvas.focus();
       }).catch(function (message) { showBanner(String(message), 'error'); });
     };

@@ -2,7 +2,7 @@
   "facts": [
     { "id": "moxie", "title": "Making air on Mars", "text": "Perseverance's MOXIE experiment made oxygen out of the thin Mars air, which is mostly carbon dioxide.", "source": "NASA JPL, Mars 2020 MOXIE", "trigger": "build:oxygen" },
     { "id": "dust2018", "title": "Dust is dangerous", "text": "In 2018 a dust storm covered the whole planet. It blocked the sunlight that powered the Opportunity rover, and its mission ended.", "source": "NASA JPL, Opportunity mission", "trigger": "night" },
-    { "id": "lightdelay", "title": "Messages take time", "text": "A radio signal takes about 4 to 24 minutes to travel between Earth and Mars, depending on where the planets are.", "source": "NASA Mars Exploration", "trigger": "night" },
+    { "id": "lightdelay", "title": "Messages take time", "text": "A radio signal takes about 3 to 22 minutes to travel between Earth and Mars, depending on where the planets are.", "source": "NASA Mars Exploration", "trigger": "night" },
     { "id": "regolithshield", "title": "Soil as a shield", "text": "Piling Mars soil (regolith) over a habitat is one idea for blocking radiation. Thick, heavy material stops particles.", "source": "NASA habitat studies", "trigger": "build:wall" },
     { "id": "curiosityrad", "title": "Radiation at Gale", "text": "Curiosity's RAD instrument measures radiation right here at Gale crater. On an average sol it is about 0.64 millisieverts, roughly 6 chest X-rays.", "source": "Hassler et al. 2014, Science 343 (Curiosity RAD)", "trigger": "storm" },
     { "id": "isswater", "title": "Recycling water", "text": "The International Space Station recycles about 98 percent of its water, including sweat and breath.", "source": "NASA, 2023", "trigger": "build:recycler" },

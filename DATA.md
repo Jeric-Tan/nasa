@@ -11,10 +11,18 @@ The archive is bundled in `Assets/StreamingAssets/data/` so the game works offli
 | DONKI live (last 30 days of flares) | fetched at startup | "Today's Sun" banner on the title screen and in morning briefings. | If the call fails (offline, blocked), the banner falls back to the archive and its label changes to REAL ARCHIVE. CORS was checked on 2026-11-14: DONKI sends `Access-Control-Allow-Origin: *`. |
 | Curiosity RAD (via the published average) | `radiation.json` | Commander-mode real units: normal radiation at Gale ≈ 0.64 mSv a sol ≈ 6 chest X-rays. | **Published value, not a live query.** The RadLab API (`visualization.osdr.nasa.gov/radlab/api/?query=…`) returns MSL-RAD-Surface rows, but no dose column name we tried returns values. Source: Hassler et al. 2014, *Science* 343, 1244797. Storm damage in health points is a game number. |
 | [OSDR](https://osdr.nasa.gov) studies OSD-489, OSD-104, OSD-7, OSD-678, OSD-334 | `osdr_facts.json` | Fact cards about bones, muscles, plants and radiation. | Kid-friendly text written by us; the study title is fetched from OSDR so each card can be checked. |
-| [Mars Trek](https://trek.nasa.gov/mars/) | (not yet) | Expedition map image. | Placeholder crater drawing until a Gale image is exported (see README). |
+| NASA/JPL-Caltech/ASU, PIA14290 (Mars Odyssey mosaic of Gale crater) | `Resources/Art/gale_map.png` | Expedition map image. | Cropped and tinted Mars-red; spot markers are placed by the game, not real coordinates. |
+| Curiosity Mastcam photos PIA19928 (Bagnold Dunes), PIA16204 (Rocknest), PIA16701 (Yellowknife Bay), via the [NASA Image and Video Library](https://images.nasa.gov) | `Resources/Art/trip_*.jpg`, `Resources/Data/Trips.json` | The trip scene for each Gale spot: a real photo of the place, its credit, and one fact from NASA's captions and results. | Black mosaic borders cropped. Each record keeps `source` and `retrieved_on`. Jezero spots and the supply drop have no photo and say so. |
+| Curiosity SAM water in soil (Leshin et al. 2013, *Science* 341, 1238937: 1.5–3% by weight at Rocknest) | `Trips.json`, Guide text | Why the game's "water" comes from baking soil. | Shown as "about 2%". Gale is near the equator, where NASA's SWIM ice maps show no shallow buried ice, so there is no "ice field": the inventory item (id `ice` in code) is shown as water. Jezero's old "more ice" bonus was removed for the same reason. |
 
 Other facts (MOXIE, the 2018 dust storm, light delay, ISS water recycling) are in
 `Assets/Resources/Data/Facts.json`, each with a source line.
+
+## Hackathon resources not used (yet)
+- **Mars Trek**: the trip map is the Mars Odyssey image PIA14290, not a Mars Trek export.
+- **RadLab**: it holds ISS dosimetry; the game needs Mars surface dose, so it uses the published Curiosity RAD average (above).
+- **Mars Rover Photos API (api.nasa.gov)**: the trip photos come from the NASA Image and Video Library instead, because it has captioned mosaics with credits.
+- **CSA youth resources and food-production toolkit**: read while planning; nothing is quoted in the game.
 
 ## Known gaps
 - RadLab dose columns: find the right column name (RadLab GUI → Data API page was returning HTTP 500 on 2026-11-14).

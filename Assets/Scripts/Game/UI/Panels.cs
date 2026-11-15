@@ -35,7 +35,13 @@ namespace OutpostGale
             if (autoAction != null)
             {
                 var a = actions.Find(x => x.id == autoAction);
-                if (a != null && a.enabled) { RunAction(m, a); return; }
+                if (a != null && a.enabled)
+                {
+                    // Trips and fixes open their own popup; every other quick job asks first.
+                    if (a.id == "outside" || a.id.StartsWith("fix:")) RunAction(m, a);
+                    else Queue(done => ConfirmAction(m, a, done));
+                    return;
+                }
                 if (a != null) { Toast(a.why ?? "Not now"); AudioFx.Error(); return; }
             }
             if (actions.Count == 0)
@@ -49,8 +55,14 @@ namespace OutpostGale
                 var def = Balance.Module(m.id);
                 var card = Modal(560);
                 UIKit.Label(card, (m.built ? "" : "Construction site: ") + def.name, 28, Theme.Ink, TextAnchor.MiddleLeft, true);
+                Origin(card, "ROOM", "You're at this room. Pick a job: each one costs daylight hours.", false);
                 if (!string.IsNullOrEmpty(def.plus) && m.built)
                     UIKit.Label(card, "<color=#227A3B>+ " + def.plus + "</color>" + (string.IsNullOrEmpty(def.minus) ? "" : "   <color=#B42318>− " + def.minus + "</color>"), 15);
+                if (m.id == "hab" && m.built && !World.Inside)
+                {
+                    var inside = UIKit.Button(card, "Go inside the base", () => { CloseModal(card); done(); World.SetInside(true); }, Theme.Life, 18);
+                    UIKit.Size(inside, -1, 52, -1, 54);
+                }
                 foreach (var a in actions)
                 {
                     var act = a;
@@ -63,9 +75,30 @@ namespace OutpostGale
             });
         }
 
+        // A quick job (shortcut key, dock button, or E at an object): say what it gives and costs, then ask.
+        void ConfirmAction(PlacedModule m, StationAction a, Action done)
+        {
+            var card = Modal(500);
+            UIKit.Label(card, a.label, 28, Theme.Ink, TextAnchor.MiddleLeft, true);
+            Origin(card, "QUICK JOB", "You picked this with a shortcut. Check it before you spend the time.", false);
+            UIKit.Label(card, a.detail + ".", 18);
+            UIKit.Label(card, "Takes " + Mission.Hours(a.quarters) + " of daylight (" + Mission.Hours(Mission.S.quartersLeft) + " left today).", 16, Theme.Muted);
+            var row = UIKit.Rect("Row", card);
+            UIKit.HStack(row.gameObject, 10).childForceExpandWidth = true;
+            UIKit.Size(row, -1, 56, -1, 56);
+            UIKit.Button(row, "Not now", () => { CloseModal(card); done(); }, Theme.Paper);
+            UIKit.Button(row, "Do it", () => { CloseModal(card); done(); RunAction(m, a); }, Theme.Power);
+        }
+
         void RunAction(PlacedModule m, StationAction a)
         {
-            if (a.id == "outside") { ShowExpedition(); return; }
+            if (a.id == "outside")
+            {
+                // Step out through the airlock onto the surface, then pick where to go.
+                if (World.Inside) World.StepOutside(m);
+                ShowExpedition();
+                return;
+            }
             if (a.id.StartsWith("fix:"))
             {
                 string id = a.id.Substring(4);
@@ -93,6 +126,7 @@ namespace OutpostGale
             {
                 var card = Modal(600, null, true);
                 UIKit.Label(card, "Radio from Earth", 26, Theme.Gold, TextAnchor.MiddleLeft, true);
+                Origin(card, "RADIO", "You used the Radio. Radio waves take minutes to cross space, so Earth's news is a sol late.", true);
                 AudioFx.Radio();
                 var bar = UIKit.Label(card, "Signal travelling…", 14, Theme.Hex("#D9CFE0"));
                 var text = UIKit.Label(card, "", 19, Theme.Paper);
@@ -118,6 +152,7 @@ namespace OutpostGale
             var def = Balance.Event(eventId);
             var card = Modal(460);
             UIKit.Label(card, def.fixText, 26, Theme.Ink, TextAnchor.MiddleCenter, true);
+            Origin(card, "FIXING A PROBLEM", "Problems pop up as machines wear out. You chose to fix this one.", false);
             UIKit.Label(card, "Hold the button (or Space) until the ring fills.", 16, Theme.Muted, TextAnchor.MiddleCenter);
             var holder = UIKit.Rect("Ring", card);
             UIKit.Size(holder, -1, 150, -1, 150);
@@ -175,17 +210,32 @@ namespace OutpostGale
                 }
                 int rows = Mathf.CeilToInt((Balance.modules.Length - 4 - locked) / 3f);
                 UIKit.Size(grid, -1, rows * 208, -1, rows * 208);
-                if (locked > 0) UIKit.Label(card, locked + " more blueprint" + (locked > 1 ? "s" : "") + " to unlock: bring home rock samples from the Science spot, and listen for Earth.", 15, Theme.Muted);
+                if (locked > 0) UIKit.Label(card, locked + " more blueprint" + (locked > 1 ? "s" : "") + " to unlock: bring home rock samples from the layered rocks, and listen for Earth.", 15, Theme.Muted);
                 UIKit.Button(card, "Close", () => { CloseModal(card); done(); }, Theme.Paper, 16);
             });
         }
 
         void BuildCard(RectTransform grid, ModuleDef def, RectTransform menu, Action done)
         {
-            var p = UIKit.Panel(grid, Color.white, def.id, true, 14);
-            UIKit.VStack(p.gameObject, 3, 12);
+            var p = UIKit.Panel(grid, Color.white, def.id, true, 18);
+            UIKit.VStack(p.gameObject, 3, 14);
             int count = Mission.S.modules.FindAll(x => x.id == def.id).Count;
-            UIKit.Label(p.transform, def.name + (def.maxCount > 1 ? "  <size=13>(" + count + "/" + def.maxCount + ")</size>" : ""), 19, Theme.Ink, TextAnchor.MiddleLeft, true);
+            var head = UIKit.Rect("Head", p.transform);
+            var hh = UIKit.HStack(head.gameObject, 8);
+            hh.childForceExpandWidth = false;
+            UIKit.Size(head, -1, 36, -1, 36);
+            var title = UIKit.Label(head, def.name + (def.maxCount > 1 ? "  <size=13><color=#76677F>" + count + "/" + def.maxCount + "</color></size>" : ""), 19, Theme.Ink, TextAnchor.MiddleLeft, true);
+            UIKit.Size(title, -1, 36, -1, 36, 1);
+            var art = Theme.Art(def.id);
+            if (art)
+            {
+                var pic = UIKit.Rect("Art", head);
+                UIKit.Size(pic, 36, 36, 36, 36);
+                var pi = pic.gameObject.AddComponent<Image>();
+                pi.sprite = art;
+                pi.preserveAspect = true;
+                pi.raycastTarget = false;
+            }
             UIKit.Label(p.transform, "<color=#227A3B>+ " + def.plus + "</color>", 14);
             UIKit.Label(p.transform, "<color=#B42318>− " + def.minus + "</color>", 14);
             UIKit.Label(p.transform, "<i>" + def.why + "</i>", 12, Theme.Muted);
@@ -209,6 +259,7 @@ namespace OutpostGale
         {
             var card = Modal(600);
             UIKit.Label(card, "Every choice costs something", 26, Theme.Ink, TextAnchor.MiddleLeft, true);
+            Origin(card, "FIRST UPGRADE", "This question only comes once, before your first build.", false);
             UIKit.Label(card, "The " + def.name.ToLowerInvariant() + " gives you:\n<color=#227A3B><b>+ " + def.plus + "</b></color>\n\nBut it costs:\n<color=#B42318><b>− " + def.minus + "</b></color>", 19);
             UIKit.Label(card, "Are you OK giving that up?", 19);
             var row = UIKit.Rect("Row", card);
@@ -270,14 +321,14 @@ namespace OutpostGale
                     int dose = knownStorm ? sp.stormDose : sp.dose;
                     string rad = Mission.Mode.realUnits ? "−" + dose + " health" : "Radiation: " + (dose <= 3 ? "LOW" : dose <= 5 ? "MEDIUM" : "HIGH");
                     string finds = "+" + (sp.amount + (sp.material == "ice" ? Balance.Site(s.site).iceBonus : 0)) + " " + Mission.MaterialName(sp.material, sp.amount) + (sp.partChance > 0 ? ", maybe a part" : "");
-                    string text = "<b>" + sp.name + "</b>  ·  " + Mission.Hours(q) + " there and back  ·  " + rad + (knownStorm ? " (storm day!)" : "") +
+                    string text = "<b>" + SpotTitle(sp) + "</b>  ·  " + Mission.Hours(q) + " there and back  ·  " + rad + (knownStorm ? " (storm day!)" : "") +
                                   "\n<size=14>" + finds + ". " + sp.blurb + "</size>";
                     var b = UIKit.Button(list, text, () => { CloseModal(card); done(); GoOnTrip(sp.id); }, Color.white, 17);
                     b.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
                     UIKit.Size(b, -1, 74, -1, 76);
                     b.interactable = s.quartersLeft >= q;
                 }
-                UIKit.Button(card, "Stay inside", () => { CloseModal(card); done(); }, Theme.Paper, 16);
+                UIKit.Button(card, "Go back inside", () => { CloseModal(card); done(); World.SetInside(true); }, Theme.Paper, 16);
             });
         }
 
@@ -322,9 +373,9 @@ namespace OutpostGale
                 var pos = basePos + new Vector2(Mathf.Cos(ang), Mathf.Sin(ang) * (art ? 1f : 1.2f)) * dist;
                 pos = new Vector2(Mathf.Clamp(pos.x, 0.1f, 0.9f), Mathf.Clamp(pos.y, 0.1f, 0.9f));
                 bool open = Mission.SpotsToday().Contains(spot);
-                if (open) Marker(img, pos, spot.name, spot.material == "samples" ? Theme.Power : spot.material == "ice" ? Theme.Life : spot.material == "parts" ? Theme.Health : Theme.Sand);
+                if (open) Marker(img, pos, SpotTitle(spot), spot.material == "samples" ? Theme.Power : spot.material == "ice" ? Theme.Life : spot.material == "parts" ? Theme.Health : Theme.Sand);
             }
-            var credit = UIKit.Label(frame.transform, art ? "Map: NASA Mars Trek" : "Placeholder map (add a Mars Trek image)", 11, Theme.Paper, TextAnchor.LowerCenter);
+            var credit = UIKit.Label(frame.transform, art ? "Map: NASA/JPL-Caltech/ASU (Mars Odyssey, PIA14290)" : "Drawn map (no NASA image for this site)", 11, Theme.Paper, TextAnchor.LowerCenter);
             UIKit.Anchor(credit.rectTransform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 8), new Vector2(320, 18));
             return frame.rectTransform;
         }
@@ -351,6 +402,8 @@ namespace OutpostGale
             if (!r.ok) { Toast(r.message); AudioFx.Error(); return; }
             AudioFx.Trip();
             AfterChange();
+            var spot = Balance.Spot(spotId);
+            Queue(done => ShowTripScene(spot, done)); // the place itself: real photo, a true fact, three finds
             Queue(done => ShowTripResult(r.message, done));
         }
 
@@ -358,7 +411,8 @@ namespace OutpostGale
         {
             var trip = Mission.S.trip;
             var card = Modal(620);
-            UIKit.Label(card, Balance.Spot(trip.spotId).name, 28, Theme.Ink, TextAnchor.MiddleLeft, true);
+            UIKit.Label(card, SpotTitle(Balance.Spot(trip.spotId)), 28, Theme.Ink, TextAnchor.MiddleLeft, true);
+            Origin(card, "TRIP RESULT", "What you found outside, and the radiation the crew took on the way.", false);
             UIKit.Label(card, message, 18);
             if (trip.warning)
             {
@@ -402,6 +456,7 @@ namespace OutpostGale
             var s = Mission.S;
             var card = Modal(720, null, true);
             UIKit.Label(card, "Morning briefing: Sol " + s.sol, 30, Theme.Gold, TextAnchor.MiddleLeft, true);
+            Origin(card, "MORNING BRIEFING", "Every sol starts with news from BOLT and Earth.", true);
             UIKit.Label(card, "Act " + Mission.Act + ": " + ActName(Mission.Act) + "   ·   " + (s.lastSol - s.sol + 1) + " sols until the next crew lands", 15, Theme.Hex("#D9CFE0"));
 
             var sun = UIKit.Panel(card, Theme.NightSoft, "Sun", false, 12);
@@ -429,6 +484,30 @@ namespace OutpostGale
 
         static string Tag(string text) => "<color=#FFD27A><b>[" + text + "]</b></color>";
 
+        // A small line at the top of a popup saying where it comes from, in plain words.
+        static void Origin(RectTransform card, string tag, string why, bool dark)
+        {
+            var t = UIKit.Label(card, "<b><color=" + (dark ? "#FFD27A" : "#B9502A") + ">" + tag + "</color></b>   " + why, 13, dark ? Theme.Soft : Theme.Muted);
+            t.transform.SetAsFirstSibling();
+        }
+
+        // What radiation did while you slept, why, the running total, and what low health means.
+        void RadiationPanel(RectTransform card, NightReport r, bool dark)
+        {
+            var s = Mission.S;
+            bool shielded = Mission.Layout().IsShielded(Mission.Layout().First("hab"));
+            var p = UIKit.Panel(card, dark ? Theme.NightSoft : Theme.Hex("#FFF0EC"), "Radiation", true, 12);
+            UIKit.VStack(p.gameObject, 4, 14);
+            Color ink = dark ? Theme.Paper : Theme.Ink;
+            UIKit.Label(p.transform, "<color=#E5483B><b>RADIATION WHILE YOU SLEPT:  −" + lastNightDose + " crew health</b></color>", 18, ink);
+            UIKit.Label(p.transform, "Mars has a thin atmosphere and no magnetic field, so space radiation reaches the base every night. " +
+                (shielded ? "Your shield wall cut the normal dose in half." : "A shield wall touching the hab would cut the normal dose in half.") +
+                (r.storm ? (r.shelterSealed ? " The solar storm added " + r.stormDamage + ", but the sealed shelter blocked most of it." :
+                                              " The solar storm added " + r.stormDamage + " because nobody was sealed in the shelter.") : ""), 15, ink);
+            UIKit.Label(p.transform, "<b>Radiation so far this mission: " + s.totalDose + "</b>   ·   Crew health " + s.health + (s.healthCap < 100 ? " (max " + s.healthCap + ")" : ""), 15, ink);
+            UIKit.Label(p.transform, "If crew health reaches 0, the crew goes home early. Keep every meter at " + Balance.endings.healthyMeter + " or more for the best ending.", 14, dark ? Theme.Soft : Theme.Muted);
+        }
+
         // ---------- night report ----------
 
         void ShowNightReport(NightReport r, Action done)
@@ -436,6 +515,8 @@ namespace OutpostGale
             var card = Modal(760, null, r.storm);
             Color ink = r.storm ? Theme.Paper : Theme.Ink;
             UIKit.Label(card, r.storm ? "Stormy night (sol " + r.sol + ")" : "Night report (sol " + r.sol + ")", 30, r.storm ? Theme.Gold : Theme.Ink, TextAnchor.MiddleLeft, true);
+            Origin(card, "WHILE YOU SLEPT", "This report comes every time you end a sol: what changed overnight, and why.", r.storm);
+            RadiationPanel(card, r, r.storm);
             foreach (var l in r.lines)
             {
                 string name = l.meter == "power" ? "Power" : l.meter == "life" ? "Life support" : "Crew health";
@@ -481,7 +562,7 @@ namespace OutpostGale
             if (title == null) return;
             var p = UIKit.Panel(card, Theme.Night, "Fact", true, 12);
             UIKit.VStack(p.gameObject, 4, 14);
-            UIKit.Label(p.transform, "<color=#FFD27A><b>New fact card: " + title + "</b></color>", 17, Theme.Paper);
+            UIKit.Label(p.transform, "<color=#FFD27A><b>New fact card: " + title + "</b></color>   <size=12>You found it tonight. It's saved in your Logbook.</size>", 17, Theme.Paper);
             UIKit.Label(p.transform, text, 15, Theme.Paper);
             UIKit.Label(p.transform, "<size=12>" + source + "</size>", 12, Theme.Hex("#D9CFE0"));
         }
@@ -497,19 +578,47 @@ namespace OutpostGale
                 var term = Data.story.TermFor(t);
                 if (term != null) text = text.Replace(t == "sep" ? "SEP" : term.word, "<color=#FFD27A><b>" + (t == "sep" ? "SEP" : term.word) + "</b></color>");
             }
+            text = Keywords.Highlight(text); // colour-code meters, dangers, supplies, places and keys
             var dim = UIKit.Fill(modalLayer, new Color(0, 0, 0, 0.25f), "Dialogue");
             UIKit.Stretch(dim.rectTransform);
             var p = UIKit.Panel(dim.transform, Theme.Night, "Box");
             UIKit.Anchor(p.rectTransform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 110), new Vector2(860, 150));
             var portrait = UIKit.Panel(p.transform, SpeakerColor(line.speaker), "Portrait", true, 40);
             UIKit.Anchor(portrait.rectTransform, new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(16, 0), new Vector2(100, 100));
-            var initial = UIKit.Label(portrait.transform, Data.story.SpeakerName(line.speaker).Substring(0, 1), 46, Theme.Ink, TextAnchor.MiddleCenter, true);
-            UIKit.Stretch(initial.rectTransform);
+            var boltArt = line.speaker == "bolt" ? Theme.Art("bolt") : null;
+            var crewArt = line.speaker == "mira" || line.speaker == "tomas" ? Theme.Art("crew_" + line.speaker) : null;
+            if (boltArt)
+            {
+                // BOLT's portrait is the mascot itself.
+                var face = UIKit.Rect("Bolt", portrait.transform);
+                UIKit.Stretch(face, 6, 6, 6, 6);
+                var fi = face.gameObject.AddComponent<Image>();
+                fi.sprite = boltArt;
+                fi.preserveAspect = true;
+                fi.raycastTarget = false;
+                face.gameObject.AddComponent<Bob>();
+            }
+            else if (crewArt)
+            {
+                // The crew portrait: their drawn character, framed on the face.
+                portrait.gameObject.AddComponent<Mask>().showMaskGraphic = true;
+                var face = UIKit.Rect("Face", portrait.transform);
+                UIKit.Anchor(face, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, -40), new Vector2(190, 237));
+                var fi = face.gameObject.AddComponent<Image>();
+                fi.sprite = crewArt;
+                fi.preserveAspect = true;
+                fi.raycastTarget = false;
+            }
+            else
+            {
+                var initial = UIKit.Label(portrait.transform, Data.story.SpeakerName(line.speaker).Substring(0, 1), 46, Theme.Ink, TextAnchor.MiddleCenter, true);
+                UIKit.Stretch(initial.rectTransform);
+            }
             var name = UIKit.Label(p.transform, line.speaker == "you" ? Mission.S.commanderName : Data.story.SpeakerName(line.speaker), 20, Theme.Gold, TextAnchor.UpperLeft, true);
             UIKit.Stretch(name.rectTransform, 132, 100, 16, 10);
             var body = UIKit.Label(p.transform, text, 19, Theme.Paper, TextAnchor.UpperLeft);
             UIKit.Stretch(body.rectTransform, 132, 40, 20, 42);
-            var next = UIKit.Button(p.transform, "Next ▶", null, Theme.Gold, 16);
+            var next = UIKit.Button(p.transform, "Next", null, Theme.Gold, 16);
             UIKit.Anchor((RectTransform)next.transform, new Vector2(1, 0), new Vector2(1, 0), new Vector2(-12, 10), new Vector2(110, 40));
             var skip = UIKit.Button(p.transform, "Skip story", null, Theme.Paper, 13);
             UIKit.Anchor((RectTransform)skip.transform, new Vector2(1, 0), new Vector2(1, 0), new Vector2(-132, 10), new Vector2(110, 40));
@@ -536,6 +645,7 @@ namespace OutpostGale
         {
             var card = Modal(520, null, true);
             UIKit.Label(card, "New word: " + t.word, 24, Theme.Gold, TextAnchor.MiddleLeft, true);
+            Origin(card, "NEW WORD", "BOLT explains each new word the first time it comes up.", true);
             UIKit.Label(card, "BOLT: " + t.explain, 18, Theme.Paper);
             UIKit.Button(card, "Got it", () => { CloseModal(card); done(); }, Theme.Gold);
         }
@@ -548,6 +658,7 @@ namespace OutpostGale
             var s = Mission.S;
             var card = Modal(620);
             UIKit.Label(card, "Mission start", 28, Theme.Ink, TextAnchor.MiddleLeft, true);
+            Origin(card, "MISSION START", "Shown once, when a new mission begins.", false);
             UIKit.Label(card, "Classroom Code: <b>" + s.classroomCode + "</b>\n<size=15>Anyone who types this code gets the same storms, events and map. Compare your endings!</size>", 18);
             var t1 = Balance.Trait(s.traits[0]);
             var t2 = Balance.Trait(s.traits[1]);

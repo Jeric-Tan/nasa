@@ -1,51 +1,36 @@
-# Assets to add (art and audio)
+# Art and audio
 
-The game runs today with placeholder art and sounds generated in code. Drop real files in these
-exact places and names, and the game picks them up automatically (no code changes). Then add a line
-to `CREDITS.md` for each pack.
+Every file the game loads at runtime lives in `Assets/Resources/`. Where each one comes from, and its licence,
+is in [CREDITS.md](CREDITS.md). Import settings (sprites at 64 px per unit, compressed, crisp mipmapped
+character art; Vorbis audio, streamed music) are applied automatically by `Assets/Scripts/Editor/BuildScript.cs`.
 
-Import settings (64 px per unit, bilinear, max 1024, compressed; audio as Vorbis, music streamed) are
-applied automatically by `Assets/Scripts/Editor/BuildScript.cs` to `Assets/Resources/Art`,
-`Assets/Resources/Audio` and `Assets/ThirdParty`.
+## Art: `Assets/Resources/Art/`
 
-## Sprites: `Assets/Resources/Art/<name>.png`
-Top-down or 3/4-view sprites; each is stretched to its module's footprint (in tiles, width × height).
-
-| File | Module | Footprint |
+| Files | What | Source |
 |---|---|---|
-| `hab.png` | Hab core | 3 × 2 |
-| `airlock.png` | Airlock | 1 × 1 |
-| `shelter.png` | Storm Shelter | 2 × 2 |
-| `solar.png` | Starting solar array | 3 × 1 |
-| `panel.png` | Extra solar panel | 2 × 1 |
-| `wall.png` | Regolith shield wall segment | 1 × 1 |
-| `oxygen.png` | Oxygen maker | 2 × 1 |
-| `greenhouse.png` | Greenhouse | 2 × 2 |
-| `battery.png` | Big battery | 1 × 1 |
-| `recycler.png` | Water recycler | 2 × 1 |
-| `gym.png` | Gym corner | 1 × 1 |
-| `dish.png` | Comms dish | 1 × 1 |
-| `pad.png` | Landing pad | 3 × 3 |
-| `rock.png` | Rocks on the grid | 1 × 1 |
-| `gale_map.png` | Expedition map (square, about 1024 px), Gale crater from Mars Trek | — |
-| `jezero_map.png` | Expedition map for Jezero (unlocks after a finished mission) | — |
+| `bolt.png`, `char_*.png`, `crew_*.png`, `airlock_rack.png` | BOLT, the astronaut (front and 4 walk frames), Mira and Tomas, the airlock suit rack | Drawn by `tools/art/*.py` (AI-assisted, see CREDITS) |
+| `hab`, `airlock`, `shelter`, `solar`, `panel`, `wall`, `oxygen`, `greenhouse`, `battery`, `recycler`, `gym`, `dish` (`.png`) | Base modules on the map, and the machines inside | Kenney Sci-Fi RTS (CC0) |
+| `rock*.png`, `ground*.png` | Rocks and ground tiles | Kenney Sci-Fi RTS (CC0) |
+| `astronaut.png`, `mira.png`, `tomas.png` | Fallback people, used only if the drawn characters are missing | Kenney Sci-Fi RTS (CC0) |
+| `icon_*.png` | HUD icons | Kenney Game Icons (CC0) |
+| `gale_map.png` | Trip map of Gale crater | NASA/JPL-Caltech/ASU, PIA14290 |
+| `trip_*.jpg` | Trip scene photos (Bagnold Dunes, Rocknest, Yellowknife Bay) | NASA/JPL-Caltech/MSSS, Curiosity Mastcam |
 
-Where to get them:
-- **Kenney** (kenney.nl/assets, CC0, no login): pick a space/sci-fi pack (check the exact pack names on the site).
-  Unzip the pack into `Assets/ThirdParty/Kenney/<pack>/`, then copy or rename the sprites you want into `Assets/Resources/Art/`.
-- **Mars Trek** (trek.nasa.gov/mars): find Gale crater, export one image, save as `gale_map.png`. NASA data; no NASA logo.
+To redraw the original characters: `python tools/art/make_bolt.py` (likewise `make_character.py`,
+`make_character_side.py`, `make_crew.py`, `make_suit_rack.py`). They need Python 3 with Pillow.
 
-## Audio: `Assets/Resources/Audio/<name>.ogg` (or .mp3 / .wav)
-| File | Used for |
-|---|---|
-| `mars_wind` | Title screen and ambience. Use NASA Perseverance's real Mars wind recording ("Sounds of Mars"); the title then says "this is what Mars really sounds like". |
-| `music_calm` | Daytime loop |
-| `music_tense` | Storm nights |
-| `build` | A module finishes |
-| `siren` | A storm hits |
-| `chime` | Shelter sealed / problem fixed |
-| `click` | Buttons |
-| `step` | Footsteps |
-| `error` | Can't do that |
+## Audio: `Assets/Resources/Audio/`
 
-Sources: Kenney audio packs (CC0), freesound.org filtered to CC0 (needs an account), Incompetech (CC BY, credit required).
+| File | Used for | Source |
+|---|---|---|
+| `mars_wind.mp3` | Title screen and ambience | NASA Perseverance SuperCam recording (public domain) |
+| `dust_devil.mp3` | Dust devil on a trip | NASA Perseverance SuperCam recording (public domain) |
+| `build`, `chime`, `click`, `error`, `radio`, `trip` (`.ogg`) | Sound effects | Kenney sound packs (CC0) |
+
+The storm siren and footsteps are generated in code.
+
+## Replacing art or sound
+
+The game uses whatever file is in these places, by name, and falls back to code-drawn placeholders when
+one is missing. Optional extras it will pick up: `pad.png` (landing pad), `jezero_map.png` (Jezero trip map),
+`terrain.png` (map ground), and `music_calm` / `music_tense` audio. Add a line to CREDITS.md for anything new.
